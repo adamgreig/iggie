@@ -229,19 +229,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 2650 6200 2650
 $Comp
-L agg:NFET Q?
-U 1 1 614C6078
-P 4450 2450
-AR Path="/614C6078" Ref="Q?"  Part="1" 
-AR Path="/6147A5D5/614C6078" Ref="Q1"  Part="1" 
-F 0 "Q1" H 4200 2480 50  0000 L CNN
-F 1 "NFET" H 4200 2290 50  0000 L CNN
-F 2 "" H 4450 2450 50  0001 C CNN
-F 3 "" H 4450 2450 50  0001 C CNN
-	1    4450 2450
-	1    0    0    -1  
-$EndComp
-$Comp
 L agg:R R?
 U 1 1 614C607E
 P 4150 2850
@@ -261,19 +248,6 @@ Wire Wire Line
 Connection ~ 4150 2550
 Wire Wire Line
 	4150 2550 4250 2550
-$Comp
-L agg:NFET Q?
-U 1 1 614C6088
-P 7400 2450
-AR Path="/614C6088" Ref="Q?"  Part="1" 
-AR Path="/6147A5D5/614C6088" Ref="Q2"  Part="1" 
-F 0 "Q2" H 7150 2480 50  0000 L CNN
-F 1 "NFET" H 7150 2290 50  0000 L CNN
-F 2 "" H 7400 2450 50  0001 C CNN
-F 3 "" H 7400 2450 50  0001 C CNN
-	1    7400 2450
-	1    0    0    -1  
-$EndComp
 $Comp
 L agg:R R?
 U 1 1 614C608E
@@ -551,8 +525,8 @@ L agg:L L?
 U 1 1 614C6132
 P 4050 1900
 AR Path="/614C6132" Ref="L?"  Part="1" 
-AR Path="/6147A5D5/614C6132" Ref="L2"  Part="1" 
-F 0 "L2" H 4100 1950 50  0000 C CNN
+AR Path="/6147A5D5/614C6132" Ref="L1"  Part="1" 
+F 0 "L1" H 4100 1950 50  0000 C CNN
 F 1 "L" H 4100 1850 50  0000 C CNN
 F 2 "" H 4050 1900 50  0001 C CNN
 F 3 "" H 4050 1900 50  0001 C CNN
@@ -640,9 +614,10 @@ P 4850 1900
 AR Path="/614C615C" Ref="D?"  Part="1" 
 AR Path="/6147A5D5/614C615C" Ref="D14"  Part="1" 
 F 0 "D14" H 4900 1970 50  0000 C CNN
-F 1 "SCHOTTKY" H 4900 1830 50  0001 C CNN
-F 2 "" H 4800 1870 50  0001 C CNN
-F 3 "" H 4900 1970 50  0001 C CNN
+F 1 "STTH512B" H 4900 1830 50  0000 C CNN
+F 2 "agg:DPAK_DIODE" H 4800 1870 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stth512.pdf" H 4900 1970 50  0001 C CNN
+F 4 "2344055" H 4850 1900 50  0001 C CNN "Farnell"
 	1    4850 1900
 	-1   0    0    -1  
 $EndComp
@@ -682,8 +657,8 @@ L agg:L L?
 U 1 1 614C6176
 P 7000 1900
 AR Path="/614C6176" Ref="L?"  Part="1" 
-AR Path="/6147A5D5/614C6176" Ref="L3"  Part="1" 
-F 0 "L3" H 7050 1950 50  0000 C CNN
+AR Path="/6147A5D5/614C6176" Ref="L2"  Part="1" 
+F 0 "L2" H 7050 1950 50  0000 C CNN
 F 1 "L" H 7050 1850 50  0000 C CNN
 F 2 "" H 7000 1900 50  0001 C CNN
 F 3 "" H 7000 1900 50  0001 C CNN
@@ -694,19 +669,6 @@ Wire Wire Line
 	7400 2350 7400 1900
 Wire Wire Line
 	7400 1900 7100 1900
-$Comp
-L agg:SCHOTTKY D?
-U 1 1 614C617E
-P 7800 1900
-AR Path="/614C617E" Ref="D?"  Part="1" 
-AR Path="/6147A5D5/614C617E" Ref="D15"  Part="1" 
-F 0 "D15" H 7850 1970 50  0000 C CNN
-F 1 "SCHOTTKY" H 7850 1830 50  0001 C CNN
-F 2 "" H 7750 1870 50  0001 C CNN
-F 3 "" H 7850 1970 50  0001 C CNN
-	1    7800 1900
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7700 1900 7400 1900
 Connection ~ 7400 1900
@@ -1078,19 +1040,6 @@ F 2 "agg:SOT-23-5" H 9250 3400 50  0001 L CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 9250 3300 50  0001 L CNN
 F 4 "1630421" H 9250 3200 50  0001 L CNN "Farnell"
 	1    9450 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L agg:NFET Q?
-U 1 1 614C628B
-P 10300 3500
-AR Path="/614C628B" Ref="Q?"  Part="1" 
-AR Path="/6147A5D5/614C628B" Ref="Q3"  Part="1" 
-F 0 "Q3" H 10050 3530 50  0000 L CNN
-F 1 "NFET" H 10050 3340 50  0000 L CNN
-F 2 "" H 10300 3500 50  0001 C CNN
-F 3 "" H 10300 3500 50  0001 C CNN
-	1    10300 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2606,45 +2555,6 @@ Wire Notes Line
 	550  6450 550  5100
 Text Notes 600  6400 0    60   ~ 12
 Current Sense Amplifiers
-$Comp
-L agg:PART X?
-U 1 1 6297628F
-P 6400 7650
-AR Path="/6297628F" Ref="X?"  Part="1" 
-AR Path="/6147A5D5/6297628F" Ref="X8"  Part="1" 
-F 0 "X8" H 6450 7750 50  0000 L CNN
-F 1 "HEATSINK" H 6450 7650 50  0000 L CNN
-F 2 "" H 6400 7650 50  0001 C CNN
-F 3 "" H 6400 7650 50  0001 C CNN
-	1    6400 7650
-	1    0    0    -1  
-$EndComp
-$Comp
-L agg:PART X?
-U 1 1 62976295
-P 6400 7400
-AR Path="/62976295" Ref="X?"  Part="1" 
-AR Path="/6147A5D5/62976295" Ref="X7"  Part="1" 
-F 0 "X7" H 6450 7500 50  0000 L CNN
-F 1 "HEATSINK" H 6450 7400 50  0000 L CNN
-F 2 "" H 6400 7400 50  0001 C CNN
-F 3 "" H 6400 7400 50  0001 C CNN
-	1    6400 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L agg:PART X?
-U 1 1 629A6209
-P 6400 7150
-AR Path="/629A6209" Ref="X?"  Part="1" 
-AR Path="/6147A5D5/629A6209" Ref="X6"  Part="1" 
-F 0 "X6" H 6450 7250 50  0000 L CNN
-F 1 "HEATSINK" H 6450 7150 50  0000 L CNN
-F 2 "" H 6400 7150 50  0001 C CNN
-F 3 "" H 6400 7150 50  0001 C CNN
-	1    6400 7150
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	550  5000 11150 5000
 Wire Notes Line
@@ -2771,4 +2681,54 @@ Wire Wire Line
 	8150 5400 8150 5450
 Wire Wire Line
 	8150 5550 8150 5600
+$Comp
+L agg:SCHOTTKY D?
+U 1 1 62C4FC38
+P 7800 1900
+AR Path="/62C4FC38" Ref="D?"  Part="1" 
+AR Path="/6147A5D5/62C4FC38" Ref="D15"  Part="1" 
+F 0 "D15" H 7850 1970 50  0000 C CNN
+F 1 "STTH512B" H 7850 1830 50  0000 C CNN
+F 2 "agg:DPAK_DIODE" H 7750 1870 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stth512.pdf" H 7850 1970 50  0001 C CNN
+F 4 "2344055" H 7800 1900 50  0001 C CNN "Farnell"
+	1    7800 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L agg:NFET_GDS Q1
+U 1 1 62C5D73E
+P 4450 2450
+F 0 "Q1" H 4200 2480 50  0000 L CNN
+F 1 "STB45N60DM2AG" H 4365 2285 50  0001 R CNN
+F 2 "agg:D2PAK_GDS" H 4450 2450 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stb45n60dm2ag.pdf" H 4450 2450 50  0001 C CNN
+F 4 "3129762" H 4450 2450 50  0001 C CNN "Farnell"
+	1    4450 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:NFET_GDS Q2
+U 1 1 62C5E943
+P 7400 2450
+F 0 "Q2" H 7150 2480 50  0000 L CNN
+F 1 "STB45N60DM2AG" H 7315 2285 50  0001 R CNN
+F 2 "agg:D2PAK_GDS" H 7400 2450 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stb45n60dm2ag.pdf" H 7400 2450 50  0001 C CNN
+F 4 "3129762" H 7400 2450 50  0001 C CNN "Farnell"
+	1    7400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:NFET_GDS Q3
+U 1 1 62C60334
+P 10300 3500
+F 0 "Q3" H 10050 3530 50  0000 L CNN
+F 1 "STB45N60DM2AG" H 10215 3335 50  0001 R CNN
+F 2 "agg:D2PAK_GDS" H 10300 3500 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stb45n60dm2ag.pdf" H 10300 3500 50  0001 C CNN
+F 4 "3129762" H 10300 3500 50  0001 C CNN "Farnell"
+	1    10300 3500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
