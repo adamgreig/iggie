@@ -1616,18 +1616,6 @@ F 4 "2290328" H 1700 2100 50  0001 C CNN "Farnell"
 $EndComp
 Text Label 5050 4150 0    50   ~ 0
 GD3
-$Comp
-L agg:CP C1
-U 1 1 6036C0A4
-P 1650 1300
-F 0 "C1" H 1700 1370 50  0000 C CNN
-F 1 "CP" H 1700 1230 50  0000 C CNN
-F 2 "" H 1650 1300 50  0001 C CNN
-F 3 "" H 1650 1300 50  0001 C CNN
-F 4 "50" H 1650 1300 50  0001 C CNN "Voltage"
-	1    1650 1300
-	0    1    -1   0   
-$EndComp
 Wire Wire Line
 	1650 1200 1650 1100
 Connection ~ 1650 1100
@@ -1906,4 +1894,19 @@ Wire Wire Line
 NoConn ~ 1150 1200
 Text Notes 5350 4750 0    50   ~ 0
 PA15: TIM1_BKIN, HRTIM1_FLT2
+$Comp
+L agg:CP C1
+U 1 1 62DF485C
+P 1650 1300
+AR Path="/62DF485C" Ref="C1"  Part="1" 
+AR Path="/6147A5D5/62DF485C" Ref="C?"  Part="1" 
+F 0 "C1" H 1700 1370 50  0000 C CNN
+F 1 "100µ" H 1700 1230 50  0000 C CNN
+F 2 "" H 1650 1300 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1187.pdf" H 1650 1300 50  0001 C CNN
+F 4 "50V" H 1700 1150 50  0000 C CNN "Voltage"
+F 5 "2079271" H 1650 1300 50  0001 C CNN "Farnell"
+	1    1650 1300
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC
