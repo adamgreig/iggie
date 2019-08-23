@@ -1,0 +1,207 @@
+Bill Of Materials
+=================
+
+Source file: psu.xml
+Date: 2019-08-17T19:26:00.038967
+
+Parts Missing Footprints
+------------------------
+X5     MAINS PSU      
+
+Parts Missing Order Codes
+-------------------------
+X3     M3 MOUNT        agg:M3_MOUNT
+X4     M3 MOUNT        agg:M3_MOUNT
+X2     M3 MOUNT        agg:M3_MOUNT
+X1     M3 MOUNT        agg:M3_MOUNT
+J2     PWR_IN          agg:BARRELJACK
+TP2    TESTPAD         agg:SIL-254P-01
+TP1    TESTPAD         agg:TESTPAD
+TP3    TESTPAD         agg:TESTPAD
+TP4    TESTPAD         agg:TESTPAD
+TP5    TESTPAD         agg:TESTPAD
+TP12   TESTPAD         agg:TESTPAD
+TP8    TESTPAD         agg:TESTPAD
+R14    DNF             agg:0805
+R17    DNF             agg:0805
+R16    DNF             agg:0805
+R49    DNF             agg:0805
+TP7    TESTPAD         agg:SIL-254P-01
+TP11   TESTPAD         agg:SIL-254P-01
+TP10   TESTPAD         agg:TESTPAD
+TP14   TESTPAD         agg:TESTPAD
+TP16   TESTPAD         agg:TESTPAD
+TP6    TESTPAD         agg:TESTPAD
+TP9    TESTPAD         agg:TESTPAD
+TP13   TESTPAD         agg:TESTPAD
+TP15   TESTPAD         agg:TESTPAD
+
+Inconsistent Order Codes
+------------------------
+  Voltage
+  ~~~~~~~
+    50V: 
+      C6     100p            agg:0603
+      C3     10µ             agg:1210
+      C12    100n            agg:0603
+      C10    100n            agg:0603
+      C9     100n            agg:0603
+      C8     10µ             agg:1210
+      R9     1k              agg:0603
+      R8     1k              agg:0603
+      C13    100n            agg:0603
+      R10    1k              agg:0603
+      R11    1k              agg:0603
+      R4     1k              agg:0603
+      R5     1k              agg:0603
+      R12    1k              agg:0603
+      R13    1k              agg:0603
+      R7     10k             agg:0603
+      C2     10µ             agg:1210
+      R3     10k             agg:0603
+      R6     10k             agg:0603
+      R1     100k            agg:0603
+      R2     10k             agg:0603
+      C1     100µ            agg:PANASONIC-SMDCAP-G
+      C30    1µ              agg:1206
+      C31    100n            agg:0603
+      C32    1µ              agg:1206
+      C33    100n            agg:0603
+      R33    100k            agg:0603
+      R35    100k            agg:0603
+      R31    1k              agg:0603
+      R30    1k              agg:0603
+      C18    1µ              agg:1206
+      R22    10k             agg:0603
+      R40    100k            agg:0603
+      C34    1µ              agg:1206
+      C35    100n            agg:0603
+      R45    1k              agg:0603
+      R41    68k             agg:0603
+      R46    1k              agg:0603
+      R42    68k             agg:0603
+      R47    1k              agg:0603
+      R43    1M              agg:0603
+      R48    100k            agg:0603
+      C36    100n            agg:0603
+      C40    100n            agg:0603
+      C45    100n            agg:0603
+      C47    100n            agg:0603
+      R37    10k             agg:0603
+      C38    100n            agg:0603
+      R25    10k             agg:0603
+      C21    10µ             agg:1210
+      R50    1k              agg:0603
+    250V: 
+      C22    68µ             agg:PANASONIC-SMDCAP-K
+      C19    1µ              agg:2220
+      C14    DNF             agg:0805
+      C17    DNF             agg:0805
+      C16    DNF             agg:0805
+      C20    1µ              agg:2220
+      C25    1µ              agg:2220
+      C15    DNF             agg:0805
+
+Vendor Specific BOMs
+--------------------
+  Farnell
+  ~~~~~~~
+2469571,1,1x STM32F334K8T6 LQFP-32
+1360132,1,1x CTRL MOLEX-KK-254P-04
+1696320,1,1x TSR 1-2450 TSR1
+2067775,1,1x ADP3335 MSOP-8
+2856437,1,1x SWD FTSH-105-01-L-DV-K
+9406115,9,9x 100p 0603
+2320814,7,7x 1µ 0603
+2781426,4,4x 10µ 1210
+1515747,1,1x FB 0603
+2320803,12,12x 100n 0603
+2447272,14,14x 1k 0603
+2368174,3,3x ESD_DIODE 0603
+2849479,1,1x 25M XTAL-25x20
+2815916,1,1x MAINS PSU None
+2290329,1,1x RED 0603-LED
+2290328,7,7x GRN 0603-LED
+2447230,7,7x 10k 0603
+1859669,1,1x VSSC520S-M3/9AT DO-214AB-SM
+1899460,1,1x SMAJ58A DO-214AC-SMA
+1672131,1,1x TSR 1-24150 TSR1
+1360131,1,1x HV_OUT MOLEX-KK-254P-03
+2447226,5,5x 100k 0603
+2079271,1,1x 100µ PANASONIC-SMDCAP-G
+1630421,3,3x MCP1416 SOT-23-5
+1759454,4,4x 1µ 1206
+2079442,4,4x 10m 1206
+2288335,2,2x 47µH MSS1210
+2326343,3,3x 68µ PANASONIC-SMDCAP-K
+2344055,2,2x STTH512B DPAK_DIODE
+1828845,3,3x 1µ 2220
+2447453,4,4x 100k 1206
+2447420,2,2x 68k 0603
+2447285,1,1x 1M 0603
+2460985,3,3x AD8551 MSOP-8
+1470398,1,1x INA139 SOT-23-5
+2447667,5,5x 499k 0805
+2845252,1,1x NCV8460A SOIC-8
+2101651,4,4x 100 D2PAK_R
+3129762,3,3x STB45N60DM2AG D2PAK_GDS
+
+
+  Voltage
+  ~~~~~~~
+50V,59,59x C6 C3 C12 C10 C9 C8 R9 R8 C13 R10 R11 R4 R5 R12 R13 R7 C2 R3 R6 R1 R2 C7 C1 C30 C31 C32 C33 R33 R35 R31 R30 C27 C28 C18 R22 R40 C34 C35 R45 R41 C42 R46 R42 C43 R47 R43 C44 R48 C36 C40 C45 C47 R37 C29 C38 C24 R25 C21 R50 0603,1206,PANASONIC-SMDCAP-G,1210
+16V,7,7x C4 C5 C11 C37 C41 C46 C39 0603
+24V,3,3x D7 D8 D9 0603
+250V,10,10x C22 C19 C14 C17 C16 C23 C26 C20 C25 C15 2220,PANASONIC-SMDCAP-K,0805
+200V,4,4x R21 R24 R51 R52 1206
+150V,5,5x R20 R23 R26 R28 R19 0805
+
+
+Assembly BOM
+------------
+2469571              1   STM32F334K8T6   LQFP-32         IC4
+1360132              1   CTRL            MOLEX-KK-254P-04 J3
+1696320              1   TSR 1-2450      TSR1            IC3
+2067775              1   ADP3335         MSOP-8          IC1
+2856437              1   SWD             FTSH-105-01-L-DV-K P1
+9406115              9   100p            0603            C24 C27 C28 C29 C42 C43 C44 C6 C7
+2320814              7   1µ              0603            C11 C37 C39 C4 C41 C46 C5
+2781426              4   10µ             1210            C2 C21 C3 C8
+1515747              1   FB              0603            L3
+2320803              12  100n            0603            C10 C12 C13 C31 C33 C35 C36 C38 C40 C45 C47 C9
+2447272              14  1k              0603            R10 R11 R12 R13 R30 R31 R4 R45 R46 R47 R5 R50 R8 R9
+2368174              3   ESD_DIODE       0603            D7 D8 D9
+2849479              1   25M             XTAL-25x20      Y1
+2815916              1   MAINS PSU       None            X5
+2290329              1   RED             0603-LED        D10
+2290328              7   GRN             0603-LED        D11 D12 D13 D3 D4 D5 D6
+2447230              7   10k             0603            R2 R22 R25 R3 R37 R6 R7
+1859669              1   VSSC520S-M3/9AT DO-214AB-SMC    D1
+1899460              1   SMAJ58A         DO-214AC-SMA    D2
+1672131              1   TSR 1-24150     TSR1            IC2
+1360131              1   HV_OUT          MOLEX-KK-254P-03 J1
+2447226              5   100k            0603            R1 R33 R35 R40 R48
+2079271              1   100µ            PANASONIC-SMDCAP-G C1
+1630421              3   MCP1416         SOT-23-5        IC6 IC7 IC8
+1759454              4   1µ              1206            C18 C30 C32 C34
+2079442              4   10m             1206            R18 R34 R36 R39
+2288335              2   47µH            MSS1210         L1 L2
+2326343              3   68µ             PANASONIC-SMDCAP-K C22 C23 C26
+2344055              2   STTH512B        DPAK_DIODE      D14 D15
+1828845              3   1µ              2220            C19 C20 C25
+2447453              4   100k            1206            R21 R24 R51 R52
+2447420              2   68k             0603            R41 R42
+2447285              1   1M              0603            R43
+2460985              3   AD8551          MSOP-8          IC10 IC11 IC12
+1470398              1   INA139          SOT-23-5        IC9
+2447667              5   499k            0805            R19 R20 R23 R26 R28
+2845252              1   NCV8460A        SOIC-8          IC5
+2101651              4   100             D2PAK_R         R27 R29 R32 R38
+3129762              3   STB45N60DM2AG   D2PAK_GDS       Q1 Q2 Q3
+50V                  59  100p,10µ,100k,1µ,100n,68k,100µ,1M,1k,10k 0603,1206,PANASONIC-SMDCAP-G,1210 C1 C10 C12 C13 C18 C2 C21 C24 C27 C28 C29 C3 C30 C31 C32 C33 C34 C35 C36 C38 C40 C42 C43 C44 C45 C47 C6 C7 C8 C9 R1 R10 R11 R12 R13 R2 R22 R25 R3 R30 R31 R33 R35 R37 R4 R40 R41 R42 R43 R45 R46 R47 R48 R5 R50 R6 R7 R8 R9
+16V                  7   1µ              0603            C11 C37 C39 C4 C41 C46 C5
+24V                  3   ESD_DIODE       0603            D7 D8 D9
+250V                 10  1µ,DNF,68µ      2220,PANASONIC-SMDCAP-K,0805 C14 C15 C16 C17 C19 C20 C22 C23 C25 C26
+200V                 4   100k            1206            R21 R24 R51 R52
+150V                 5   499k            0805            R19 R20 R23 R26 R28
+

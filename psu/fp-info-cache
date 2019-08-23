@@ -1,4 +1,4 @@
-473809543403303
+477094545526303
 agg
 0201
 
@@ -78,6 +78,13 @@ agg
 2
 agg
 1812
+
+
+0
+2
+2
+agg
+2220
 
 
 0
@@ -189,6 +196,13 @@ B32921
 2
 2
 agg
+BARRELJACK
+
+
+0
+3
+3
+agg
 BCAAPC
 
 
@@ -273,6 +287,13 @@ BNC_PCB_RA_5-1634556-0
 5
 2
 agg
+CHIPv1_0
+
+
+0
+80
+80
+agg
 ChipFET-1206-8
 
 
@@ -280,12 +301,19 @@ ChipFET-1206-8
 8
 8
 agg
-CHIPv1_0
-
+D2PAK
+TO-263
 
 0
-80
-80
+3
+3
+agg
+D2PAK_GDS
+TO-263
+
+0
+3
+3
 agg
 DD21.01xx.1111
 
@@ -553,6 +581,20 @@ DO-214AC-SMA
 2
 2
 agg
+DPAK
+TO-252
+
+0
+3
+3
+agg
+DPAK_DIODE
+TO-252 with typical diode pins A=3 K=2,4
+
+0
+3
+3
+agg
 DQ1225
 
 
@@ -665,20 +707,6 @@ LAB01
 24
 24
 agg
-Lattice-BG121
-
-
-0
-121
-121
-agg
-Lattice-SG48
-
-
-0
-90
-49
-agg
 LGA-16L-ST
 
 
@@ -734,6 +762,20 @@ LQFP-144
 0
 144
 144
+agg
+Lattice-BG121
+
+
+0
+121
+121
+agg
+Lattice-SG48
+
+
+0
+90
+49
 agg
 M2.5_HOLE
 
@@ -1022,6 +1064,20 @@ MSS1210
 2
 2
 agg
+PANASONIC-SMDCAP-G
+
+
+0
+2
+2
+agg
+PANASONIC-SMDCAP-K
+
+
+0
+2
+2
+agg
 PICOLOCK-100P-2
 
 
@@ -1036,19 +1092,19 @@ PIZERO
 40
 40
 agg
+PULSE_32x100
+
+
+0
+3
+2
+agg
 PowerFLAT-5x6
 
 
 0
 14
 6
-agg
-PowerPair-3x3
-
-
-0
-10
-5
 agg
 PowerPAK-1212-8
 
@@ -1071,12 +1127,12 @@ PowerPAK-SO-8
 9
 3
 agg
-PULSE_32x100
+PowerPair-3x3
 
 
 0
-3
-2
+10
+5
 agg
 QFN-16-EP-NXP
 
@@ -1981,13 +2037,6 @@ ULTRA-FIT-01x03
 3
 3
 agg
-uQFN-10L
-
-
-0
-10
-10
-agg
 US8-3.1mm
 
 
@@ -2120,3 +2169,10 @@ XTAL-50x32
 0
 2
 2
+agg
+uQFN-10L
+
+
+0
+10
+10
