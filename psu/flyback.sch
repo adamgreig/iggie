@@ -1,0 +1,2417 @@
+EESchema Schematic File Version 4
+LIBS:psu-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L agg:MCP1416 IC?
+U 1 1 5D63EE7C
+P 3650 2900
+AR Path="/5D63EE7C" Ref="IC?"  Part="1" 
+AR Path="/6147A5D5/5D63EE7C" Ref="IC?"  Part="1" 
+AR Path="/5D647F49/5D63EE7C" Ref="IC?"  Part="1" 
+F 0 "IC?" H 3450 3100 50  0000 L CNN
+F 1 "MCP1416" H 3450 2700 50  0000 L CNN
+F 2 "agg:SOT-23-5" H 3450 2600 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 3450 2500 50  0001 L CNN
+F 4 "1630421" H 3450 2400 50  0001 L CNN "Farnell"
+	1    3650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63EE96
+P 3550 3450
+AR Path="/5D63EE96" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63EE96" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63EE96" Ref="C?"  Part="1" 
+F 0 "C?" H 3600 3520 50  0000 C CNN
+F 1 "1µ" H 3600 3380 50  0000 C CNN
+F 2 "agg:1206" H 3550 3450 50  0001 C CNN
+F 3 "" H 3550 3450 50  0001 C CNN
+F 4 "50V" H 3550 3450 50  0001 C CNN "Voltage"
+F 5 "1759454" H 3550 3450 50  0001 C CNN "Farnell"
+	1    3550 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EE9C
+P 3550 3650
+AR Path="/5D63EE9C" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EE9C" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EE9C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3420 3690 50  0001 L CNN
+F 1 "GND" H 3550 3550 50  0000 C CNN
+F 2 "" H 3550 3650 50  0001 C CNN
+F 3 "" H 3550 3650 50  0001 C CNN
+	1    3550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3650 3550 3550
+Wire Wire Line
+	3550 3450 3550 3350
+$Comp
+L agg:C C?
+U 1 1 5D63EEA6
+P 3800 3450
+AR Path="/5D63EEA6" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63EEA6" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63EEA6" Ref="C?"  Part="1" 
+F 0 "C?" H 3850 3520 50  0000 C CNN
+F 1 "100n" H 3850 3380 50  0000 C CNN
+F 2 "agg:0603" H 3800 3450 50  0001 C CNN
+F 3 "" H 3800 3450 50  0001 C CNN
+F 4 "50V" H 3800 3450 50  0001 C CNN "Voltage"
+F 5 "2320803" H 3800 3450 50  0001 C CNN "Farnell"
+	1    3800 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EEAC
+P 3800 3650
+AR Path="/5D63EEAC" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EEAC" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EEAC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3670 3690 50  0001 L CNN
+F 1 "GND" H 3800 3550 50  0000 C CNN
+F 2 "" H 3800 3650 50  0001 C CNN
+F 3 "" H 3800 3650 50  0001 C CNN
+	1    3800 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3650 3800 3550
+Wire Wire Line
+	3800 3350 3800 3450
+$Comp
+L agg:R R?
+U 1 1 5D63EEE9
+P 4200 2950
+AR Path="/5D63EEE9" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63EEE9" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63EEE9" Ref="R?"  Part="1" 
+F 0 "R?" H 4250 3000 50  0000 C CNN
+F 1 "100k" H 4250 2900 50  0000 C CNN
+F 2 "agg:0603" H 4200 2950 50  0001 C CNN
+F 3 "" H 4200 2950 50  0001 C CNN
+F 4 "2447226" H 4200 2950 50  0001 C CNN "Farnell"
+F 5 "50V" H 4200 2950 50  0001 C CNN "Voltage"
+	1    4200 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EEFF
+P 4200 3150
+AR Path="/5D63EEFF" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EEFF" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EEFF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4070 3190 50  0001 L CNN
+F 1 "GND" H 4200 3050 50  0000 C CNN
+F 2 "" H 4200 3150 50  0001 C CNN
+F 3 "" H 4200 3150 50  0001 C CNN
+	1    4200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EF35
+P 4500 4000
+AR Path="/5D63EF35" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EF35" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EF35" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4370 4040 50  0001 L CNN
+F 1 "GND" H 4500 3900 50  0000 C CNN
+F 2 "" H 4500 4000 50  0001 C CNN
+F 3 "" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3600 4500 3650
+$Comp
+L agg:R R?
+U 1 1 5D63EF3F
+P 4800 3600
+AR Path="/5D63EF3F" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63EF3F" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63EF3F" Ref="R?"  Part="1" 
+F 0 "R?" H 4850 3650 50  0000 C CNN
+F 1 "1k" H 4850 3550 50  0000 C CNN
+F 2 "agg:0603" H 4800 3600 50  0001 C CNN
+F 3 "" H 4800 3600 50  0001 C CNN
+F 4 "2447272" H 4800 3600 50  0001 C CNN "Farnell"
+F 5 "50V" H 4800 3600 50  0001 C CNN "Voltage"
+	1    4800 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L agg:TESTPAD TP?
+U 1 1 5D63EF47
+P 5650 3650
+AR Path="/5D63EF47" Ref="TP?"  Part="1" 
+AR Path="/6147A5D5/5D63EF47" Ref="TP?"  Part="1" 
+AR Path="/5D647F49/5D63EF47" Ref="TP?"  Part="1" 
+F 0 "TP?" V 5750 3650 50  0000 C CNN
+F 1 "TESTPAD" H 5650 3575 50  0001 L CNN
+F 2 "agg:TESTPAD" H 5650 3500 50  0001 L CNN
+F 3 "" H 5650 3650 50  0001 C CNN
+	1    5650 3650
+	0    -1   -1   0   
+$EndComp
+Text Notes 3950 4550 0    50   ~ 0
+Switch current sense:\nImax 6A\n6A*10mR=60mV\nPmax=360mW (pulsed)
+$Comp
+L agg:C C?
+U 1 1 5D63EF74
+P 3800 1600
+AR Path="/5D63EF74" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63EF74" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63EF74" Ref="C?"  Part="1" 
+F 0 "C?" H 3850 1670 50  0000 C CNN
+F 1 "1µ" H 3850 1530 50  0000 C CNN
+F 2 "agg:1206" H 3800 1600 50  0001 C CNN
+F 3 "" H 3800 1600 50  0001 C CNN
+F 4 "50V" H 3850 1450 50  0000 C CNN "Voltage"
+F 5 "1759454" H 3800 1600 50  0001 C CNN "Farnell"
+	1    3800 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 1600 3100 1450
+Wire Wire Line
+	3800 1600 3800 1450
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EF8F
+P 3100 1800
+AR Path="/5D63EF8F" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EF8F" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EF8F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2970 1840 50  0001 L CNN
+F 1 "GND" H 3100 1700 50  0000 C CNN
+F 2 "" H 3100 1800 50  0001 C CNN
+F 3 "" H 3100 1800 50  0001 C CNN
+	1    3100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63EF95
+P 3800 1800
+AR Path="/5D63EF95" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63EF95" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63EF95" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3670 1840 50  0001 L CNN
+F 1 "GND" H 3800 1700 50  0000 C CNN
+F 2 "" H 3800 1800 50  0001 C CNN
+F 3 "" H 3800 1800 50  0001 C CNN
+	1    3800 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1800 3800 1700
+Wire Wire Line
+	3100 1700 3100 1800
+$Comp
+L agg:SCHOTTKY D?
+U 1 1 5D63EFA7
+P 5650 1750
+AR Path="/5D63EFA7" Ref="D?"  Part="1" 
+AR Path="/6147A5D5/5D63EFA7" Ref="D?"  Part="1" 
+AR Path="/5D647F49/5D63EFA7" Ref="D?"  Part="1" 
+F 0 "D?" H 5700 1820 50  0000 C CNN
+F 1 "STTH512B" H 5700 1680 50  0000 C CNN
+F 2 "agg:DPAK_DIODE" H 5600 1720 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stth512.pdf" H 5700 1820 50  0001 C CNN
+F 4 "2344055" H 5650 1750 50  0001 C CNN "Farnell"
+	1    5650 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63EFC1
+P 4300 1700
+AR Path="/5D63EFC1" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63EFC1" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63EFC1" Ref="R?"  Part="1" 
+F 0 "R?" H 4350 1750 50  0000 C CNN
+F 1 "DNF" H 4350 1650 50  0000 C CNN
+F 2 "agg:1206" H 4300 1700 50  0001 C CNN
+F 3 "" H 4300 1700 50  0001 C CNN
+F 4 "50V" H 4300 1700 50  0001 C CNN "Voltage"
+	1    4300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63EFC8
+P 4300 1900
+AR Path="/5D63EFC8" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63EFC8" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63EFC8" Ref="C?"  Part="1" 
+F 0 "C?" H 4350 1970 50  0000 C CNN
+F 1 "DNF" H 4350 1830 50  0000 C CNN
+F 2 "agg:1206" H 4300 1900 50  0001 C CNN
+F 3 "" H 4300 1900 50  0001 C CNN
+F 4 "50V" H 4300 1900 50  0001 C CNN "Voltage"
+	1    4300 1900
+	0    1    1    0   
+$EndComp
+Text Notes 4150 2000 1    50   ~ 0
+Snubber
+$Comp
+L agg:R R?
+U 1 1 5D63F001
+P 8050 1950
+AR Path="/5D63F001" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F001" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F001" Ref="R?"  Part="1" 
+F 0 "R?" H 8100 2000 50  0000 C CNN
+F 1 "100k" H 8100 1900 50  0000 C CNN
+F 2 "agg:1206" H 8050 1950 50  0001 C CNN
+F 3 "" H 8050 1950 50  0001 C CNN
+F 4 "2447453" H 8050 1950 50  0001 C CNN "Farnell"
+F 5 "200V" H 8050 1950 50  0001 C CNN "Voltage"
+	1    8050 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F009
+P 8050 2200
+AR Path="/5D63F009" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F009" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F009" Ref="R?"  Part="1" 
+F 0 "R?" H 8100 2250 50  0000 C CNN
+F 1 "100k" H 8100 2150 50  0000 C CNN
+F 2 "agg:1206" H 8050 2200 50  0001 C CNN
+F 3 "" H 8050 2200 50  0001 C CNN
+F 4 "2447453" H 8050 2200 50  0001 C CNN "Farnell"
+F 5 "200V" H 8050 2200 50  0001 C CNN "Voltage"
+	1    8050 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 2050 8050 2200
+Wire Wire Line
+	8050 1950 8050 1750
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F011
+P 8050 2950
+AR Path="/5D63F011" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F011" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F011" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7920 2990 50  0001 L CNN
+F 1 "GND" H 8050 2850 50  0000 C CNN
+F 2 "" H 8050 2950 50  0001 C CNN
+F 3 "" H 8050 2950 50  0001 C CNN
+	1    8050 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2950 8050 2800
+Text Notes 7700 3350 0    50   ~ 0
+Passive discharge:\n400V→48V in 30s\n1mA, 100mW/resistor
+$Comp
+L agg:15v #PWR?
+U 1 1 5D63F039
+P 3800 3350
+AR Path="/5D63F039" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F039" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F039" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3800 3460 50  0001 L CNN
+F 1 "15v" H 3800 3440 50  0000 C CNN
+F 2 "" H 3800 3350 50  0001 C CNN
+F 3 "" H 3800 3350 50  0001 C CNN
+	1    3800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:15v #PWR?
+U 1 1 5D63F03F
+P 3550 3350
+AR Path="/5D63F03F" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F03F" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F03F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3550 3460 50  0001 L CNN
+F 1 "15v" H 3550 3440 50  0000 C CNN
+F 2 "" H 3550 3350 50  0001 C CNN
+F 3 "" H 3550 3350 50  0001 C CNN
+	1    3550 3350
+	1    0    0    -1  
+$EndComp
+Text Notes 3450 2650 0    50   ~ 0
+Gate Driver
+Text HLabel 3000 2900 0    50   Input ~ 0
+GD
+Text HLabel 10750 1750 2    50   Output ~ 0
+HV+
+Text HLabel 10750 1850 2    50   Output ~ 0
+HV-
+Text Notes 5550 4600 0    50   ~ 0
+V(I_Q) = (1+R2/R1)*V(ISENSE_Q)\n= 51 * 0.06\n= 3.06V at 6A
+$Comp
+L agg:INA139 IC?
+U 1 1 5D63F18F
+P 1700 2400
+AR Path="/5D63F18F" Ref="IC?"  Part="1" 
+AR Path="/6147A5D5/5D63F18F" Ref="IC?"  Part="1" 
+AR Path="/5D647F49/5D63F18F" Ref="IC?"  Part="1" 
+F 0 "IC?" V 1900 2300 50  0000 R CNN
+F 1 "INA139" V 1900 2500 50  0000 L CNN
+F 2 "agg:SOT-23-5" H 1400 2000 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina139.pdf" H 1400 1900 50  0001 L CNN
+F 4 "1470398" H 1400 1800 50  0001 L CNN "Farnell"
+	1    1700 2400
+	0    -1   1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F196
+P 2000 2550
+AR Path="/5D63F196" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F196" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F196" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1870 2590 50  0001 L CNN
+F 1 "GND" H 2000 2450 50  0000 C CNN
+F 2 "" H 2000 2550 60  0001 C CNN
+F 3 "" H 2000 2550 60  0001 C CNN
+	1    2000 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F19F
+P 1700 3050
+AR Path="/5D63F19F" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F19F" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F19F" Ref="R?"  Part="1" 
+F 0 "R?" H 1750 3100 50  0000 C CNN
+F 1 "100k" H 1750 3000 50  0000 C CNN
+F 2 "agg:0603" H 1700 3050 50  0001 C CNN
+F 3 "" H 1700 3050 50  0001 C CNN
+F 4 "2447226" H 1700 3050 50  0001 C CNN "Farnell"
+F 5 "50V" H 1700 3050 50  0001 C CNN "Voltage"
+	1    1700 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F1A5
+P 1700 3250
+AR Path="/5D63F1A5" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F1A5" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F1A5" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1570 3290 50  0001 L CNN
+F 1 "GND" H 1700 3150 50  0000 C CNN
+F 2 "" H 1700 3250 60  0001 C CNN
+F 3 "" H 1700 3250 60  0001 C CNN
+	1    1700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3250 1700 3150
+Wire Wire Line
+	1700 2900 1700 3050
+Connection ~ 1700 2900
+Wire Wire Line
+	1700 2900 1950 2900
+Text Notes 1400 4900 0    50   ~ 0
+Input current monitoring:\nV(I_IN) = 2.5A * 0.01R * (100k/1k)\n= 2.5V at 2.5A\nRC gives -3dB at 160Hz
+$Comp
+L agg:C C?
+U 1 1 5D63F1B9
+P 5900 4000
+AR Path="/5D63F1B9" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F1B9" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F1B9" Ref="C?"  Part="1" 
+F 0 "C?" H 5950 4070 50  0000 C CNN
+F 1 "100n" H 5950 3930 50  0000 C CNN
+F 2 "agg:0603" H 5900 4000 50  0001 C CNN
+F 3 "" H 5900 4000 50  0001 C CNN
+F 4 "50V" H 5900 4000 50  0001 C CNN "Voltage"
+F 5 "2320803" H 5900 4000 50  0001 C CNN "Farnell"
+	1    5900 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63F1C1
+P 6150 4000
+AR Path="/5D63F1C1" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F1C1" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F1C1" Ref="C?"  Part="1" 
+F 0 "C?" H 6200 4070 50  0000 C CNN
+F 1 "1µ" H 6200 3930 50  0000 C CNN
+F 2 "agg:0603" H 6150 4000 50  0001 C CNN
+F 3 "" H 6150 4000 50  0001 C CNN
+F 4 "16V" H 6150 4000 50  0001 C CNN "Voltage"
+F 5 "2320814" H 6150 4000 50  0001 C CNN "Farnell"
+	1    6150 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F1D3
+P 5900 4150
+AR Path="/5D63F1D3" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F1D3" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F1D3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5770 4190 50  0001 L CNN
+F 1 "GND" H 5900 4050 50  0000 C CNN
+F 2 "" H 5900 4150 50  0001 C CNN
+F 3 "" H 5900 4150 50  0001 C CNN
+	1    5900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F1D9
+P 6150 4150
+AR Path="/5D63F1D9" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F1D9" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F1D9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6020 4190 50  0001 L CNN
+F 1 "GND" H 6150 4050 50  0000 C CNN
+F 2 "" H 6150 4150 50  0001 C CNN
+F 3 "" H 6150 4150 50  0001 C CNN
+	1    6150 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4150 6150 4100
+Wire Wire Line
+	6150 4000 6150 3950
+Wire Wire Line
+	5900 3950 5900 4000
+Wire Wire Line
+	5900 4100 5900 4150
+$Comp
+L agg:C C?
+U 1 1 5D63F1FB
+P 1100 2500
+AR Path="/5D63F1FB" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F1FB" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F1FB" Ref="C?"  Part="1" 
+F 0 "C?" H 1150 2570 50  0000 C CNN
+F 1 "100n" H 1150 2430 50  0000 C CNN
+F 2 "agg:0603" H 1100 2500 50  0001 C CNN
+F 3 "" H 1100 2500 50  0001 C CNN
+F 4 "50V" H 1100 2500 50  0001 C CNN "Voltage"
+F 5 "2320803" H 1100 2500 50  0001 C CNN "Farnell"
+	1    1100 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F207
+P 1100 2650
+AR Path="/5D63F207" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F207" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F207" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 970 2690 50  0001 L CNN
+F 1 "GND" H 1100 2550 50  0000 C CNN
+F 2 "" H 1100 2650 50  0001 C CNN
+F 3 "" H 1100 2650 50  0001 C CNN
+	1    1100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2450 1100 2500
+Wire Wire Line
+	1100 2600 1100 2650
+$Comp
+L agg:C C?
+U 1 1 5D63F227
+P 850 2500
+AR Path="/5D63F227" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F227" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F227" Ref="C?"  Part="1" 
+F 0 "C?" H 900 2570 50  0000 C CNN
+F 1 "1µ" H 900 2430 50  0000 C CNN
+F 2 "agg:0603" H 850 2500 50  0001 C CNN
+F 3 "" H 850 2500 50  0001 C CNN
+F 4 "16V" H 850 2500 50  0001 C CNN "Voltage"
+F 5 "2320814" H 850 2500 50  0001 C CNN "Farnell"
+	1    850  2500
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F233
+P 850 2650
+AR Path="/5D63F233" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F233" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F233" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 720 2690 50  0001 L CNN
+F 1 "GND" H 850 2550 50  0000 C CNN
+F 2 "" H 850 2650 50  0001 C CNN
+F 3 "" H 850 2650 50  0001 C CNN
+	1    850  2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  2650 850  2600
+Wire Wire Line
+	850  2500 850  2450
+$Comp
+L agg:C C?
+U 1 1 5D63F23D
+P 1950 3050
+AR Path="/5D63F23D" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F23D" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F23D" Ref="C?"  Part="1" 
+F 0 "C?" H 2000 3120 50  0000 C CNN
+F 1 "10n" H 2000 2980 50  0000 C CNN
+F 2 "agg:0805" H 1950 3050 50  0001 C CNN
+F 3 "" H 1950 3050 50  0001 C CNN
+F 4 "25V" H 1950 3050 50  0001 C CNN "Voltage"
+F 5 "1457736" H 1950 3050 50  0001 C CNN "Farnell"
+	1    1950 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 3050 1950 2900
+Connection ~ 1950 2900
+Wire Wire Line
+	1950 2900 2100 2900
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F246
+P 1950 3250
+AR Path="/5D63F246" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F246" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F246" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1820 3290 50  0001 L CNN
+F 1 "GND" H 1950 3150 50  0000 C CNN
+F 2 "" H 1950 3250 60  0001 C CNN
+F 3 "" H 1950 3250 60  0001 C CNN
+	1    1950 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3250 1950 3150
+Text HLabel 10500 4750 2    50   Output ~ 0
+I_OUT
+Text HLabel 2100 4450 2    50   Output ~ 0
+I_IN
+$Comp
+L agg:R R?
+U 1 1 5D63F253
+P 6900 1900
+AR Path="/5D63F253" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F253" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F253" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 1950 50  0000 C CNN
+F 1 "499k" H 6950 1850 50  0000 C CNN
+F 2 "agg:0805" H 6900 1900 50  0001 C CNN
+F 3 "" H 6900 1900 50  0001 C CNN
+F 4 "2447667" H 6900 1900 50  0001 C CNN "Farnell"
+F 5 "150V" H 6900 1900 50  0001 C CNN "Voltage"
+	1    6900 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F25B
+P 6900 2100
+AR Path="/5D63F25B" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F25B" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F25B" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 2150 50  0000 C CNN
+F 1 "499k" H 6950 2050 50  0000 C CNN
+F 2 "agg:0805" H 6900 2100 50  0001 C CNN
+F 3 "" H 6900 2100 50  0001 C CNN
+F 4 "2447667" H 6900 2100 50  0001 C CNN "Farnell"
+F 5 "150V" H 6900 2100 50  0001 C CNN "Voltage"
+	1    6900 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F263
+P 6900 2300
+AR Path="/5D63F263" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F263" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F263" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 2350 50  0000 C CNN
+F 1 "499k" H 6950 2250 50  0000 C CNN
+F 2 "agg:0805" H 6900 2300 50  0001 C CNN
+F 3 "" H 6900 2300 50  0001 C CNN
+F 4 "2447667" H 6900 2300 50  0001 C CNN "Farnell"
+F 5 "150V" H 6900 2300 50  0001 C CNN "Voltage"
+	1    6900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F26B
+P 6900 2500
+AR Path="/5D63F26B" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F26B" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F26B" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 2550 50  0000 C CNN
+F 1 "499k" H 6950 2450 50  0000 C CNN
+F 2 "agg:0805" H 6900 2500 50  0001 C CNN
+F 3 "" H 6900 2500 50  0001 C CNN
+F 4 "2447667" H 6900 2500 50  0001 C CNN "Farnell"
+F 5 "150V" H 6900 2500 50  0001 C CNN "Voltage"
+	1    6900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F273
+P 6900 2800
+AR Path="/5D63F273" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F273" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F273" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 2850 50  0000 C CNN
+F 1 "10k" H 6950 2750 50  0000 C CNN
+F 2 "agg:0603" H 6900 2800 50  0001 C CNN
+F 3 "" H 6900 2800 50  0001 C CNN
+F 4 "2447230" H 6900 2800 50  0001 C CNN "Farnell"
+F 5 "50V" H 6900 2800 50  0001 C CNN "Voltage"
+	1    6900 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 2000 6900 2100
+Wire Wire Line
+	6900 2200 6900 2300
+Wire Wire Line
+	6900 2400 6900 2500
+Wire Wire Line
+	6900 2600 6900 2700
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F27E
+P 6900 2950
+AR Path="/5D63F27E" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F27E" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F27E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6770 2990 50  0001 L CNN
+F 1 "GND" H 6900 2850 50  0000 C CNN
+F 2 "" H 6900 2950 50  0001 C CNN
+F 3 "" H 6900 2950 50  0001 C CNN
+	1    6900 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2950 6900 2900
+Wire Wire Line
+	6900 2700 7150 2700
+Connection ~ 6900 2700
+Wire Wire Line
+	6900 2700 6900 2800
+Text Notes 6700 3350 0    50   ~ 0
+Output voltage divider:\n400V in, 1.99V out\n80mW
+$Comp
+L agg:C C?
+U 1 1 5D63F28B
+P 7150 2800
+AR Path="/5D63F28B" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F28B" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F28B" Ref="C?"  Part="1" 
+F 0 "C?" H 7200 2870 50  0000 C CNN
+F 1 "100p" H 7200 2730 50  0000 C CNN
+F 2 "agg:0603" H 7150 2800 50  0001 C CNN
+F 3 "" H 7150 2800 50  0001 C CNN
+F 4 "50V" H 7150 2800 50  0001 C CNN "Voltage"
+F 5 "9406115" H 7150 2800 50  0001 C CNN "Farnell"
+	1    7150 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 2800 7150 2700
+Connection ~ 7150 2700
+Wire Wire Line
+	7150 2700 7300 2700
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F294
+P 7150 2950
+AR Path="/5D63F294" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F294" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F294" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7020 2990 50  0001 L CNN
+F 1 "GND" H 7150 2850 50  0000 C CNN
+F 2 "" H 7150 2950 50  0001 C CNN
+F 3 "" H 7150 2950 50  0001 C CNN
+	1    7150 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2950 7150 2900
+Text HLabel 7350 2700 2    50   Output ~ 0
+V_OUT
+Wire Wire Line
+	4500 3750 4500 3800
+Text Notes 8350 4250 0    50   ~ 0
+Output current monitoring:\nV(I_OUT) = 0.1A * 0.5R * (50k/1k)\n= 2.5V at 100mA\nRC gives -3dB at 160Hz
+Wire Wire Line
+	4500 3600 4700 3600
+Wire Wire Line
+	6500 2100 6500 2250
+Wire Wire Line
+	6150 2500 6150 2100
+Wire Wire Line
+	6150 2950 6150 2600
+Wire Wire Line
+	6500 2500 6500 2350
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F2FA
+P 6500 2950
+AR Path="/5D63F2FA" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F2FA" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F2FA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6370 2990 50  0001 L CNN
+F 1 "GND" H 6500 2850 50  0000 C CNN
+F 2 "" H 6500 2950 50  0001 C CNN
+F 3 "" H 6500 2950 50  0001 C CNN
+	1    6500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5D63F300
+P 6150 2950
+AR Path="/5D63F300" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5D63F300" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5D63F300" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6020 2990 50  0001 L CNN
+F 1 "GND" H 6150 2850 50  0000 C CNN
+F 2 "" H 6150 2950 50  0001 C CNN
+F 3 "" H 6150 2950 50  0001 C CNN
+	1    6150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:NFET_GDS Q?
+U 1 1 5D63F354
+P 4500 2700
+F 0 "Q?" H 4250 2730 50  0000 L CNN
+F 1 "STB45N60DM2AG" H 4415 2535 50  0001 R CNN
+F 2 "agg:D2PAK_GDS" H 4500 2700 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stb45n60dm2ag.pdf" H 4500 2700 50  0001 C CNN
+F 4 "3129762" H 4500 2700 50  0001 C CNN "Farnell"
+	1    4500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:CP C?
+U 1 1 5D63F3A7
+P 6150 2100
+AR Path="/5D63F3A7" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F3A7" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F3A7" Ref="C?"  Part="1" 
+F 0 "C?" H 6200 2170 50  0000 C CNN
+F 1 "68µ" H 6200 2030 50  0000 C CNN
+F 2 "agg:PANASONIC-SMDCAP-K" H 6150 2100 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1202.pdf" H 6150 2100 50  0001 C CNN
+F 4 "250V" H 6200 1950 50  0000 C CNN "Voltage"
+F 5 "2326343" H 6150 2100 50  0001 C CNN "Farnell"
+	1    6150 2100
+	0    1    -1   0   
+$EndComp
+$Comp
+L agg:CP C?
+U 1 1 5D63F3AF
+P 6150 2600
+AR Path="/5D63F3AF" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F3AF" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F3AF" Ref="C?"  Part="1" 
+F 0 "C?" H 6200 2670 50  0000 C CNN
+F 1 "68µ" H 6200 2530 50  0000 C CNN
+F 2 "agg:PANASONIC-SMDCAP-K" H 6150 2600 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1202.pdf" H 6150 2600 50  0001 C CNN
+F 4 "250V" H 6200 2450 50  0000 C CNN "Voltage"
+F 5 "2326343" H 6150 2600 50  0001 C CNN "Farnell"
+	1    6150 2600
+	0    1    -1   0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63F3B7
+P 6500 2000
+AR Path="/5D63F3B7" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F3B7" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F3B7" Ref="C?"  Part="1" 
+F 0 "C?" H 6550 2070 50  0000 C CNN
+F 1 "1µ" H 6550 1930 50  0000 C CNN
+F 2 "agg:2220" H 6500 2000 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2048632.pdf" H 6500 2000 50  0001 C CNN
+F 4 "250V" H 6550 1850 50  0000 C CNN "Voltage"
+F 5 "1828845" H 6500 2000 50  0001 C CNN "Farnell"
+	1    6500 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63F3BF
+P 6500 2250
+AR Path="/5D63F3BF" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F3BF" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F3BF" Ref="C?"  Part="1" 
+F 0 "C?" H 6550 2320 50  0000 C CNN
+F 1 "1µ" H 6550 2180 50  0000 C CNN
+F 2 "agg:2220" H 6500 2250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2048632.pdf" H 6500 2250 50  0001 C CNN
+F 4 "250V" H 6550 2100 50  0000 C CNN "Voltage"
+F 5 "1828845" H 6500 2250 50  0001 C CNN "Farnell"
+	1    6500 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5D63F3C8
+P 3100 1600
+AR Path="/5D63F3C8" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5D63F3C8" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5D63F3C8" Ref="C?"  Part="1" 
+F 0 "C?" H 3150 1670 50  0000 C CNN
+F 1 "10µ" H 3150 1530 50  0000 C CNN
+F 2 "agg:1210" H 3100 1600 50  0001 C CNN
+F 3 "" H 3100 1600 50  0001 C CNN
+F 4 "50V" H 3150 1450 50  0000 C CNN "Voltage"
+F 5 "2781426" H 3100 1600 50  0001 C CNN "Farnell"
+	1    3100 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5D63F3DA
+P 8050 2450
+AR Path="/5D63F3DA" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F3DA" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F3DA" Ref="R?"  Part="1" 
+F 0 "R?" H 8100 2500 50  0000 C CNN
+F 1 "100k" H 8100 2400 50  0000 C CNN
+F 2 "agg:1206" H 8050 2450 50  0001 C CNN
+F 3 "" H 8050 2450 50  0001 C CNN
+F 4 "2447453" H 8050 2450 50  0001 C CNN "Farnell"
+F 5 "200V" H 8050 2450 50  0001 C CNN "Voltage"
+	1    8050 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 2450 8050 2300
+$Comp
+L agg:R R?
+U 1 1 5D63F3E3
+P 8050 2700
+AR Path="/5D63F3E3" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F3E3" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F3E3" Ref="R?"  Part="1" 
+F 0 "R?" H 8100 2750 50  0000 C CNN
+F 1 "100k" H 8100 2650 50  0000 C CNN
+F 2 "agg:1206" H 8050 2700 50  0001 C CNN
+F 3 "" H 8050 2700 50  0001 C CNN
+F 4 "2447453" H 8050 2700 50  0001 C CNN "Farnell"
+F 5 "200V" H 8050 2700 50  0001 C CNN "Voltage"
+	1    8050 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 2700 8050 2550
+$Comp
+L agg:TESTPAD TP?
+U 1 1 5D63F412
+P 3100 3000
+AR Path="/5D63F412" Ref="TP?"  Part="1" 
+AR Path="/6147A5D5/5D63F412" Ref="TP?"  Part="1" 
+AR Path="/5D647F49/5D63F412" Ref="TP?"  Part="1" 
+F 0 "TP?" V 3200 3000 50  0000 C CNN
+F 1 "TESTPAD" H 3100 2925 50  0001 L CNN
+F 2 "agg:SIL-254P-01" H 3100 2850 50  0001 L CNN
+F 3 "" H 3100 3000 50  0001 C CNN
+	1    3100 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:TESTPAD TP?
+U 1 1 5D63F42B
+P 7300 2750
+AR Path="/5D63F42B" Ref="TP?"  Part="1" 
+AR Path="/6147A5D5/5D63F42B" Ref="TP?"  Part="1" 
+AR Path="/5D647F49/5D63F42B" Ref="TP?"  Part="1" 
+F 0 "TP?" H 7300 2800 50  0000 L CNN
+F 1 "TESTPAD" H 7300 2675 50  0001 L CNN
+F 2 "agg:TESTPAD" H 7300 2600 50  0001 L CNN
+F 3 "" H 7300 2750 50  0001 C CNN
+	1    7300 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 2750 7300 2700
+Connection ~ 7300 2700
+Wire Wire Line
+	7300 2700 7350 2700
+$Comp
+L agg:TESTPAD TP?
+U 1 1 5D63F43C
+P 2100 2850
+AR Path="/5D63F43C" Ref="TP?"  Part="1" 
+AR Path="/6147A5D5/5D63F43C" Ref="TP?"  Part="1" 
+AR Path="/5D647F49/5D63F43C" Ref="TP?"  Part="1" 
+F 0 "TP?" V 2150 2900 50  0000 L CNN
+F 1 "TESTPAD" H 2100 2775 50  0001 L CNN
+F 2 "agg:TESTPAD" H 2100 2700 50  0001 L CNN
+F 3 "" H 2100 2850 50  0001 C CNN
+	1    2100 2850
+	0    1    -1   0   
+$EndComp
+$Comp
+L agg:24v #PWR?
+U 1 1 5D6B0436
+P 1400 1400
+F 0 "#PWR?" H 1400 1510 50  0001 L CNN
+F 1 "24v" H 1400 1490 50  0000 C CNN
+F 2 "" H 1400 1400 50  0001 C CNN
+F 3 "" H 1400 1400 50  0001 C CNN
+	1    1400 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1400 1400 1450
+$Comp
+L agg:GA3459-BL T?
+U 1 1 5D742CF1
+P 4900 1850
+F 0 "T?" H 4900 2350 50  0000 C CNN
+F 1 "GA3459-BL" H 4900 1350 50  0000 C CNN
+F 2 "agg:GA3459-BL" H 4900 1250 50  0001 C CNN
+F 3 "https://www.coilcraft.com/pdfs/ga3459.pdf" H 4800 1850 50  0001 C CNN
+	1    4900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1750 4500 1750
+Wire Wire Line
+	4500 1750 4500 1650
+Connection ~ 4500 1450
+Wire Wire Line
+	4500 1450 4600 1450
+Wire Wire Line
+	4500 1650 4600 1650
+Connection ~ 4500 1650
+Wire Wire Line
+	4500 1650 4500 1550
+Wire Wire Line
+	4600 1550 4500 1550
+Connection ~ 4500 1550
+Wire Wire Line
+	4500 1550 4500 1450
+Wire Wire Line
+	4600 1950 4500 1950
+Wire Wire Line
+	4500 1950 4500 2050
+Wire Wire Line
+	4600 2250 4500 2250
+Connection ~ 4500 2250
+Wire Wire Line
+	4600 2150 4500 2150
+Connection ~ 4500 2150
+Wire Wire Line
+	4500 2150 4500 2250
+Wire Wire Line
+	4600 2050 4500 2050
+Connection ~ 4500 2050
+Wire Wire Line
+	4500 2050 4500 2150
+Wire Wire Line
+	4300 1700 4300 1550
+Wire Wire Line
+	4300 1550 4500 1550
+Wire Wire Line
+	4300 1800 4300 1900
+Wire Wire Line
+	4300 2000 4300 2150
+Wire Wire Line
+	4300 2150 4500 2150
+Wire Wire Line
+	4200 3150 4200 3050
+Wire Wire Line
+	3950 2800 4200 2800
+Wire Wire Line
+	4200 2950 4200 2800
+Connection ~ 4200 2800
+Wire Wire Line
+	4200 2800 4300 2800
+$Comp
+L agg:15v #PWR?
+U 1 1 5DBB09CB
+P 3300 2750
+AR Path="/5DBB09CB" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5DBB09CB" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5DBB09CB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3300 2860 50  0001 L CNN
+F 1 "15v" H 3300 2840 50  0000 C CNN
+F 2 "" H 3300 2750 50  0001 C CNN
+F 3 "" H 3300 2750 50  0001 C CNN
+	1    3300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2750 3300 2800
+Wire Wire Line
+	3300 2800 3350 2800
+$Comp
+L agg:GND #PWR?
+U 1 1 5DBC68AD
+P 3300 3050
+AR Path="/5DBC68AD" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5DBC68AD" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5DBC68AD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3170 3090 50  0001 L CNN
+F 1 "GND" H 3300 2950 50  0000 C CNN
+F 2 "" H 3300 3050 50  0001 C CNN
+F 3 "" H 3300 3050 50  0001 C CNN
+	1    3300 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3050 3300 3000
+Wire Wire Line
+	3300 3000 3350 3000
+Wire Wire Line
+	5200 1750 5550 1750
+Wire Wire Line
+	5650 1750 6150 1750
+Wire Wire Line
+	6150 1750 6150 2000
+Wire Wire Line
+	6150 1750 6500 1750
+Wire Wire Line
+	6500 1750 6500 2000
+Connection ~ 6150 1750
+Wire Wire Line
+	6500 1750 6900 1750
+Wire Wire Line
+	6900 1750 6900 1900
+Connection ~ 6500 1750
+Wire Wire Line
+	6900 1750 8050 1750
+Connection ~ 6900 1750
+Wire Wire Line
+	3800 1450 4500 1450
+$Comp
+L agg:CP C?
+U 1 1 5E069923
+P 2400 1700
+AR Path="/5E069923" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E069923" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E069923" Ref="C?"  Part="1" 
+F 0 "C?" H 2450 1770 50  0000 C CNN
+F 1 "100µ" H 2450 1630 50  0000 C CNN
+F 2 "agg:PANASONIC-SMDCAP-G" H 2400 1700 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1187.pdf" H 2400 1700 50  0001 C CNN
+F 4 "50V" H 2450 1550 50  0000 C CNN "Voltage"
+F 5 "2079271" H 2400 1700 50  0001 C CNN "Farnell"
+	1    2400 1700
+	0    1    -1   0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5E0B38FE
+P 2400 1800
+AR Path="/5E0B38FE" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E0B38FE" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E0B38FE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2270 1840 50  0001 L CNN
+F 1 "GND" H 2400 1700 50  0000 C CNN
+F 2 "" H 2400 1800 50  0001 C CNN
+F 3 "" H 2400 1800 50  0001 C CNN
+	1    2400 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1800 2400 1700
+Wire Wire Line
+	2400 1600 2400 1450
+Connection ~ 2400 1450
+$Comp
+L agg:CP C?
+U 1 1 5E0FAF92
+P 2050 1700
+AR Path="/5E0FAF92" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E0FAF92" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E0FAF92" Ref="C?"  Part="1" 
+F 0 "C?" H 2100 1770 50  0000 C CNN
+F 1 "100µ" H 2100 1630 50  0000 C CNN
+F 2 "agg:PANASONIC-SMDCAP-G" H 2050 1700 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1187.pdf" H 2050 1700 50  0001 C CNN
+F 4 "50V" H 2100 1550 50  0000 C CNN "Voltage"
+F 5 "2079271" H 2050 1700 50  0001 C CNN "Farnell"
+	1    2050 1700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2050 1600 2050 1450
+Connection ~ 2050 1450
+Wire Wire Line
+	2050 1450 2400 1450
+$Comp
+L agg:GND #PWR?
+U 1 1 5E112E71
+P 2050 1800
+AR Path="/5E112E71" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E112E71" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E112E71" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1920 1840 50  0001 L CNN
+F 1 "GND" H 2050 1700 50  0000 C CNN
+F 2 "" H 2050 1800 50  0001 C CNN
+F 3 "" H 2050 1800 50  0001 C CNN
+	1    2050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1800 2050 1700
+Connection ~ 3800 1450
+Connection ~ 3100 1450
+Connection ~ 2750 1450
+Wire Wire Line
+	2750 1450 3100 1450
+Wire Wire Line
+	2400 1450 2750 1450
+Wire Wire Line
+	2750 1600 2750 1450
+Wire Wire Line
+	2750 1800 2750 1700
+$Comp
+L agg:GND #PWR?
+U 1 1 5E1D1233
+P 2750 1800
+AR Path="/5E1D1233" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E1D1233" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E1D1233" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2620 1840 50  0001 L CNN
+F 1 "GND" H 2750 1700 50  0000 C CNN
+F 2 "" H 2750 1800 50  0001 C CNN
+F 3 "" H 2750 1800 50  0001 C CNN
+	1    2750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5E1B828F
+P 2750 1600
+AR Path="/5E1B828F" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E1B828F" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E1B828F" Ref="C?"  Part="1" 
+F 0 "C?" H 2800 1670 50  0000 C CNN
+F 1 "10µ" H 2800 1530 50  0000 C CNN
+F 2 "agg:1210" H 2750 1600 50  0001 C CNN
+F 3 "" H 2750 1600 50  0001 C CNN
+F 4 "50V" H 2800 1450 50  0000 C CNN "Voltage"
+F 5 "2781426" H 2750 1600 50  0001 C CNN "Farnell"
+	1    2750 1600
+	0    1    1    0   
+$EndComp
+Connection ~ 3450 1450
+Wire Wire Line
+	3450 1450 3800 1450
+Wire Wire Line
+	3100 1450 3450 1450
+Wire Wire Line
+	3450 1800 3450 1700
+$Comp
+L agg:GND #PWR?
+U 1 1 5E17FB3D
+P 3450 1800
+AR Path="/5E17FB3D" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E17FB3D" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E17FB3D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3320 1840 50  0001 L CNN
+F 1 "GND" H 3450 1700 50  0000 C CNN
+F 2 "" H 3450 1800 50  0001 C CNN
+F 3 "" H 3450 1800 50  0001 C CNN
+	1    3450 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1450 3450 1600
+$Comp
+L agg:C C?
+U 1 1 5E14F196
+P 3450 1600
+AR Path="/5E14F196" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E14F196" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E14F196" Ref="C?"  Part="1" 
+F 0 "C?" H 3500 1670 50  0000 C CNN
+F 1 "1µ" H 3500 1530 50  0000 C CNN
+F 2 "agg:1206" H 3450 1600 50  0001 C CNN
+F 3 "" H 3450 1600 50  0001 C CNN
+F 4 "50V" H 3500 1450 50  0000 C CNN "Voltage"
+F 5 "1759454" H 3450 1600 50  0001 C CNN "Farnell"
+	1    3450 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5E24B12C
+P 5350 2500
+AR Path="/5E24B12C" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E24B12C" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E24B12C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5220 2540 50  0001 L CNN
+F 1 "GND" H 5350 2400 50  0000 C CNN
+F 2 "" H 5350 2500 50  0001 C CNN
+F 3 "" H 5350 2500 50  0001 C CNN
+	1    5350 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1950 5350 1950
+Wire Wire Line
+	5350 1950 5350 2500
+Wire Wire Line
+	3100 3000 3100 2900
+Wire Wire Line
+	3000 2900 3100 2900
+Connection ~ 3100 2900
+Wire Wire Line
+	3100 2900 3350 2900
+$Comp
+L agg:C C?
+U 1 1 5E2D030F
+P 6500 2500
+AR Path="/5E2D030F" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E2D030F" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E2D030F" Ref="C?"  Part="1" 
+F 0 "C?" H 6550 2570 50  0000 C CNN
+F 1 "1µ" H 6550 2430 50  0000 C CNN
+F 2 "agg:2220" H 6500 2500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2048632.pdf" H 6500 2500 50  0001 C CNN
+F 4 "250V" H 6550 2350 50  0000 C CNN "Voltage"
+F 5 "1828845" H 6500 2500 50  0001 C CNN "Farnell"
+	1    6500 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 2600 6500 2950
+$Comp
+L agg:R R?
+U 1 1 5E4D8340
+P 4500 3650
+AR Path="/5E4D8340" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5E4D8340" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5E4D8340" Ref="R?"  Part="1" 
+F 0 "R?" H 4550 3700 50  0000 C CNN
+F 1 "10m" H 4550 3600 50  0000 C CNN
+F 2 "agg:1206" H 4500 3650 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf" H 4500 3650 50  0001 C CNN
+F 4 "2145283" H 4500 3650 50  0001 C CNN "Farnell"
+	1    4500 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5E95E45D
+P 10700 3650
+AR Path="/5E95E45D" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E95E45D" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E95E45D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 10570 3690 50  0001 L CNN
+F 1 "GND" H 10700 3550 50  0000 C CNN
+F 2 "" H 10700 3650 50  0001 C CNN
+F 3 "" H 10700 3650 50  0001 C CNN
+	1    10700 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 3650 10700 1850
+Wire Wire Line
+	10700 1850 10750 1850
+$Comp
+L agg:ZENER D?
+U 1 1 5E9A50F8
+P 8750 2000
+F 0 "D?" H 8800 2070 50  0000 C CNN
+F 1 "ADR5045" H 8800 1930 50  0001 C CNN
+F 2 "agg:SOT-23" H 8750 2000 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/adr5040_5041_5043_5044_5045.pdf" H 8750 2000 50  0001 C CNN
+F 4 "2460166" H 8750 2000 50  0001 C CNN "Farnell"
+F 5 "5V" H 8800 1900 50  0000 C CNN "Voltage"
+	1    8750 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:ZENER D?
+U 1 1 5E9A5EFD
+P 8750 2300
+F 0 "D?" H 8800 2370 50  0000 C CNN
+F 1 "ADR5045" H 8800 2230 50  0001 C CNN
+F 2 "agg:SOT-23" H 8750 2300 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/adr5040_5041_5043_5044_5045.pdf" H 8750 2300 50  0001 C CNN
+F 4 "2460166" H 8750 2300 50  0001 C CNN "Farnell"
+F 5 "5V" H 8800 2200 50  0000 C CNN "Voltage"
+	1    8750 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5E9A7849
+P 8750 3650
+AR Path="/5E9A7849" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5E9A7849" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5E9A7849" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8620 3690 50  0001 L CNN
+F 1 "GND" H 8750 3550 50  0000 C CNN
+F 2 "" H 8750 3650 50  0001 C CNN
+F 3 "" H 8750 3650 50  0001 C CNN
+	1    8750 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2700 8750 2600
+Wire Wire Line
+	8750 2300 8750 2100
+Wire Wire Line
+	8750 2000 8750 1750
+Connection ~ 8750 1750
+$Comp
+L agg:C C?
+U 1 1 5E9D571D
+P 9250 2150
+AR Path="/5E9D571D" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5E9D571D" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5E9D571D" Ref="C?"  Part="1" 
+F 0 "C?" H 9300 2220 50  0000 C CNN
+F 1 "100n" H 9300 2080 50  0000 C CNN
+F 2 "agg:0603" H 9250 2150 50  0001 C CNN
+F 3 "" H 9250 2150 50  0001 C CNN
+F 4 "50V" H 9250 2150 50  0001 C CNN "Voltage"
+F 5 "2320803" H 9250 2150 50  0001 C CNN "Farnell"
+	1    9250 2150
+	0    1    1    0   
+$EndComp
+Connection ~ 8750 2600
+Wire Wire Line
+	8750 2600 8750 2400
+$Comp
+L agg:INA139 IC?
+U 1 1 5E9F89AF
+P 9850 2100
+AR Path="/5E9F89AF" Ref="IC?"  Part="1" 
+AR Path="/6147A5D5/5E9F89AF" Ref="IC?"  Part="1" 
+AR Path="/5D647F49/5E9F89AF" Ref="IC?"  Part="1" 
+F 0 "IC?" V 10050 2000 50  0000 R CNN
+F 1 "INA139" V 10050 2200 50  0000 L CNN
+F 2 "agg:SOT-23-5" H 9550 1700 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina139.pdf" H 9550 1600 50  0001 L CNN
+F 4 "1470398" H 9550 1500 50  0001 L CNN "Farnell"
+	1    9850 2100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9900 1750 9950 1750
+$Comp
+L agg:R R?
+U 1 1 5E4DE5AD
+P 9900 1750
+AR Path="/5E4DE5AD" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5E4DE5AD" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5E4DE5AD" Ref="R?"  Part="1" 
+F 0 "R?" H 9950 1800 50  0000 C CNN
+F 1 "500m" H 9950 1700 50  0000 C CNN
+F 2 "agg:1206" H 9900 1750 50  0001 C CNN
+F 3 "" H 9900 1750 50  0001 C CNN
+	1    9900 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9750 1900 9750 1750
+Connection ~ 9750 1750
+Wire Wire Line
+	9750 1750 9800 1750
+Wire Wire Line
+	9950 1900 9950 1750
+Connection ~ 9950 1750
+Wire Wire Line
+	9950 1750 10750 1750
+Wire Wire Line
+	10150 2600 10150 2200
+Wire Wire Line
+	10150 2200 10050 2200
+Wire Wire Line
+	9650 2200 9400 2200
+Wire Wire Line
+	9400 2200 9400 1750
+Connection ~ 9400 1750
+Wire Wire Line
+	9400 1750 9750 1750
+Wire Wire Line
+	9850 2700 9850 2500
+Wire Wire Line
+	9650 2900 9500 2900
+Wire Wire Line
+	9500 2900 9500 2600
+Connection ~ 9500 2600
+Wire Wire Line
+	9500 2600 10150 2600
+$Comp
+L agg:GND #PWR?
+U 1 1 5EAF0D65
+P 9850 3650
+AR Path="/5EAF0D65" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5EAF0D65" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5EAF0D65" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9720 3690 50  0001 L CNN
+F 1 "GND" H 9850 3550 50  0000 C CNN
+F 2 "" H 9850 3650 50  0001 C CNN
+F 3 "" H 9850 3650 50  0001 C CNN
+	1    9850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:TESTPAD TP?
+U 1 1 5EB148BA
+P 10250 3200
+AR Path="/5EB148BA" Ref="TP?"  Part="1" 
+AR Path="/6147A5D5/5EB148BA" Ref="TP?"  Part="1" 
+AR Path="/5D647F49/5EB148BA" Ref="TP?"  Part="1" 
+F 0 "TP?" V 10300 3250 50  0000 L CNN
+F 1 "TESTPAD" H 10250 3125 50  0001 L CNN
+F 2 "agg:TESTPAD" H 10250 3050 50  0001 L CNN
+F 3 "" H 10250 3200 50  0001 C CNN
+	1    10250 3200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	10250 3200 10250 3250
+Connection ~ 10250 3250
+Wire Wire Line
+	10250 3250 10100 3250
+$Comp
+L agg:C C?
+U 1 1 5EB31330
+P 9000 2150
+AR Path="/5EB31330" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5EB31330" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5EB31330" Ref="C?"  Part="1" 
+F 0 "C?" H 9050 2220 50  0000 C CNN
+F 1 "1µ" H 9050 2080 50  0000 C CNN
+F 2 "agg:0603" H 9000 2150 50  0001 C CNN
+F 3 "" H 9000 2150 50  0001 C CNN
+F 4 "16V" H 9000 2150 50  0001 C CNN "Voltage"
+F 5 "2320814" H 9000 2150 50  0001 C CNN "Farnell"
+	1    9000 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 2600 9000 2600
+Wire Wire Line
+	8750 1750 9000 1750
+Wire Wire Line
+	9000 2150 9000 1750
+Connection ~ 9000 1750
+Wire Wire Line
+	9000 1750 9250 1750
+Wire Wire Line
+	9000 2250 9000 2600
+Connection ~ 9000 2600
+Wire Wire Line
+	9000 2600 9250 2600
+Wire Wire Line
+	9250 2150 9250 1750
+Connection ~ 9250 1750
+Wire Wire Line
+	9250 1750 9400 1750
+Wire Wire Line
+	9250 2250 9250 2600
+Connection ~ 9250 2600
+Wire Wire Line
+	9250 2600 9500 2600
+Wire Wire Line
+	8750 3650 8750 3550
+Wire Wire Line
+	8750 3450 8750 3300
+Wire Wire Line
+	8750 3200 8750 3050
+Wire Wire Line
+	8750 2950 8750 2800
+Wire Wire Line
+	1750 1450 1800 1450
+Wire Wire Line
+	1400 1450 1600 1450
+Wire Wire Line
+	1600 2200 1600 1450
+Connection ~ 1600 1450
+Wire Wire Line
+	1600 1450 1650 1450
+Wire Wire Line
+	1800 2200 1800 1450
+Connection ~ 1800 1450
+Wire Wire Line
+	1800 1450 2050 1450
+Wire Wire Line
+	1400 2450 1400 2500
+Wire Wire Line
+	1400 2500 1500 2500
+Wire Wire Line
+	1900 2500 2000 2500
+Wire Wire Line
+	2000 2500 2000 2550
+Wire Wire Line
+	1700 2800 1700 2900
+$Comp
+L agg:R R?
+U 1 1 5EE12F13
+P 4800 3800
+AR Path="/5EE12F13" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5EE12F13" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5EE12F13" Ref="R?"  Part="1" 
+F 0 "R?" H 4850 3850 50  0000 C CNN
+F 1 "1k" H 4850 3750 50  0000 C CNN
+F 2 "agg:0603" H 4800 3800 50  0001 C CNN
+F 3 "" H 4800 3800 50  0001 C CNN
+F 4 "2447272" H 4800 3800 50  0001 C CNN "Farnell"
+F 5 "50V" H 4800 3800 50  0001 C CNN "Voltage"
+	1    4800 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4700 3800 4500 3800
+Connection ~ 4500 3800
+Wire Wire Line
+	4500 3800 4500 4000
+Wire Wire Line
+	4800 3600 5000 3600
+Wire Wire Line
+	4800 3800 4900 3800
+Wire Wire Line
+	5300 3900 5300 3950
+$Comp
+L agg:GND #PWR?
+U 1 1 5EEE72A8
+P 5300 3950
+AR Path="/5EEE72A8" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5EEE72A8" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5EEE72A8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5170 3990 50  0001 L CNN
+F 1 "GND" H 5300 3850 50  0000 C CNN
+F 2 "" H 5300 3950 60  0001 C CNN
+F 3 "" H 5300 3950 60  0001 C CNN
+	1    5300 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3450 5300 3500
+Text HLabel 5750 3700 2    50   Output ~ 0
+I_Q
+Wire Wire Line
+	5750 3700 5650 3700
+$Comp
+L agg:R R?
+U 1 1 5EF29045
+P 5350 4250
+AR Path="/5EF29045" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5EF29045" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5EF29045" Ref="R?"  Part="1" 
+F 0 "R?" H 5400 4300 50  0000 C CNN
+F 1 "100k" H 5400 4200 50  0000 C CNN
+F 2 "agg:0603" H 5350 4250 50  0001 C CNN
+F 3 "" H 5350 4250 50  0001 C CNN
+F 4 "2447226" H 5350 4250 50  0001 C CNN "Farnell"
+F 5 "50V" H 5350 4250 50  0001 C CNN "Voltage"
+	1    5350 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 3700 5650 4250
+Wire Wire Line
+	5650 4250 5450 4250
+Connection ~ 5650 3700
+Wire Wire Line
+	5650 3700 5600 3700
+Wire Wire Line
+	5250 4250 5150 4250
+Wire Wire Line
+	4900 4250 4900 3800
+Connection ~ 4900 3800
+Wire Wire Line
+	4900 3800 5000 3800
+$Comp
+L agg:R R?
+U 1 1 5EF3F692
+P 5350 4450
+AR Path="/5EF3F692" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5EF3F692" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5EF3F692" Ref="R?"  Part="1" 
+F 0 "R?" H 5400 4500 50  0000 C CNN
+F 1 "100k" H 5400 4400 50  0000 C CNN
+F 2 "agg:0603" H 5350 4450 50  0001 C CNN
+F 3 "" H 5350 4450 50  0001 C CNN
+F 4 "2447226" H 5350 4450 50  0001 C CNN "Farnell"
+F 5 "50V" H 5350 4450 50  0001 C CNN "Voltage"
+	1    5350 4450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5350 4450 5450 4450
+Wire Wire Line
+	5450 4450 5450 4250
+Connection ~ 5450 4250
+Wire Wire Line
+	5450 4250 5350 4250
+Wire Wire Line
+	5250 4450 5150 4450
+Wire Wire Line
+	5150 4450 5150 4250
+Connection ~ 5150 4250
+Wire Wire Line
+	5150 4250 4900 4250
+Wire Wire Line
+	5650 3650 5650 3700
+$Comp
+L agg:PNP Q?
+U 1 1 5F00A3C1
+P 9850 2900
+F 0 "Q?" H 9980 2920 50  0000 L BNN
+F 1 "PBHV9050T" H 9980 2880 50  0000 L TNN
+F 2 "agg:SOT-23" H 9880 2820 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/609431.pdf" H 9980 2920 50  0001 C CNN
+F 4 "1829318" H 9850 2900 50  0001 C CNN "Farnell"
+F 5 "500V" H 9850 2900 50  0001 C CNN "Voltage"
+	1    9850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 3100 9850 3250
+Wire Wire Line
+	8050 1750 8750 1750
+Connection ~ 8050 1750
+Text Notes 9100 3700 1    50   ~ 0
+60µA bias for ADR5045\n100µA max for INA139\n2Mohm 390V gives 195µA
+Text Notes 8600 2500 1    50   ~ 0
+2x ADR5045\nshunt references
+$Comp
+L agg:R R?
+U 1 1 5F0D3AC3
+P 8750 2700
+AR Path="/5F0D3AC3" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F0D3AC3" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F0D3AC3" Ref="R?"  Part="1" 
+F 0 "R?" H 8800 2750 50  0000 C CNN
+F 1 "499k" H 8800 2650 50  0000 C CNN
+F 2 "agg:0805" H 8750 2700 50  0001 C CNN
+F 3 "" H 8750 2700 50  0001 C CNN
+F 4 "2447667" H 8750 2700 50  0001 C CNN "Farnell"
+F 5 "150V" H 8750 2700 50  0001 C CNN "Voltage"
+	1    8750 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5F0D43D8
+P 8750 2950
+AR Path="/5F0D43D8" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F0D43D8" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F0D43D8" Ref="R?"  Part="1" 
+F 0 "R?" H 8800 3000 50  0000 C CNN
+F 1 "499k" H 8800 2900 50  0000 C CNN
+F 2 "agg:0805" H 8750 2950 50  0001 C CNN
+F 3 "" H 8750 2950 50  0001 C CNN
+F 4 "2447667" H 8750 2950 50  0001 C CNN "Farnell"
+F 5 "150V" H 8750 2950 50  0001 C CNN "Voltage"
+	1    8750 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5F0D4796
+P 8750 3200
+AR Path="/5F0D4796" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F0D4796" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F0D4796" Ref="R?"  Part="1" 
+F 0 "R?" H 8800 3250 50  0000 C CNN
+F 1 "499k" H 8800 3150 50  0000 C CNN
+F 2 "agg:0805" H 8750 3200 50  0001 C CNN
+F 3 "" H 8750 3200 50  0001 C CNN
+F 4 "2447667" H 8750 3200 50  0001 C CNN "Farnell"
+F 5 "150V" H 8750 3200 50  0001 C CNN "Voltage"
+	1    8750 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5F0D4BC2
+P 8750 3450
+AR Path="/5F0D4BC2" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F0D4BC2" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F0D4BC2" Ref="R?"  Part="1" 
+F 0 "R?" H 8800 3500 50  0000 C CNN
+F 1 "499k" H 8800 3400 50  0000 C CNN
+F 2 "agg:0805" H 8750 3450 50  0001 C CNN
+F 3 "" H 8750 3450 50  0001 C CNN
+F 4 "2447667" H 8750 3450 50  0001 C CNN "Farnell"
+F 5 "150V" H 8750 3450 50  0001 C CNN "Voltage"
+	1    8750 3450
+	0    1    1    0   
+$EndComp
+Text Notes 2800 1350 0    50   ~ 0
+24V 2.5A
+Text Notes 7250 1650 0    50   ~ 0
+400V 100mA
+$Comp
+L agg:C C?
+U 1 1 5F1486E6
+P 10100 3400
+AR Path="/5F1486E6" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5F1486E6" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5F1486E6" Ref="C?"  Part="1" 
+F 0 "C?" H 10150 3470 50  0000 C CNN
+F 1 "10n" H 10150 3330 50  0000 C CNN
+F 2 "agg:0805" H 10100 3400 50  0001 C CNN
+F 3 "" H 10100 3400 50  0001 C CNN
+F 4 "25V" H 10100 3400 50  0001 C CNN "Voltage"
+F 5 "1457736" H 10100 3400 50  0001 C CNN "Farnell"
+	1    10100 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10100 3400 10100 3250
+Connection ~ 10100 3250
+Wire Wire Line
+	10100 3250 9850 3250
+$Comp
+L agg:GND #PWR?
+U 1 1 5F172F11
+P 10100 3650
+AR Path="/5F172F11" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F172F11" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F172F11" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9970 3690 50  0001 L CNN
+F 1 "GND" H 10100 3550 50  0000 C CNN
+F 2 "" H 10100 3650 50  0001 C CNN
+F 3 "" H 10100 3650 50  0001 C CNN
+	1    10100 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 3650 10100 3500
+Wire Wire Line
+	2100 2850 2100 2900
+$Comp
+L agg:24v #PWR?
+U 1 1 5F199BA9
+P 1400 2450
+F 0 "#PWR?" H 1400 2560 50  0001 L CNN
+F 1 "24v" H 1400 2540 50  0000 C CNN
+F 2 "" H 1400 2450 50  0001 C CNN
+F 3 "" H 1400 2450 50  0001 C CNN
+	1    1400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:24v #PWR?
+U 1 1 5F19A593
+P 1100 2450
+F 0 "#PWR?" H 1100 2560 50  0001 L CNN
+F 1 "24v" H 1100 2540 50  0000 C CNN
+F 2 "" H 1100 2450 50  0001 C CNN
+F 3 "" H 1100 2450 50  0001 C CNN
+	1    1100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:24v #PWR?
+U 1 1 5F19A961
+P 850 2450
+F 0 "#PWR?" H 850 2560 50  0001 L CNN
+F 1 "24v" H 850 2540 50  0000 C CNN
+F 2 "" H 850 2450 50  0001 C CNN
+F 3 "" H 850 2450 50  0001 C CNN
+	1    850  2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:AD8605 IC?
+U 1 1 5F1A30A6
+P 2000 3850
+F 0 "IC?" V 1950 4150 50  0000 C CNN
+F 1 "AD8605" V 1950 3500 50  0000 C CNN
+F 2 "agg:SOT-23-5" H 2000 3500 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf" H 2000 3850 50  0001 C CNN
+F 4 "1838870" H 2000 3400 50  0001 C CNN "Farnell"
+	1    2000 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F1B75D9
+P 2250 3950
+F 0 "#PWR?" H 2250 4060 50  0001 L CNN
+F 1 "3v3" H 2250 4040 50  0000 C CNN
+F 2 "" H 2250 3950 50  0001 C CNN
+F 3 "" H 2250 3950 50  0001 C CNN
+	1    2250 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 3950 2200 3950
+$Comp
+L agg:GND #PWR?
+U 1 1 5F1C12E1
+P 1750 3950
+F 0 "#PWR?" H 1620 3990 50  0001 L CNN
+F 1 "GND" H 1750 3850 50  0000 C CNN
+F 2 "" H 1750 3950 50  0001 C CNN
+F 3 "" H 1750 3950 50  0001 C CNN
+	1    1750 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 3950 1750 3950
+$Comp
+L agg:C C?
+U 1 1 5F1CDC7E
+P 850 3900
+AR Path="/5F1CDC7E" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5F1CDC7E" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5F1CDC7E" Ref="C?"  Part="1" 
+F 0 "C?" H 900 3970 50  0000 C CNN
+F 1 "100n" H 900 3830 50  0000 C CNN
+F 2 "agg:0603" H 850 3900 50  0001 C CNN
+F 3 "" H 850 3900 50  0001 C CNN
+F 4 "50V" H 850 3900 50  0001 C CNN "Voltage"
+F 5 "2320803" H 850 3900 50  0001 C CNN "Farnell"
+	1    850  3900
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5F1CDC8A
+P 1100 3900
+AR Path="/5F1CDC8A" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5F1CDC8A" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5F1CDC8A" Ref="C?"  Part="1" 
+F 0 "C?" H 1150 3970 50  0000 C CNN
+F 1 "1µ" H 1150 3830 50  0000 C CNN
+F 2 "agg:0603" H 1100 3900 50  0001 C CNN
+F 3 "" H 1100 3900 50  0001 C CNN
+F 4 "16V" H 1100 3900 50  0001 C CNN "Voltage"
+F 5 "2320814" H 1100 3900 50  0001 C CNN "Farnell"
+	1    1100 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F1CDC94
+P 1100 3850
+AR Path="/5F1CDC94" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F1CDC94" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F1CDC94" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1100 3960 50  0001 L CNN
+F 1 "3v3" H 1100 3940 50  0000 C CNN
+F 2 "" H 1100 3850 50  0001 C CNN
+F 3 "" H 1100 3850 50  0001 C CNN
+	1    1100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F1CDC9E
+P 850 3850
+AR Path="/5F1CDC9E" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F1CDC9E" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F1CDC9E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 850 3960 50  0001 L CNN
+F 1 "3v3" H 850 3940 50  0000 C CNN
+F 2 "" H 850 3850 50  0001 C CNN
+F 3 "" H 850 3850 50  0001 C CNN
+	1    850  3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5F1CDCA8
+P 850 4050
+AR Path="/5F1CDCA8" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F1CDCA8" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F1CDCA8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 720 4090 50  0001 L CNN
+F 1 "GND" H 850 3950 50  0000 C CNN
+F 2 "" H 850 4050 50  0001 C CNN
+F 3 "" H 850 4050 50  0001 C CNN
+	1    850  4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5F1CDCB2
+P 1100 4050
+AR Path="/5F1CDCB2" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F1CDCB2" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F1CDCB2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 970 4090 50  0001 L CNN
+F 1 "GND" H 1100 3950 50  0000 C CNN
+F 2 "" H 1100 4050 50  0001 C CNN
+F 3 "" H 1100 4050 50  0001 C CNN
+	1    1100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 4050 1100 4000
+Wire Wire Line
+	1100 3900 1100 3850
+Wire Wire Line
+	850  3850 850  3900
+Wire Wire Line
+	850  4000 850  4050
+Connection ~ 2100 2900
+$Comp
+L agg:AD8605 IC?
+U 1 1 5F28FAC9
+P 10400 4250
+F 0 "IC?" V 10350 4550 50  0000 C CNN
+F 1 "AD8605" V 10350 3900 50  0000 C CNN
+F 2 "agg:SOT-23-5" H 10400 3900 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf" H 10400 4250 50  0001 C CNN
+F 4 "1838870" H 10400 3800 50  0001 C CNN "Farnell"
+	1    10400 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F28FAD3
+P 10650 4350
+F 0 "#PWR?" H 10650 4460 50  0001 L CNN
+F 1 "3v3" H 10650 4440 50  0000 C CNN
+F 2 "" H 10650 4350 50  0001 C CNN
+F 3 "" H 10650 4350 50  0001 C CNN
+	1    10650 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10650 4350 10600 4350
+$Comp
+L agg:GND #PWR?
+U 1 1 5F28FADE
+P 10150 4350
+F 0 "#PWR?" H 10020 4390 50  0001 L CNN
+F 1 "GND" H 10150 4250 50  0000 C CNN
+F 2 "" H 10150 4350 50  0001 C CNN
+F 3 "" H 10150 4350 50  0001 C CNN
+	1    10150 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10200 4350 10150 4350
+$Comp
+L agg:C C?
+U 1 1 5F28FAEB
+P 9350 4500
+AR Path="/5F28FAEB" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5F28FAEB" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5F28FAEB" Ref="C?"  Part="1" 
+F 0 "C?" H 9400 4570 50  0000 C CNN
+F 1 "100n" H 9400 4430 50  0000 C CNN
+F 2 "agg:0603" H 9350 4500 50  0001 C CNN
+F 3 "" H 9350 4500 50  0001 C CNN
+F 4 "50V" H 9350 4500 50  0001 C CNN "Voltage"
+F 5 "2320803" H 9350 4500 50  0001 C CNN "Farnell"
+	1    9350 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5F28FAF7
+P 9600 4500
+AR Path="/5F28FAF7" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5F28FAF7" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5F28FAF7" Ref="C?"  Part="1" 
+F 0 "C?" H 9650 4570 50  0000 C CNN
+F 1 "1µ" H 9650 4430 50  0000 C CNN
+F 2 "agg:0603" H 9600 4500 50  0001 C CNN
+F 3 "" H 9600 4500 50  0001 C CNN
+F 4 "16V" H 9600 4500 50  0001 C CNN "Voltage"
+F 5 "2320814" H 9600 4500 50  0001 C CNN "Farnell"
+	1    9600 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F28FB01
+P 9600 4450
+AR Path="/5F28FB01" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F28FB01" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F28FB01" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9600 4560 50  0001 L CNN
+F 1 "3v3" H 9600 4540 50  0000 C CNN
+F 2 "" H 9600 4450 50  0001 C CNN
+F 3 "" H 9600 4450 50  0001 C CNN
+	1    9600 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F28FB0B
+P 9350 4450
+AR Path="/5F28FB0B" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F28FB0B" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F28FB0B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9350 4560 50  0001 L CNN
+F 1 "3v3" H 9350 4540 50  0000 C CNN
+F 2 "" H 9350 4450 50  0001 C CNN
+F 3 "" H 9350 4450 50  0001 C CNN
+	1    9350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5F28FB15
+P 9350 4650
+AR Path="/5F28FB15" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F28FB15" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F28FB15" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9220 4690 50  0001 L CNN
+F 1 "GND" H 9350 4550 50  0000 C CNN
+F 2 "" H 9350 4650 50  0001 C CNN
+F 3 "" H 9350 4650 50  0001 C CNN
+	1    9350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5F28FB1F
+P 9600 4650
+AR Path="/5F28FB1F" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F28FB1F" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F28FB1F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9470 4690 50  0001 L CNN
+F 1 "GND" H 9600 4550 50  0000 C CNN
+F 2 "" H 9600 4650 50  0001 C CNN
+F 3 "" H 9600 4650 50  0001 C CNN
+	1    9600 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4650 9600 4600
+Wire Wire Line
+	9600 4500 9600 4450
+Wire Wire Line
+	9350 4450 9350 4500
+Wire Wire Line
+	9350 4600 9350 4650
+Wire Wire Line
+	10400 4650 10400 4750
+Wire Wire Line
+	10400 4750 10500 4750
+Wire Wire Line
+	10400 4750 9850 4750
+Wire Wire Line
+	9850 4750 9850 3900
+Wire Wire Line
+	9850 3900 10300 3900
+Wire Wire Line
+	10300 3900 10300 4050
+Connection ~ 10400 4750
+Wire Wire Line
+	10500 4050 10500 3250
+Wire Wire Line
+	10250 3250 10500 3250
+Wire Wire Line
+	2100 2900 2100 3650
+Wire Wire Line
+	1900 3650 1900 3550
+Wire Wire Line
+	1900 3550 1450 3550
+Wire Wire Line
+	1450 3550 1450 4350
+Wire Wire Line
+	1450 4350 2000 4350
+Wire Wire Line
+	2000 4350 2000 4250
+Wire Wire Line
+	2000 4350 2000 4450
+Wire Wire Line
+	2000 4450 2100 4450
+Connection ~ 2000 4350
+Wire Wire Line
+	4800 2750 4800 2800
+$Comp
+L agg:GND #PWR?
+U 1 1 5F44ABD9
+P 4800 3000
+AR Path="/5F44ABD9" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F44ABD9" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F44ABD9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4670 3040 50  0001 L CNN
+F 1 "GND" H 4800 2900 50  0000 C CNN
+F 2 "" H 4800 3000 50  0001 C CNN
+F 3 "" H 4800 3000 50  0001 C CNN
+	1    4800 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2950 4800 3000
+Connection ~ 4500 3600
+Wire Wire Line
+	4800 2800 5050 2800
+Connection ~ 4800 2800
+Wire Wire Line
+	4800 2800 4800 2850
+Text HLabel 5200 2800 2    50   Output ~ 0
+V_Q
+$Comp
+L agg:R R?
+U 1 1 5F4B0C21
+P 4800 2850
+AR Path="/5F4B0C21" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F4B0C21" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F4B0C21" Ref="R?"  Part="1" 
+F 0 "R?" H 4850 2900 50  0000 C CNN
+F 1 "1k" H 4850 2800 50  0000 C CNN
+F 2 "agg:0603" H 4800 2850 50  0001 C CNN
+F 3 "" H 4800 2850 50  0001 C CNN
+F 4 "2447272" H 4800 2850 50  0001 C CNN "Farnell"
+F 5 "50V" H 4800 2850 50  0001 C CNN "Voltage"
+	1    4800 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5F4B855B
+P 4800 2650
+AR Path="/5F4B855B" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F4B855B" Ref="R?"  Part="1" 
+F 0 "R?" H 4850 2700 50  0000 C CNN
+F 1 "10k" H 4850 2600 50  0000 C CNN
+F 2 "agg:0603" H 4800 2650 50  0001 C CNN
+F 3 "" H 4800 2650 50  0001 C CNN
+F 4 "2447230" H 4800 2650 50  0001 C CNN "Farnell"
+F 5 "50V" H 4800 2650 50  0001 C CNN "Voltage"
+	1    4800 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:R R?
+U 1 1 5F4E0E69
+P 4800 2500
+AR Path="/5F4E0E69" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F4E0E69" Ref="R?"  Part="1" 
+F 0 "R?" H 4850 2550 50  0000 C CNN
+F 1 "10k" H 4850 2450 50  0000 C CNN
+F 2 "agg:0603" H 4800 2500 50  0001 C CNN
+F 3 "" H 4800 2500 50  0001 C CNN
+F 4 "2447230" H 4800 2500 50  0001 C CNN "Farnell"
+F 5 "50V" H 4800 2500 50  0001 C CNN "Voltage"
+	1    4800 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 2600 4800 2650
+Wire Wire Line
+	4500 2250 4500 2450
+Wire Wire Line
+	4800 2500 4800 2450
+Wire Wire Line
+	4800 2450 4500 2450
+Connection ~ 4500 2450
+Wire Wire Line
+	4500 2450 4500 2600
+$Comp
+L agg:SCHOTTKY D?
+U 1 1 5F5A8324
+P 5050 2650
+F 0 "D?" H 5100 2720 50  0000 C CNN
+F 1 "NTS245SFT1G" H 5100 2580 50  0001 C CNN
+F 2 "" H 5000 2620 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1900863.pdf" H 5100 2720 50  0001 C CNN
+F 4 "2473418" H 5050 2650 50  0001 C CNN "Farnell"
+	1    5050 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5F5C4AA1
+P 5050 2600
+F 0 "#PWR?" H 5050 2710 50  0001 L CNN
+F 1 "3v3" H 5050 2690 50  0000 C CNN
+F 2 "" H 5050 2600 50  0001 C CNN
+F 3 "" H 5050 2600 50  0001 C CNN
+	1    5050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2600 5050 2650
+Wire Wire Line
+	5050 2750 5050 2800
+Connection ~ 5050 2800
+Wire Wire Line
+	5050 2800 5200 2800
+$Comp
+L agg:SCHOTTKY D?
+U 1 1 5F5E28A1
+P 5050 2850
+F 0 "D?" H 5100 2920 50  0000 C CNN
+F 1 "NTS245SFT1G" H 5100 2780 50  0001 C CNN
+F 2 "" H 5000 2820 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1900863.pdf" H 5100 2920 50  0001 C CNN
+F 4 "2473418" H 5050 2850 50  0001 C CNN "Farnell"
+	1    5050 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 2850 5050 2800
+$Comp
+L agg:GND #PWR?
+U 1 1 5F5F0F59
+P 5050 3000
+AR Path="/5F5F0F59" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F5F0F59" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F5F0F59" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4920 3040 50  0001 L CNN
+F 1 "GND" H 5050 2900 50  0000 C CNN
+F 2 "" H 5050 3000 50  0001 C CNN
+F 3 "" H 5050 3000 50  0001 C CNN
+	1    5050 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3000 5050 2950
+Text Notes 5200 3150 0    50   ~ 0
+Switch voltage sensing:\n24V+(400/10)V=64V\n64V*(1/21) = 3.05V
+Text Notes 1500 1300 0    50   ~ 0
+Input current sense:\nImax 2.5A\n2.5A*10mR=25mV\nPmax=63mW
+Text Notes 9600 1600 0    50   ~ 0
+Output current sense:\nImax 0.1A\n0.1A*500mR=50mV\nPmax=5mW
+Wire Wire Line
+	4500 2900 4500 3600
+$Comp
+L agg:R R?
+U 1 1 5EC5FDFA
+P 9850 3400
+AR Path="/5EC5FDFA" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5EC5FDFA" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5EC5FDFA" Ref="R?"  Part="1" 
+F 0 "R?" H 9900 3450 50  0000 C CNN
+F 1 "100k" H 9900 3350 50  0000 C CNN
+F 2 "agg:0603" H 9850 3400 50  0001 C CNN
+F 3 "" H 9850 3400 50  0001 C CNN
+F 4 "2447226" H 9850 3400 50  0001 C CNN "Farnell"
+F 5 "50V" H 9850 3400 50  0001 C CNN "Voltage"
+	1    9850 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 3650 9850 3500
+Connection ~ 9850 3250
+Wire Wire Line
+	9850 3250 9850 3400
+$Comp
+L agg:R R?
+U 1 1 5F6EBB44
+P 9650 3400
+AR Path="/5F6EBB44" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5F6EBB44" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5F6EBB44" Ref="R?"  Part="1" 
+F 0 "R?" H 9700 3450 50  0000 C CNN
+F 1 "100k" H 9700 3350 50  0000 C CNN
+F 2 "agg:0603" H 9650 3400 50  0001 C CNN
+F 3 "" H 9650 3400 50  0001 C CNN
+F 4 "2447226" H 9650 3400 50  0001 C CNN "Farnell"
+F 5 "50V" H 9650 3400 50  0001 C CNN "Voltage"
+	1    9650 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 3250 9650 3250
+Wire Wire Line
+	9650 3250 9650 3400
+$Comp
+L agg:GND #PWR?
+U 1 1 5F756498
+P 9650 3650
+AR Path="/5F756498" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5F756498" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5F756498" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9520 3690 50  0001 L CNN
+F 1 "GND" H 9650 3550 50  0000 C CNN
+F 2 "" H 9650 3650 50  0001 C CNN
+F 3 "" H 9650 3650 50  0001 C CNN
+	1    9650 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 3650 9650 3500
+$Comp
+L agg:R R?
+U 1 1 5D63F0C5
+P 1650 1450
+AR Path="/5D63F0C5" Ref="R?"  Part="1" 
+AR Path="/6147A5D5/5D63F0C5" Ref="R?"  Part="1" 
+AR Path="/5D647F49/5D63F0C5" Ref="R?"  Part="1" 
+F 0 "R?" H 1700 1500 50  0000 C CNN
+F 1 "10m" H 1700 1400 50  0000 C CNN
+F 2 "agg:1206" H 1650 1450 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf" H 1650 1450 50  0001 C CNN
+F 4 "2145283" H 1650 1450 50  0001 C CNN "Farnell"
+	1    1650 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:AD8605 IC?
+U 1 1 5F7846C0
+P 5200 3700
+F 0 "IC?" H 5100 3450 50  0000 C CNN
+F 1 "AD8065" H 5100 3950 50  0000 C CNN
+F 2 "agg:SOT-23-5" H 5200 3350 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8065_8066.pdf" H 5200 3700 50  0001 C CNN
+F 4 "2376729" H 5200 3250 50  0001 C CNN "Farnell"
+	1    5200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:5v #PWR?
+U 1 1 5F793F51
+P 5300 3450
+F 0 "#PWR?" H 5300 3560 50  0001 L CNN
+F 1 "5v" H 5300 3540 50  0000 C CNN
+F 2 "" H 5300 3450 50  0001 C CNN
+F 3 "" H 5300 3450 50  0001 C CNN
+	1    5300 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:5v #PWR?
+U 1 1 5F797B90
+P 5900 3950
+F 0 "#PWR?" H 5900 4060 50  0001 L CNN
+F 1 "5v" H 5900 4040 50  0000 C CNN
+F 2 "" H 5900 3950 50  0001 C CNN
+F 3 "" H 5900 3950 50  0001 C CNN
+	1    5900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:5v #PWR?
+U 1 1 5F797F52
+P 6150 3950
+F 0 "#PWR?" H 6150 4060 50  0001 L CNN
+F 1 "5v" H 6150 4040 50  0000 C CNN
+F 2 "" H 6150 3950 50  0001 C CNN
+F 3 "" H 6150 3950 50  0001 C CNN
+	1    6150 3950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
