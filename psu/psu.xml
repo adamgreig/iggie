@@ -1,0 +1,2302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/adam/Projects/iggie/psu/psu.sch</source>
+    <date>Tue 27 Aug 2019 00:27:41 BST</date>
+    <tool>Eeschema 5.1.4-e60b266~84~ubuntu18.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>IGGie PSU</title>
+        <company/>
+        <rev>1</rev>
+        <date>2019-08-26</date>
+        <source>psu.sch</source>
+        <comment number="1" value="Drawn by: AG"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Flyback/" tstamps="/5D647F49/">
+      <title_block>
+        <title>IGGie PSU</title>
+        <company/>
+        <rev>1</rev>
+        <date>2019-08-26</date>
+        <source>flyback.sch</source>
+        <comment number="1" value="Drawn by: AG"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC102">
+      <value>STM32F334K8T6</value>
+      <footprint>agg:LQFP-32</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stm32f334k8.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2469571</field>
+      </fields>
+      <libsource lib="agg" part="STM32F3xxKxTx" description="STM32F3 32 pin LQFP package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63750E</tstamp>
+    </comp>
+    <comp ref="J102">
+      <value>CTRL</value>
+      <footprint>agg:MOLEX-KK-254P-04</footprint>
+      <fields>
+        <field name="Farnell">1360132</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637515</tstamp>
+    </comp>
+    <comp ref="IC103">
+      <value>TSR 1-2450</value>
+      <footprint>agg:TSR1</footprint>
+      <datasheet>http://www.tracopower.com/products/tsr1.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1696320</field>
+      </fields>
+      <libsource lib="agg" part="TSR1" description="TSR1 Switch Mode Regulators"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63751C</tstamp>
+    </comp>
+    <comp ref="C110">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637546</tstamp>
+    </comp>
+    <comp ref="C111">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63755C</tstamp>
+    </comp>
+    <comp ref="C109">
+      <value>10µ</value>
+      <footprint>agg:1210</footprint>
+      <fields>
+        <field name="Farnell">2781426</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637572</tstamp>
+    </comp>
+    <comp ref="L101">
+      <value>FB</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">1515747</field>
+      </fields>
+      <libsource lib="agg" part="L" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6375CC</tstamp>
+    </comp>
+    <comp ref="C108">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6375E1</tstamp>
+    </comp>
+    <comp ref="C105">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6375EB</tstamp>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6375F3</tstamp>
+    </comp>
+    <comp ref="C102">
+      <value>10µ</value>
+      <footprint>agg:1210</footprint>
+      <fields>
+        <field name="Farnell">2781426</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6375FB</tstamp>
+    </comp>
+    <comp ref="C107">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63762D</tstamp>
+    </comp>
+    <comp ref="R110">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63764C</tstamp>
+    </comp>
+    <comp ref="R111">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637657</tstamp>
+    </comp>
+    <comp ref="D109">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637660</tstamp>
+    </comp>
+    <comp ref="D110">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637668</tstamp>
+    </comp>
+    <comp ref="X102">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63767F</tstamp>
+    </comp>
+    <comp ref="X104">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637685</tstamp>
+    </comp>
+    <comp ref="X103">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63768B</tstamp>
+    </comp>
+    <comp ref="X101">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637691</tstamp>
+    </comp>
+    <comp ref="Y101">
+      <value>25M</value>
+      <footprint>agg:XTAL-25x20</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2581435.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2849479</field>
+      </fields>
+      <libsource lib="agg" part="TCXO_ST" description="4 pin TCXO with Standy"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63769F</tstamp>
+    </comp>
+    <comp ref="C103">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6376A7</tstamp>
+    </comp>
+    <comp ref="X105">
+      <value>MAINS PSU</value>
+      <datasheet>http://www.farnell.com/datasheets/2547969.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2815916</field>
+      </fields>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6376EA</tstamp>
+    </comp>
+    <comp ref="D111">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6376F4</tstamp>
+    </comp>
+    <comp ref="D106">
+      <value>RED</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290329</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63770B</tstamp>
+    </comp>
+    <comp ref="R106">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637713</tstamp>
+    </comp>
+    <comp ref="R107">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63771B</tstamp>
+    </comp>
+    <comp ref="D107">
+      <value>GRN</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637722</tstamp>
+    </comp>
+    <comp ref="D105">
+      <value>GRN</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637729</tstamp>
+    </comp>
+    <comp ref="D108">
+      <value>GRN</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637749</tstamp>
+    </comp>
+    <comp ref="R109">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6377A9</tstamp>
+    </comp>
+    <comp ref="D102">
+      <value>VSSC520S-M3/9AT</value>
+      <footprint>agg:DO-214AB-SMC</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2050375.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1859669</field>
+      </fields>
+      <libsource lib="agg" part="SCHOTTKY" description="Schottky Diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6377D1</tstamp>
+    </comp>
+    <comp ref="D101">
+      <value>SMAJ58A</value>
+      <footprint>agg:DO-214AC-SMA</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2076055.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1899460</field>
+      </fields>
+      <libsource lib="agg" part="SCHOTTKY" description="Schottky Diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6377E6</tstamp>
+    </comp>
+    <comp ref="IC101">
+      <value>TSR 1-24150</value>
+      <footprint>agg:TSR1</footprint>
+      <datasheet>http://www.tracopower.com/products/tsr1.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1672131</field>
+      </fields>
+      <libsource lib="agg" part="TSR1" description="TSR1 Switch Mode Regulators"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6377F5</tstamp>
+    </comp>
+    <comp ref="C106">
+      <value>10µ</value>
+      <footprint>agg:1210</footprint>
+      <fields>
+        <field name="Farnell">2781426</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637816</tstamp>
+    </comp>
+    <comp ref="D104">
+      <value>GRN</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637844</tstamp>
+    </comp>
+    <comp ref="D103">
+      <value>GRN</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637864</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63789B</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6378A3</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>100p</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">9406115</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6378B7</tstamp>
+    </comp>
+    <comp ref="J101">
+      <value>PWR_IN</value>
+      <footprint>agg:BARRELJACK</footprint>
+      <libsource lib="agg" part="BarrelJack" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637900</tstamp>
+    </comp>
+    <comp ref="TP102">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637906</tstamp>
+    </comp>
+    <comp ref="TP101">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637914</tstamp>
+    </comp>
+    <comp ref="TP103">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63791B</tstamp>
+    </comp>
+    <comp ref="TP104">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637923</tstamp>
+    </comp>
+    <comp ref="IC104">
+      <value>NCP161</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NCP161-D.PDF</datasheet>
+      <fields>
+        <field name="Farnell">3131472</field>
+      </fields>
+      <libsource lib="agg" part="NCP161" description="450 mA, Ultra-Low Noise and High PSRR LDO Regulator for RF and Analog Circuits"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63792C</tstamp>
+    </comp>
+    <comp ref="TP105">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637945</tstamp>
+    </comp>
+    <comp ref="J103">
+      <value>HV_OUT</value>
+      <footprint>agg:MOLEX-KK-254P-03</footprint>
+      <fields>
+        <field name="Farnell">1360131</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x03" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637956</tstamp>
+    </comp>
+    <comp ref="R108">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637751</tstamp>
+    </comp>
+    <comp ref="R105">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637731</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63783D</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D63785D</tstamp>
+    </comp>
+    <comp ref="P101">
+      <value>SWD</value>
+      <footprint>agg:FTSH-105-01-L-DV-K</footprint>
+      <fields>
+        <field name="Farnell">2856437</field>
+      </fields>
+      <libsource lib="agg" part="SWD" description="Serial Wire Debug Port"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D637523</tstamp>
+    </comp>
+    <comp ref="J104">
+      <value>UART</value>
+      <footprint>agg:SM04B-PASS</footprint>
+      <fields>
+        <field name="Farnell">2399347</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F986F31</tstamp>
+    </comp>
+    <comp ref="R113">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F99AF05</tstamp>
+    </comp>
+    <comp ref="R112">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F99B518</tstamp>
+    </comp>
+    <comp ref="D114">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9ECAB5</tstamp>
+    </comp>
+    <comp ref="D113">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA03ECB</tstamp>
+    </comp>
+    <comp ref="D112">
+      <value>ESD_DIODE</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2368174</field>
+        <field name="Voltage">24V</field>
+      </fields>
+      <libsource lib="agg" part="ESD_DIODE" description="ESD diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA0456B</tstamp>
+    </comp>
+    <comp ref="IC203">
+      <value>MCP1416</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1630421</field>
+      </fields>
+      <libsource lib="agg" part="MCP1416" description="1.5A High Speed Power MOSFET Driver"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EE7C</tstamp>
+    </comp>
+    <comp ref="C211">
+      <value>1µ</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1759454</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EE96</tstamp>
+    </comp>
+    <comp ref="C213">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EEA6</tstamp>
+    </comp>
+    <comp ref="R203">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EEE9</tstamp>
+    </comp>
+    <comp ref="R209">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EF3F</tstamp>
+    </comp>
+    <comp ref="C212">
+      <value>1µ</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1759454</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EF74</tstamp>
+    </comp>
+    <comp ref="D203">
+      <value>STTH512B</value>
+      <footprint>agg:DPAK_DIODE</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stth512.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2344055</field>
+      </fields>
+      <libsource lib="agg" part="SCHOTTKY" description="Schottky Diode"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EFA7</tstamp>
+    </comp>
+    <comp ref="R204">
+      <value>4R7</value>
+      <footprint>agg:1206</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2563624.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2447524</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EFC1</tstamp>
+    </comp>
+    <comp ref="C214">
+      <value>10n</value>
+      <footprint>agg:1206</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2620236.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2896776</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EFC8</tstamp>
+    </comp>
+    <comp ref="R218">
+      <value>100k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2447453</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F001</tstamp>
+    </comp>
+    <comp ref="R219">
+      <value>100k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2447453</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F009</tstamp>
+    </comp>
+    <comp ref="IC201">
+      <value>INA139</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina139.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1470398</field>
+      </fields>
+      <libsource lib="agg" part="INA139" description="High-Side Measurement Current Shunt Monitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F18F</tstamp>
+    </comp>
+    <comp ref="R202">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F19F</tstamp>
+    </comp>
+    <comp ref="C215">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F1B9</tstamp>
+    </comp>
+    <comp ref="C218">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F1C1</tstamp>
+    </comp>
+    <comp ref="C203">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F1FB</tstamp>
+    </comp>
+    <comp ref="C201">
+      <value>1µ</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1759454</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F227</tstamp>
+    </comp>
+    <comp ref="C205">
+      <value>10n</value>
+      <footprint>agg:0805</footprint>
+      <fields>
+        <field name="Farnell">1457736</field>
+        <field name="Voltage">25V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F23D</tstamp>
+    </comp>
+    <comp ref="R213">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F253</tstamp>
+    </comp>
+    <comp ref="R214">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F25B</tstamp>
+    </comp>
+    <comp ref="R215">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F263</tstamp>
+    </comp>
+    <comp ref="R216">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F26B</tstamp>
+    </comp>
+    <comp ref="R217">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F273</tstamp>
+    </comp>
+    <comp ref="C222">
+      <value>100p</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">9406115</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F28B</tstamp>
+    </comp>
+    <comp ref="Q201">
+      <value>STB45N60DM2AG</value>
+      <footprint>agg:D2PAK_GDS</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stb45n60dm2ag.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3129762</field>
+      </fields>
+      <libsource lib="agg" part="NFET_GDS" description="Generic N-channel FET"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F354</tstamp>
+    </comp>
+    <comp ref="C216">
+      <value>68µ</value>
+      <footprint>agg:PANASONIC-SMDCAP-K</footprint>
+      <datasheet>http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1202.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2326343</field>
+        <field name="Voltage">250V</field>
+      </fields>
+      <libsource lib="agg" part="CP" description="Polarised Capacitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3A7</tstamp>
+    </comp>
+    <comp ref="C217">
+      <value>68µ</value>
+      <footprint>agg:PANASONIC-SMDCAP-K</footprint>
+      <datasheet>http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1202.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2326343</field>
+        <field name="Voltage">250V</field>
+      </fields>
+      <libsource lib="agg" part="CP" description="Polarised Capacitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3AF</tstamp>
+    </comp>
+    <comp ref="C219">
+      <value>1µ</value>
+      <footprint>agg:2220</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2048632.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1828845</field>
+        <field name="Voltage">250V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3B7</tstamp>
+    </comp>
+    <comp ref="C220">
+      <value>1µ</value>
+      <footprint>agg:2220</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2048632.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1828845</field>
+        <field name="Voltage">250V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3BF</tstamp>
+    </comp>
+    <comp ref="C209">
+      <value>10µ</value>
+      <footprint>agg:1210</footprint>
+      <fields>
+        <field name="Farnell">2781426</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3C8</tstamp>
+    </comp>
+    <comp ref="R220">
+      <value>100k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2447453</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3DA</tstamp>
+    </comp>
+    <comp ref="R221">
+      <value>100k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2447453</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F3E3</tstamp>
+    </comp>
+    <comp ref="TP202">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F412</tstamp>
+    </comp>
+    <comp ref="TP204">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F42B</tstamp>
+    </comp>
+    <comp ref="TP201">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F43C</tstamp>
+    </comp>
+    <comp ref="T201">
+      <value>GA3459-BL</value>
+      <footprint>agg:GA3459-BL</footprint>
+      <datasheet>https://www.coilcraft.com/pdfs/ga3459.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2458040</field>
+      </fields>
+      <libsource lib="agg" part="GA3459-BL" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D742CF1</tstamp>
+    </comp>
+    <comp ref="C207">
+      <value>100µ</value>
+      <footprint>agg:PANASONIC-SMDCAP-G</footprint>
+      <datasheet>http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1187.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2079271</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="CP" description="Polarised Capacitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E069923</tstamp>
+    </comp>
+    <comp ref="C206">
+      <value>100µ</value>
+      <footprint>agg:PANASONIC-SMDCAP-G</footprint>
+      <datasheet>http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1187.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2079271</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="CP" description="Polarised Capacitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E0FAF92</tstamp>
+    </comp>
+    <comp ref="C208">
+      <value>10µ</value>
+      <footprint>agg:1210</footprint>
+      <fields>
+        <field name="Farnell">2781426</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E1B828F</tstamp>
+    </comp>
+    <comp ref="C210">
+      <value>1µ</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1759454</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E14F196</tstamp>
+    </comp>
+    <comp ref="C221">
+      <value>1µ</value>
+      <footprint>agg:2220</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2048632.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1828845</field>
+        <field name="Voltage">250V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E2D030F</tstamp>
+    </comp>
+    <comp ref="R205">
+      <value>10m</value>
+      <footprint>agg:1206</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2710719.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2079442</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E4D8340</tstamp>
+    </comp>
+    <comp ref="D204">
+      <value>ADR5045</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/adr5040_5041_5043_5044_5045.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2460166</field>
+        <field name="Voltage">5V</field>
+      </fields>
+      <libsource lib="agg" part="ZENER" description="Zener Diode"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E9A50F8</tstamp>
+    </comp>
+    <comp ref="D205">
+      <value>ADR5045</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/adr5040_5041_5043_5044_5045.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2460166</field>
+        <field name="Voltage">5V</field>
+      </fields>
+      <libsource lib="agg" part="ZENER" description="Zener Diode"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E9A5EFD</tstamp>
+    </comp>
+    <comp ref="C224">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E9D571D</tstamp>
+    </comp>
+    <comp ref="IC205">
+      <value>INA139</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina139.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1470398</field>
+      </fields>
+      <libsource lib="agg" part="INA139" description="High-Side Measurement Current Shunt Monitor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E9F89AF</tstamp>
+    </comp>
+    <comp ref="R228">
+      <value>500m</value>
+      <footprint>agg:1206</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2197344.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1717875</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5E4DE5AD</tstamp>
+    </comp>
+    <comp ref="TP205">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EB148BA</tstamp>
+    </comp>
+    <comp ref="C223">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EB31330</tstamp>
+    </comp>
+    <comp ref="R210">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EE12F13</tstamp>
+    </comp>
+    <comp ref="R211">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EF29045</tstamp>
+    </comp>
+    <comp ref="R212">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EF3F692</tstamp>
+    </comp>
+    <comp ref="Q202">
+      <value>PBHV9050T</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/609431.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1829318</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="PNP" description="PNP BJT Transistor"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F00A3C1</tstamp>
+    </comp>
+    <comp ref="R222">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F0D3AC3</tstamp>
+    </comp>
+    <comp ref="R223">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F0D43D8</tstamp>
+    </comp>
+    <comp ref="R224">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F0D4796</tstamp>
+    </comp>
+    <comp ref="R225">
+      <value>499k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2695162</field>
+        <field name="Voltage">200V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F0D4BC2</tstamp>
+    </comp>
+    <comp ref="C227">
+      <value>10n</value>
+      <footprint>agg:0805</footprint>
+      <fields>
+        <field name="Farnell">1457736</field>
+        <field name="Voltage">25V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F1486E6</tstamp>
+    </comp>
+    <comp ref="IC202">
+      <value>AD8605</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1838870</field>
+      </fields>
+      <libsource lib="agg" part="AD8605" description="Precision, Low Noise, CMOS, Rail-to-Rail, Input/Output Operational Amplifier"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F1A30A6</tstamp>
+    </comp>
+    <comp ref="C202">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F1CDC7E</tstamp>
+    </comp>
+    <comp ref="C204">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F1CDC8A</tstamp>
+    </comp>
+    <comp ref="IC206">
+      <value>AD8605</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1838870</field>
+      </fields>
+      <libsource lib="agg" part="AD8605" description="Precision, Low Noise, CMOS, Rail-to-Rail, Input/Output Operational Amplifier"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F28FAC9</tstamp>
+    </comp>
+    <comp ref="C225">
+      <value>100n</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320803</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F28FAEB</tstamp>
+    </comp>
+    <comp ref="C226">
+      <value>1µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2320814</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F28FAF7</tstamp>
+    </comp>
+    <comp ref="R208">
+      <value>1k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447272</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F4B0C21</tstamp>
+    </comp>
+    <comp ref="R207">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F4B855B</tstamp>
+    </comp>
+    <comp ref="R206">
+      <value>10k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447230</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F4E0E69</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>NTS245SFT1G</value>
+      <footprint>agg:SOD-123</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1900863.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2473418</field>
+      </fields>
+      <libsource lib="agg" part="SCHOTTKY" description="Schottky Diode"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F5A8324</tstamp>
+    </comp>
+    <comp ref="D202">
+      <value>NTS245SFT1G</value>
+      <footprint>agg:SOD-123</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1900863.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2473418</field>
+      </fields>
+      <libsource lib="agg" part="SCHOTTKY" description="Schottky Diode"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F5E28A1</tstamp>
+    </comp>
+    <comp ref="R227">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5EC5FDFA</tstamp>
+    </comp>
+    <comp ref="R226">
+      <value>100k</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">2447226</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F6EBB44</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>10m</value>
+      <footprint>agg:1206</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2710719.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2079442</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63F0C5</tstamp>
+    </comp>
+    <comp ref="IC204">
+      <value>AD8065</value>
+      <footprint>agg:SOT-23-5</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/AD8065_8066.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2376729</field>
+      </fields>
+      <libsource lib="agg" part="AD8605" description="Precision, Low Noise, CMOS, Rail-to-Rail, Input/Output Operational Amplifier"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F7846C0</tstamp>
+    </comp>
+    <comp ref="TP207">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F888371</tstamp>
+    </comp>
+    <comp ref="TP203">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5D63EF47</tstamp>
+    </comp>
+    <comp ref="TP206">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <sheetpath names="/Flyback/" tstamps="/5D647F49/"/>
+      <tstamp>5F92C7F1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="agg" part="AD8605">
+      <description>Precision, Low Noise, CMOS, Rail-to-Rail, Input/Output Operational Amplifier</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">AD8605</field>
+        <field name="Footprint">agg:SOT-23-5</field>
+        <field name="Farnell">1838870</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="power_in"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="~" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="BarrelJack">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">BarrelJack</field>
+        <field name="Footprint">agg:BARRELJACK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TIP" type="passive"/>
+        <pin num="2" name="SW" type="passive"/>
+        <pin num="3" name="RING" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="C">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="CONN_01x03">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="CONN_01x04">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="CP">
+      <description>Polarised Capacitor</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="ESD_DIODE">
+      <description>ESD diode</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD_DIODE</field>
+        <field name="Footprint">agg:0402</field>
+        <field name="Farnell">2368169</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="GA3459-BL">
+      <docs>https://www.coilcraft.com/pdfs/ga3459.pdf</docs>
+      <fields>
+        <field name="Reference">T</field>
+        <field name="Value">GA3459-BL</field>
+        <field name="Footprint">agg:GA3459-BL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="NotConnected"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="NotConnected"/>
+        <pin num="9" name="~" type="passive"/>
+        <pin num="10" name="~" type="passive"/>
+        <pin num="11" name="~" type="passive"/>
+        <pin num="12" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="INA139">
+      <description>High-Side Measurement Current Shunt Monitor</description>
+      <docs>http://www.ti.com/lit/ds/symlink/ina139.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">INA139</field>
+        <field name="Footprint">agg:SOT-23-5</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/ina139.pdf</field>
+        <field name="Farnell">1470398</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="~" type="power_in"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="~" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="L">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="LED">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="MCP1416">
+      <description>1.5A High Speed Power MOSFET Driver</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">MCP1416</field>
+        <field name="Footprint">agg:SOT-23-5</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf</field>
+        <field name="Farnell">1630421</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="NotConnected"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="IN" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="OUT" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="NCP161">
+      <description>450 mA, Ultra-Low Noise and High PSRR LDO Regulator for RF and Analog Circuits</description>
+      <docs>https://www.onsemi.com/pub/Collateral/NCP161-D.PDF</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">NCP161</field>
+        <field name="Footprint">agg:SOT-23-5</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/NCP161-D.PDF</field>
+        <field name="Farnell">3131472</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="NotConnected"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="NFET_GDS">
+      <description>Generic N-channel FET</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">NFET_GDS</field>
+      </fields>
+      <pins>
+        <pin num="D" name="D" type="passive"/>
+        <pin num="G" name="G" type="passive"/>
+        <pin num="S" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="PART">
+      <description>Generic placeholder part</description>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">PART</field>
+      </fields>
+    </libpart>
+    <libpart lib="agg" part="PNP">
+      <description>PNP BJT Transistor</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">PNP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="passive"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="R">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="SCHOTTKY">
+      <description>Schottky Diode</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SCHOTTKY</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="STM32F3xxKxTx">
+      <description>STM32F3 32 pin LQFP package</description>
+      <docs>http://www.st.com/resource/en/datasheet/stm32f334k8.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">STM32F3xxKxTx</field>
+        <field name="Footprint">agg:LQFP-32</field>
+        <field name="Datasheet">http://www.st.com/resource/en/datasheet/stm32f334k8.pdf</field>
+        <field name="Farnell">2469571</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="PF0" type="BiDi"/>
+        <pin num="3" name="PF1" type="BiDi"/>
+        <pin num="4" name="NRST" type="input"/>
+        <pin num="5" name="VDDA" type="power_in"/>
+        <pin num="6" name="PA0" type="BiDi"/>
+        <pin num="7" name="PA1" type="BiDi"/>
+        <pin num="8" name="PA2" type="BiDi"/>
+        <pin num="9" name="PA3" type="BiDi"/>
+        <pin num="10" name="PA4" type="BiDi"/>
+        <pin num="11" name="PA5" type="BiDi"/>
+        <pin num="12" name="PA6" type="BiDi"/>
+        <pin num="13" name="PA7" type="BiDi"/>
+        <pin num="14" name="PB0" type="BiDi"/>
+        <pin num="15" name="PB1" type="BiDi"/>
+        <pin num="16" name="VSS" type="power_in"/>
+        <pin num="17" name="VDD" type="power_in"/>
+        <pin num="18" name="PA8" type="BiDi"/>
+        <pin num="19" name="PA9" type="BiDi"/>
+        <pin num="20" name="PA10" type="BiDi"/>
+        <pin num="21" name="PA11" type="BiDi"/>
+        <pin num="22" name="PA12" type="BiDi"/>
+        <pin num="23" name="PA13" type="BiDi"/>
+        <pin num="24" name="PA14" type="BiDi"/>
+        <pin num="25" name="PA15" type="BiDi"/>
+        <pin num="26" name="PB3" type="BiDi"/>
+        <pin num="27" name="PB4" type="BiDi"/>
+        <pin num="28" name="PB5" type="BiDi"/>
+        <pin num="29" name="PB6" type="BiDi"/>
+        <pin num="30" name="PB7" type="BiDi"/>
+        <pin num="31" name="BOOT0" type="input"/>
+        <pin num="32" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="SWD">
+      <description>Serial Wire Debug Port</description>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">SWD</field>
+        <field name="Footprint">agg:FTSH-105-01-F-D-K</field>
+        <field name="Toby">FTSH-105-01-F-D-K</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VTref" type="power_in"/>
+        <pin num="2" name="SWDIO/TMS" type="BiDi"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="SWDCLK/TCK" type="BiDi"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="SWO/TDO" type="BiDi"/>
+        <pin num="7" name="KEY" type="NotConnected"/>
+        <pin num="8" name="TDI" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="nRESET" type="openCol"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="TCXO_ST">
+      <description>4 pin TCXO with Standy</description>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">TCXO_ST</field>
+        <field name="Farnell">2405760</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~ST" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="OUT" type="output"/>
+        <pin num="4" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="TESTPAD">
+      <description>Test pad</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TESTPAD</field>
+        <field name="Footprint">agg:TESTPAD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TP" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="TSR1">
+      <description>TSR1 Switch Mode Regulators</description>
+      <docs>http://www.tracopower.com/products/tsr1.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">TSR1</field>
+        <field name="Footprint">agg:TSR1</field>
+        <field name="Datasheet">http://www.tracopower.com/products/tsr1.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="ZENER">
+      <description>Zener Diode</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ZENER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="agg">
+      <uri>/home/adam/Projects/iggie/psu/../agg-kicad/agg-kicad.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Flyback/HV+">
+      <node ref="J103" pin="1"/>
+      <node ref="IC205" pin="4"/>
+      <node ref="R228" pin="1"/>
+    </net>
+    <net code="2" name="Net-(J103-Pad2)">
+      <node ref="J103" pin="2"/>
+    </net>
+    <net code="3" name="/I_IN">
+      <node ref="IC102" pin="7"/>
+      <node ref="IC202" pin="4"/>
+      <node ref="IC202" pin="1"/>
+    </net>
+    <net code="4" name="/I_Q">
+      <node ref="IC102" pin="13"/>
+      <node ref="R211" pin="1"/>
+      <node ref="TP203" pin="1"/>
+      <node ref="IC204" pin="1"/>
+      <node ref="R212" pin="1"/>
+    </net>
+    <net code="5" name="/I_OUT">
+      <node ref="IC206" pin="4"/>
+      <node ref="IC206" pin="1"/>
+      <node ref="IC102" pin="9"/>
+    </net>
+    <net code="6" name="/VOUT_MON">
+      <node ref="TP204" pin="1"/>
+      <node ref="C222" pin="1"/>
+      <node ref="IC102" pin="8"/>
+      <node ref="R217" pin="1"/>
+      <node ref="R216" pin="2"/>
+    </net>
+    <net code="7" name="/VIN_MON">
+      <node ref="IC102" pin="6"/>
+      <node ref="C101" pin="1"/>
+      <node ref="R103" pin="1"/>
+      <node ref="R102" pin="2"/>
+    </net>
+    <net code="8" name="/GD">
+      <node ref="TP202" pin="1"/>
+      <node ref="IC203" pin="3"/>
+      <node ref="IC102" pin="18"/>
+    </net>
+    <net code="9" name="5v">
+      <node ref="C218" pin="1"/>
+      <node ref="IC103" pin="3"/>
+      <node ref="C215" pin="1"/>
+      <node ref="R105" pin="1"/>
+      <node ref="IC104" pin="1"/>
+      <node ref="TP104" pin="1"/>
+      <node ref="IC104" pin="3"/>
+      <node ref="C110" pin="1"/>
+      <node ref="IC204" pin="5"/>
+    </net>
+    <net code="10" name="Net-(IC104-Pad4)">
+      <node ref="IC104" pin="4"/>
+    </net>
+    <net code="11" name="Net-(J101-Pad2)">
+      <node ref="J101" pin="2"/>
+    </net>
+    <net code="12" name="15v">
+      <node ref="C211" pin="1"/>
+      <node ref="IC101" pin="3"/>
+      <node ref="C213" pin="1"/>
+      <node ref="TP103" pin="1"/>
+      <node ref="R104" pin="1"/>
+      <node ref="IC203" pin="2"/>
+    </net>
+    <net code="13" name="24v">
+      <node ref="C109" pin="1"/>
+      <node ref="D111" pin="1"/>
+      <node ref="R201" pin="1"/>
+      <node ref="R101" pin="1"/>
+      <node ref="IC201" pin="5"/>
+      <node ref="IC103" pin="1"/>
+      <node ref="J102" pin="1"/>
+      <node ref="R102" pin="1"/>
+      <node ref="C106" pin="1"/>
+      <node ref="IC201" pin="3"/>
+      <node ref="D102" pin="1"/>
+      <node ref="C201" pin="1"/>
+      <node ref="TP101" pin="1"/>
+      <node ref="C203" pin="1"/>
+      <node ref="IC101" pin="1"/>
+    </net>
+    <net code="14" name="Net-(D101-Pad1)">
+      <node ref="D101" pin="1"/>
+      <node ref="J101" pin="1"/>
+      <node ref="D102" pin="2"/>
+    </net>
+    <net code="15" name="Net-(D104-Pad2)">
+      <node ref="D104" pin="2"/>
+      <node ref="R104" pin="2"/>
+    </net>
+    <net code="16" name="Net-(D103-Pad2)">
+      <node ref="R101" pin="2"/>
+      <node ref="D103" pin="2"/>
+    </net>
+    <net code="17" name="Net-(IC102-Pad10)">
+      <node ref="IC102" pin="10"/>
+    </net>
+    <net code="18" name="Net-(IC102-Pad22)">
+      <node ref="IC102" pin="22"/>
+    </net>
+    <net code="19" name="Net-(IC102-Pad28)">
+      <node ref="IC102" pin="28"/>
+    </net>
+    <net code="20" name="/UART_TX">
+      <node ref="IC102" pin="29"/>
+      <node ref="R113" pin="2"/>
+      <node ref="R110" pin="2"/>
+    </net>
+    <net code="21" name="/UART_RX">
+      <node ref="IC102" pin="30"/>
+      <node ref="R112" pin="2"/>
+    </net>
+    <net code="22" name="/VQ">
+      <node ref="IC102" pin="12"/>
+      <node ref="IC102" pin="14"/>
+    </net>
+    <net code="23" name="/SWDIO">
+      <node ref="P101" pin="2"/>
+      <node ref="IC102" pin="23"/>
+    </net>
+    <net code="24" name="/SWCLK">
+      <node ref="P101" pin="4"/>
+      <node ref="IC102" pin="24"/>
+    </net>
+    <net code="25" name="Net-(P101-Pad6)">
+      <node ref="P101" pin="6"/>
+    </net>
+    <net code="26" name="Net-(P101-Pad8)">
+      <node ref="P101" pin="8"/>
+    </net>
+    <net code="27" name="/~RST">
+      <node ref="IC102" pin="4"/>
+      <node ref="P101" pin="10"/>
+    </net>
+    <net code="28" name="/V_Q">
+      <node ref="D201" pin="2"/>
+      <node ref="R207" pin="2"/>
+      <node ref="R208" pin="1"/>
+      <node ref="D202" pin="1"/>
+    </net>
+    <net code="29" name="Net-(IC102-Pad15)">
+      <node ref="IC102" pin="15"/>
+    </net>
+    <net code="30" name="Net-(IC102-Pad11)">
+      <node ref="IC102" pin="11"/>
+    </net>
+    <net code="31" name="Net-(IC102-Pad19)">
+      <node ref="IC102" pin="19"/>
+    </net>
+    <net code="32" name="Net-(IC102-Pad20)">
+      <node ref="IC102" pin="20"/>
+    </net>
+    <net code="33" name="Net-(IC102-Pad21)">
+      <node ref="IC102" pin="21"/>
+    </net>
+    <net code="34" name="Net-(D113-Pad1)">
+      <node ref="R113" pin="1"/>
+      <node ref="J104" pin="2"/>
+      <node ref="D113" pin="1"/>
+    </net>
+    <net code="35" name="Net-(D112-Pad1)">
+      <node ref="J104" pin="3"/>
+      <node ref="D112" pin="1"/>
+      <node ref="R112" pin="1"/>
+    </net>
+    <net code="36" name="3v3">
+      <node ref="J104" pin="1"/>
+      <node ref="TP105" pin="1"/>
+      <node ref="C204" pin="1"/>
+      <node ref="P101" pin="1"/>
+      <node ref="IC102" pin="17"/>
+      <node ref="C226" pin="1"/>
+      <node ref="C225" pin="1"/>
+      <node ref="Y101" pin="4"/>
+      <node ref="Y101" pin="1"/>
+      <node ref="R109" pin="2"/>
+      <node ref="C103" pin="1"/>
+      <node ref="C202" pin="1"/>
+      <node ref="R108" pin="1"/>
+      <node ref="IC104" pin="5"/>
+      <node ref="IC102" pin="1"/>
+      <node ref="D114" pin="1"/>
+      <node ref="C105" pin="1"/>
+      <node ref="IC202" pin="5"/>
+      <node ref="C104" pin="1"/>
+      <node ref="C111" pin="1"/>
+      <node ref="C102" pin="1"/>
+      <node ref="D201" pin="1"/>
+      <node ref="IC206" pin="5"/>
+      <node ref="L101" pin="2"/>
+    </net>
+    <net code="37" name="GND">
+      <node ref="C222" pin="2"/>
+      <node ref="C208" pin="2"/>
+      <node ref="C201" pin="2"/>
+      <node ref="C227" pin="2"/>
+      <node ref="C221" pin="2"/>
+      <node ref="R225" pin="2"/>
+      <node ref="C215" pin="2"/>
+      <node ref="C218" pin="2"/>
+      <node ref="C210" pin="2"/>
+      <node ref="R205" pin="2"/>
+      <node ref="C226" pin="2"/>
+      <node ref="R203" pin="2"/>
+      <node ref="R208" pin="2"/>
+      <node ref="C225" pin="2"/>
+      <node ref="C212" pin="2"/>
+      <node ref="R226" pin="2"/>
+      <node ref="R227" pin="2"/>
+      <node ref="TP206" pin="1"/>
+      <node ref="IC204" pin="2"/>
+      <node ref="R217" pin="2"/>
+      <node ref="IC206" pin="2"/>
+      <node ref="IC201" pin="2"/>
+      <node ref="C203" pin="2"/>
+      <node ref="C205" pin="2"/>
+      <node ref="R202" pin="2"/>
+      <node ref="C206" pin="1"/>
+      <node ref="C207" pin="1"/>
+      <node ref="D202" pin="2"/>
+      <node ref="C202" pin="2"/>
+      <node ref="C204" pin="2"/>
+      <node ref="IC203" pin="4"/>
+      <node ref="C211" pin="2"/>
+      <node ref="C213" pin="2"/>
+      <node ref="P101" pin="9"/>
+      <node ref="P101" pin="5"/>
+      <node ref="P101" pin="3"/>
+      <node ref="J103" pin="3"/>
+      <node ref="D112" pin="2"/>
+      <node ref="D113" pin="2"/>
+      <node ref="D114" pin="2"/>
+      <node ref="C110" pin="2"/>
+      <node ref="C111" pin="2"/>
+      <node ref="IC102" pin="31"/>
+      <node ref="IC102" pin="32"/>
+      <node ref="IC102" pin="16"/>
+      <node ref="C102" pin="2"/>
+      <node ref="C104" pin="2"/>
+      <node ref="C105" pin="2"/>
+      <node ref="C109" pin="2"/>
+      <node ref="C108" pin="2"/>
+      <node ref="D101" pin="2"/>
+      <node ref="IC101" pin="2"/>
+      <node ref="TP102" pin="1"/>
+      <node ref="J101" pin="3"/>
+      <node ref="IC104" pin="2"/>
+      <node ref="R103" pin="2"/>
+      <node ref="C101" pin="2"/>
+      <node ref="J104" pin="4"/>
+      <node ref="IC202" pin="2"/>
+      <node ref="C106" pin="2"/>
+      <node ref="D103" pin="1"/>
+      <node ref="D104" pin="1"/>
+      <node ref="D110" pin="2"/>
+      <node ref="D109" pin="2"/>
+      <node ref="C107" pin="2"/>
+      <node ref="C217" pin="1"/>
+      <node ref="C209" pin="2"/>
+      <node ref="T201" pin="7"/>
+      <node ref="C103" pin="2"/>
+      <node ref="Y101" pin="2"/>
+      <node ref="R210" pin="2"/>
+      <node ref="R221" pin="2"/>
+      <node ref="D111" pin="2"/>
+      <node ref="D106" pin="1"/>
+      <node ref="D107" pin="1"/>
+      <node ref="D105" pin="1"/>
+      <node ref="IC103" pin="2"/>
+      <node ref="J102" pin="4"/>
+      <node ref="D108" pin="1"/>
+    </net>
+    <net code="38" name="Net-(P101-Pad7)">
+      <node ref="P101" pin="7"/>
+    </net>
+    <net code="39" name="Net-(C107-Pad1)">
+      <node ref="C108" pin="1"/>
+      <node ref="IC102" pin="5"/>
+      <node ref="L101" pin="1"/>
+      <node ref="C107" pin="1"/>
+    </net>
+    <net code="40" name="/LED_STAT">
+      <node ref="IC102" pin="26"/>
+      <node ref="R107" pin="1"/>
+    </net>
+    <net code="41" name="Net-(IC102-Pad2)">
+      <node ref="IC102" pin="2"/>
+      <node ref="Y101" pin="3"/>
+    </net>
+    <net code="42" name="Net-(IC102-Pad3)">
+      <node ref="IC102" pin="3"/>
+    </net>
+    <net code="43" name="Net-(D107-Pad2)">
+      <node ref="R107" pin="2"/>
+      <node ref="D107" pin="2"/>
+    </net>
+    <net code="44" name="Net-(D105-Pad2)">
+      <node ref="D105" pin="2"/>
+      <node ref="R105" pin="2"/>
+    </net>
+    <net code="45" name="Net-(D106-Pad2)">
+      <node ref="D106" pin="2"/>
+      <node ref="R106" pin="2"/>
+    </net>
+    <net code="46" name="/LED_FAULT">
+      <node ref="R106" pin="1"/>
+      <node ref="IC102" pin="27"/>
+    </net>
+    <net code="47" name="/~RUN">
+      <node ref="R109" pin="1"/>
+      <node ref="R111" pin="2"/>
+      <node ref="IC102" pin="25"/>
+    </net>
+    <net code="48" name="Net-(D108-Pad2)">
+      <node ref="D108" pin="2"/>
+      <node ref="R108" pin="2"/>
+    </net>
+    <net code="49" name="Net-(D110-Pad1)">
+      <node ref="J102" pin="2"/>
+      <node ref="R111" pin="1"/>
+      <node ref="D110" pin="1"/>
+    </net>
+    <net code="50" name="Net-(D109-Pad1)">
+      <node ref="J102" pin="3"/>
+      <node ref="D109" pin="1"/>
+      <node ref="R110" pin="1"/>
+    </net>
+    <net code="51" name="Net-(IC204-Pad4)">
+      <node ref="R212" pin="2"/>
+      <node ref="R210" pin="1"/>
+      <node ref="IC204" pin="4"/>
+      <node ref="R211" pin="2"/>
+    </net>
+    <net code="52" name="Net-(IC204-Pad3)">
+      <node ref="IC204" pin="3"/>
+      <node ref="R209" pin="1"/>
+    </net>
+    <net code="53" name="Net-(IC205-Pad1)">
+      <node ref="Q202" pin="2"/>
+      <node ref="IC205" pin="1"/>
+    </net>
+    <net code="54" name="Net-(R222-Pad2)">
+      <node ref="R223" pin="1"/>
+      <node ref="R222" pin="2"/>
+    </net>
+    <net code="55" name="Net-(R223-Pad2)">
+      <node ref="R224" pin="1"/>
+      <node ref="R223" pin="2"/>
+    </net>
+    <net code="56" name="Net-(R224-Pad2)">
+      <node ref="R225" pin="1"/>
+      <node ref="R224" pin="2"/>
+    </net>
+    <net code="57" name="Net-(C223-Pad2)">
+      <node ref="R222" pin="1"/>
+      <node ref="C223" pin="2"/>
+      <node ref="C224" pin="2"/>
+      <node ref="IC205" pin="2"/>
+      <node ref="D205" pin="2"/>
+      <node ref="Q202" pin="1"/>
+    </net>
+    <net code="58" name="Net-(D204-Pad2)">
+      <node ref="D205" pin="1"/>
+      <node ref="D204" pin="2"/>
+    </net>
+    <net code="59" name="Net-(Q201-PadS)">
+      <node ref="R209" pin="2"/>
+      <node ref="Q201" pin="S"/>
+      <node ref="R205" pin="1"/>
+    </net>
+    <net code="60" name="Net-(R206-Pad2)">
+      <node ref="R207" pin="1"/>
+      <node ref="R206" pin="2"/>
+    </net>
+    <net code="61" name="Net-(C227-Pad1)">
+      <node ref="Q202" pin="3"/>
+      <node ref="TP205" pin="1"/>
+      <node ref="C227" pin="1"/>
+      <node ref="IC206" pin="3"/>
+      <node ref="R227" pin="1"/>
+      <node ref="R226" pin="1"/>
+    </net>
+    <net code="62" name="Net-(R213-Pad2)">
+      <node ref="R213" pin="2"/>
+      <node ref="R214" pin="1"/>
+    </net>
+    <net code="63" name="Net-(C219-Pad2)">
+      <node ref="C220" pin="1"/>
+      <node ref="C219" pin="2"/>
+    </net>
+    <net code="64" name="Net-(C216-Pad1)">
+      <node ref="C216" pin="1"/>
+      <node ref="C217" pin="2"/>
+    </net>
+    <net code="65" name="Net-(C220-Pad2)">
+      <node ref="C220" pin="2"/>
+      <node ref="C221" pin="1"/>
+    </net>
+    <net code="66" name="Net-(R214-Pad2)">
+      <node ref="R215" pin="1"/>
+      <node ref="R214" pin="2"/>
+    </net>
+    <net code="67" name="Net-(R215-Pad2)">
+      <node ref="R215" pin="2"/>
+      <node ref="R216" pin="1"/>
+    </net>
+    <net code="68" name="Net-(IC203-Pad5)">
+      <node ref="Q201" pin="G"/>
+      <node ref="R203" pin="1"/>
+      <node ref="IC203" pin="5"/>
+    </net>
+    <net code="69" name="Net-(IC203-Pad1)">
+      <node ref="IC203" pin="1"/>
+    </net>
+    <net code="70" name="Net-(C205-Pad1)">
+      <node ref="TP201" pin="1"/>
+      <node ref="IC202" pin="3"/>
+      <node ref="C205" pin="1"/>
+      <node ref="R202" pin="1"/>
+      <node ref="IC201" pin="1"/>
+    </net>
+    <net code="71" name="Net-(C216-Pad2)">
+      <node ref="IC205" pin="5"/>
+      <node ref="D204" pin="1"/>
+      <node ref="IC205" pin="3"/>
+      <node ref="D203" pin="1"/>
+      <node ref="C223" pin="1"/>
+      <node ref="C216" pin="2"/>
+      <node ref="C219" pin="1"/>
+      <node ref="C224" pin="1"/>
+      <node ref="R213" pin="1"/>
+      <node ref="R218" pin="1"/>
+      <node ref="R228" pin="2"/>
+    </net>
+    <net code="72" name="Net-(D203-Pad2)">
+      <node ref="D203" pin="2"/>
+      <node ref="T201" pin="6"/>
+    </net>
+    <net code="73" name="Net-(C214-Pad1)">
+      <node ref="C214" pin="1"/>
+      <node ref="R204" pin="2"/>
+    </net>
+    <net code="74" name="Net-(R218-Pad2)">
+      <node ref="R218" pin="2"/>
+      <node ref="R219" pin="1"/>
+    </net>
+    <net code="75" name="Net-(R220-Pad2)">
+      <node ref="R221" pin="1"/>
+      <node ref="R220" pin="2"/>
+    </net>
+    <net code="76" name="Net-(C206-Pad2)">
+      <node ref="T201" pin="2"/>
+      <node ref="T201" pin="3"/>
+      <node ref="T201" pin="4"/>
+      <node ref="R201" pin="2"/>
+      <node ref="C209" pin="1"/>
+      <node ref="IC201" pin="4"/>
+      <node ref="T201" pin="1"/>
+      <node ref="R204" pin="1"/>
+      <node ref="C208" pin="1"/>
+      <node ref="C212" pin="1"/>
+      <node ref="C206" pin="2"/>
+      <node ref="C207" pin="2"/>
+      <node ref="C210" pin="1"/>
+    </net>
+    <net code="77" name="Net-(R219-Pad2)">
+      <node ref="R219" pin="2"/>
+      <node ref="R220" pin="1"/>
+    </net>
+    <net code="78" name="Net-(T201-Pad5)">
+      <node ref="T201" pin="5"/>
+    </net>
+    <net code="79" name="Net-(T201-Pad8)">
+      <node ref="T201" pin="8"/>
+    </net>
+    <net code="80" name="Net-(C214-Pad2)">
+      <node ref="T201" pin="9"/>
+      <node ref="C214" pin="2"/>
+      <node ref="TP207" pin="1"/>
+      <node ref="T201" pin="10"/>
+      <node ref="T201" pin="11"/>
+      <node ref="T201" pin="12"/>
+      <node ref="Q201" pin="D"/>
+      <node ref="R206" pin="1"/>
+    </net>
+  </nets>
+</export>
