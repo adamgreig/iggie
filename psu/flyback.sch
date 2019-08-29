@@ -2480,10 +2480,8 @@ F 3 "" H 4100 3700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4100 3700 4100 3650
-Text Label 8650 2600 2    50   ~ 0
+Text Label 8750 2600 0    50   ~ 0
 390V
-Wire Wire Line
-	8650 2600 8750 2600
 Wire Wire Line
 	10400 4850 10400 4750
 Wire Wire Line
@@ -2495,4 +2493,6 @@ Wire Wire Line
 	4050 2800 4200 2800
 Wire Wire Line
 	3150 2900 3350 2900
+Text Label 8750 1750 0    50   ~ 0
+400V
 $EndSCHEMATC
