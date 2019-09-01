@@ -231,33 +231,33 @@ $EndComp
 $Comp
 L agg:R R?
 U 1 1 5D63EFC1
-P 4300 1700
+P 4300 1900
 AR Path="/5D63EFC1" Ref="R?"  Part="1" 
 AR Path="/6147A5D5/5D63EFC1" Ref="R?"  Part="1" 
 AR Path="/5D647F49/5D63EFC1" Ref="R204"  Part="1" 
-F 0 "R204" H 4350 1750 50  0000 C CNN
-F 1 "4R7" H 4350 1650 50  0000 C CNN
-F 2 "agg:1206" H 4300 1700 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2563624.pdf" H 4300 1700 50  0001 C CNN
-F 4 "50V" H 4300 1700 50  0001 C CNN "Voltage"
-F 5 "2447524" H 4300 1700 50  0001 C CNN "Farnell"
-	1    4300 1700
+F 0 "R204" H 4350 1950 50  0000 C CNN
+F 1 "4R7" H 4350 1850 50  0000 C CNN
+F 2 "agg:1206" H 4300 1900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2563624.pdf" H 4300 1900 50  0001 C CNN
+F 4 "50V" H 4300 1900 50  0001 C CNN "Voltage"
+F 5 "2447524" H 4300 1900 50  0001 C CNN "Farnell"
+	1    4300 1900
 	0    1    1    0   
 $EndComp
 $Comp
 L agg:C C?
 U 1 1 5D63EFC8
-P 4300 1900
+P 4300 1700
 AR Path="/5D63EFC8" Ref="C?"  Part="1" 
 AR Path="/6147A5D5/5D63EFC8" Ref="C?"  Part="1" 
 AR Path="/5D647F49/5D63EFC8" Ref="C214"  Part="1" 
-F 0 "C214" H 4350 1970 50  0000 C CNN
-F 1 "10n" H 4350 1830 50  0000 C CNN
-F 2 "agg:1206" H 4300 1900 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2620236.pdf" H 4300 1900 50  0001 C CNN
-F 4 "50V" H 4300 1900 50  0001 C CNN "Voltage"
-F 5 "2896776" H 4300 1900 50  0001 C CNN "Farnell"
-	1    4300 1900
+F 0 "C214" H 4350 1770 50  0000 C CNN
+F 1 "10n" H 4350 1630 50  0000 C CNN
+F 2 "agg:1206" H 4300 1700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2620236.pdf" H 4300 1700 50  0001 C CNN
+F 4 "50V" H 4300 1700 50  0001 C CNN "Voltage"
+F 5 "2896776" H 4300 1700 50  0001 C CNN "Farnell"
+	1    4300 1700
 	0    1    1    0   
 $EndComp
 Text Notes 4150 2000 1    50   ~ 0
@@ -708,7 +708,7 @@ Wire Wire Line
 Connection ~ 6900 2700
 Wire Wire Line
 	6900 2700 6900 2800
-Text Notes 6700 3350 0    50   ~ 0
+Text Notes 7000 4600 0    50   ~ 0
 Output voltage divider:\n400V in, 1.99V out\n80mW
 $Comp
 L agg:C C?
@@ -747,7 +747,7 @@ F 3 "" H 7150 2950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 2950 7150 2900
-Text HLabel 7350 2700 2    50   Output ~ 0
+Text HLabel 7400 4250 2    50   Output ~ 0
 V_OUT
 Wire Wire Line
 	4500 3750 4500 3800
@@ -950,8 +950,6 @@ $EndComp
 Wire Wire Line
 	7300 2750 7300 2700
 Connection ~ 7300 2700
-Wire Wire Line
-	7300 2700 7350 2700
 $Comp
 L agg:TESTPAD TP?
 U 1 1 5D63F43C
@@ -2495,4 +2493,157 @@ Wire Wire Line
 	3150 2900 3350 2900
 Text Label 8750 1750 0    50   ~ 0
 400V
+$Comp
+L agg:AD8605 IC207
+U 1 1 5FF25183
+P 7300 3650
+F 0 "IC207" V 7250 3950 50  0000 C CNN
+F 1 "AD8605" V 7250 3300 50  0000 C CNN
+F 2 "agg:SOT-23-5" H 7300 3300 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf" H 7300 3650 50  0001 C CNN
+F 4 "1838870" H 7300 3200 50  0001 C CNN "Farnell"
+	1    7300 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 4050 7300 4150
+Wire Wire Line
+	7300 4150 6750 4150
+Wire Wire Line
+	6750 4150 6750 3350
+Wire Wire Line
+	6750 3350 7200 3350
+Wire Wire Line
+	7200 3350 7200 3450
+$Comp
+L agg:GND #PWR0261
+U 1 1 5FF5B9B1
+P 7000 3750
+F 0 "#PWR0261" H 6870 3790 50  0001 L CNN
+F 1 "GND" H 7000 3650 50  0000 C CNN
+F 2 "" H 7000 3750 50  0001 C CNN
+F 3 "" H 7000 3750 50  0001 C CNN
+	1    7000 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 3750 7100 3750
+$Comp
+L agg:3v3 #PWR0262
+U 1 1 5FF6D004
+P 7600 3750
+F 0 "#PWR0262" H 7600 3860 50  0001 L CNN
+F 1 "3v3" H 7600 3840 50  0000 C CNN
+F 2 "" H 7600 3750 50  0001 C CNN
+F 3 "" H 7600 3750 50  0001 C CNN
+	1    7600 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 3750 7500 3750
+Wire Wire Line
+	7400 3450 7400 2700
+Wire Wire Line
+	7300 2700 7400 2700
+Wire Wire Line
+	7300 4150 7300 4250
+Wire Wire Line
+	7300 4250 7400 4250
+Connection ~ 7300 4150
+$Comp
+L agg:C C?
+U 1 1 5FFAEEFA
+P 6300 3450
+AR Path="/5FFAEEFA" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5FFAEEFA" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5FFAEEFA" Ref="C228"  Part="1" 
+F 0 "C228" H 6350 3520 50  0000 C CNN
+F 1 "100n" H 6350 3380 50  0000 C CNN
+F 2 "agg:0603" H 6300 3450 50  0001 C CNN
+F 3 "" H 6300 3450 50  0001 C CNN
+F 4 "50V" H 6300 3450 50  0001 C CNN "Voltage"
+F 5 "2320803" H 6300 3450 50  0001 C CNN "Farnell"
+	1    6300 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:C C?
+U 1 1 5FFAEF06
+P 6550 3450
+AR Path="/5FFAEF06" Ref="C?"  Part="1" 
+AR Path="/6147A5D5/5FFAEF06" Ref="C?"  Part="1" 
+AR Path="/5D647F49/5FFAEF06" Ref="C229"  Part="1" 
+F 0 "C229" H 6600 3520 50  0000 C CNN
+F 1 "1µ" H 6600 3380 50  0000 C CNN
+F 2 "agg:0603" H 6550 3450 50  0001 C CNN
+F 3 "" H 6550 3450 50  0001 C CNN
+F 4 "16V" H 6550 3450 50  0001 C CNN "Voltage"
+F 5 "2320814" H 6550 3450 50  0001 C CNN "Farnell"
+	1    6550 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5FFAEF10
+P 6550 3400
+AR Path="/5FFAEF10" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5FFAEF10" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5FFAEF10" Ref="#PWR0259"  Part="1" 
+F 0 "#PWR0259" H 6550 3510 50  0001 L CNN
+F 1 "3v3" H 6550 3490 50  0000 C CNN
+F 2 "" H 6550 3400 50  0001 C CNN
+F 3 "" H 6550 3400 50  0001 C CNN
+	1    6550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:3v3 #PWR?
+U 1 1 5FFAEF1A
+P 6300 3400
+AR Path="/5FFAEF1A" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5FFAEF1A" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5FFAEF1A" Ref="#PWR0257"  Part="1" 
+F 0 "#PWR0257" H 6300 3510 50  0001 L CNN
+F 1 "3v3" H 6300 3490 50  0000 C CNN
+F 2 "" H 6300 3400 50  0001 C CNN
+F 3 "" H 6300 3400 50  0001 C CNN
+	1    6300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5FFAEF24
+P 6300 3600
+AR Path="/5FFAEF24" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5FFAEF24" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5FFAEF24" Ref="#PWR0258"  Part="1" 
+F 0 "#PWR0258" H 6170 3640 50  0001 L CNN
+F 1 "GND" H 6300 3500 50  0000 C CNN
+F 2 "" H 6300 3600 50  0001 C CNN
+F 3 "" H 6300 3600 50  0001 C CNN
+	1    6300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg:GND #PWR?
+U 1 1 5FFAEF2E
+P 6550 3600
+AR Path="/5FFAEF2E" Ref="#PWR?"  Part="1" 
+AR Path="/6147A5D5/5FFAEF2E" Ref="#PWR?"  Part="1" 
+AR Path="/5D647F49/5FFAEF2E" Ref="#PWR0260"  Part="1" 
+F 0 "#PWR0260" H 6420 3640 50  0001 L CNN
+F 1 "GND" H 6550 3500 50  0000 C CNN
+F 2 "" H 6550 3600 50  0001 C CNN
+F 3 "" H 6550 3600 50  0001 C CNN
+	1    6550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3600 6550 3550
+Wire Wire Line
+	6550 3450 6550 3400
+Wire Wire Line
+	6300 3400 6300 3450
+Wire Wire Line
+	6300 3550 6300 3600
 $EndSCHEMATC

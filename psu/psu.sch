@@ -763,7 +763,7 @@ Wire Wire Line
 	3750 4250 4150 4250
 Text Label 5050 3250 0    50   ~ 0
 VIN_MON
-Text Label 5050 3450 0    50   ~ 0
+Text Label 5050 3350 0    50   ~ 0
 VOUT_MON
 Wire Notes Line
 	550  2500 3050 2500
@@ -1018,9 +1018,9 @@ Wire Wire Line
 	5350 6450 5450 6450
 Wire Wire Line
 	5550 6150 5650 6150
-Text Label 5050 5250 0    50   ~ 0
-LED_FAULT
 Text Label 5050 5150 0    50   ~ 0
+LED_FAULT
+Text Label 5050 5250 0    50   ~ 0
 LED_STAT
 $Comp
 L agg:R R109
@@ -1463,7 +1463,7 @@ Wire Wire Line
 	9050 1000 8950 1000
 Text Label 8950 1000 2    50   ~ 0
 GD
-Text Label 5050 3350 0    50   ~ 0
+Text Label 5050 3450 0    50   ~ 0
 I_IN
 Text Notes 3200 2450 0    60   ~ 12
 Low-Voltage Regulators
