@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name agg)(type KiCad)(uri /home/adam/Projects/iggie/agg-kicad/agg.pretty)(options "")(descr ""))
+  (lib (name load)(type KiCad)(uri /home/adam/Projects/iggie/load)(options "")(descr ""))
+)
