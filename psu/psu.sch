@@ -1806,8 +1806,6 @@ NoConn ~ 4100 6600
 NoConn ~ 4100 6700
 Text Label 4200 6800 0    50   ~ 0
 ~RST
-Text Notes 7450 5300 0    50   ~ 0
-add serial input?\nfewer LEDs?\ninterface to a display?
 Wire Wire Line
 	9700 1700 9800 1700
 Text Label 9800 1700 0    50   ~ 0
