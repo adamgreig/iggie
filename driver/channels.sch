@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 11
-Title ""
-Date ""
-Rev ""
+Title "IGGie Driver Board"
+Date "2019-09-26"
+Rev "1"
 Comp ""
-Comment1 ""
+Comment1 "Anode and Cathode Channels"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -21,35 +21,41 @@ AR Path="/63721298" Ref="J?"  Part="1"
 AR Path="/636F06DD/63721298" Ref="J201"  Part="1" 
 F 0 "J201" H 2100 5550 50  0000 C CNN
 F 1 "A_1_32" H 2100 3850 50  0000 C CNN
-F 2 "" H 2150 5450 50  0001 C CNN
+F 2 "agg:DIL-254P-32" H 2150 5450 50  0001 C CNN
 F 3 "" H 2150 5450 50  0001 C CNN
+F 4 "IPL1-116-01-L-D-RA-K" H 2150 5450 50  0001 C CNN "MPN"
+F 5 "2856270" H 2150 5450 50  0001 C CNN "Farnell"
 	1    2150 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L agg-kicad:CONN_02x16 J?
 U 1 1 6372129E
-P 4350 5450
+P 3150 5450
 AR Path="/6372129E" Ref="J?"  Part="1" 
-AR Path="/636F06DD/6372129E" Ref="J203"  Part="1" 
-F 0 "J203" H 4300 5550 50  0000 C CNN
-F 1 "A_33_64" H 4300 3850 50  0000 C CNN
-F 2 "" H 4350 5450 50  0001 C CNN
-F 3 "" H 4350 5450 50  0001 C CNN
-	1    4350 5450
+AR Path="/636F06DD/6372129E" Ref="J202"  Part="1" 
+F 0 "J202" H 3100 5550 50  0000 C CNN
+F 1 "A_33_64" H 3100 3850 50  0000 C CNN
+F 2 "agg:DIL-254P-32" H 3150 5450 50  0001 C CNN
+F 3 "" H 3150 5450 50  0001 C CNN
+F 4 "IPL1-116-01-L-D-RA-K" H 3150 5450 50  0001 C CNN "MPN"
+F 5 "2856270" H 3150 5450 50  0001 C CNN "Farnell"
+	1    3150 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L agg-kicad:CONN_02x16 J?
 U 1 1 637212A4
-P 5450 5450
+P 5150 5450
 AR Path="/637212A4" Ref="J?"  Part="1" 
 AR Path="/636F06DD/637212A4" Ref="J204"  Part="1" 
-F 0 "J204" H 5400 5550 50  0000 C CNN
-F 1 "K_33_64" H 5400 3850 50  0000 C CNN
-F 2 "" H 5450 5450 50  0001 C CNN
-F 3 "" H 5450 5450 50  0001 C CNN
-	1    5450 5450
+F 0 "J204" H 5100 5550 50  0000 C CNN
+F 1 "K_33_64" H 5100 3850 50  0000 C CNN
+F 2 "agg:DIL-254P-32" H 5150 5450 50  0001 C CNN
+F 3 "" H 5150 5450 50  0001 C CNN
+F 4 "IPL1-116-01-L-D-RA-K" H 5150 5450 50  0001 C CNN "MPN"
+F 5 "2856270" H 5150 5450 50  0001 C CNN "Farnell"
+	1    5150 5450
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -737,7 +743,7 @@ Wire Wire Line
 $Sheet
 S 8000 2900 950  1700
 U 63721504
-F0 "CH56-64" 50
+F0 "CH57-64" 50
 F1 "8ch.sch" 50
 F2 "A1" U R 8950 2950 50 
 F3 "K1" U R 8950 3850 50 
@@ -1189,228 +1195,228 @@ Wire Wire Line
 Wire Wire Line
 	2250 6950 2350 6950
 Wire Wire Line
-	4150 5450 4050 5450
+	2950 5450 2850 5450
 Wire Wire Line
-	4150 5550 4050 5550
+	2950 5550 2850 5550
 Wire Wire Line
-	4150 5650 4050 5650
+	2950 5650 2850 5650
 Wire Wire Line
-	4150 5750 4050 5750
+	2950 5750 2850 5750
 Wire Wire Line
-	4150 5850 4050 5850
+	2950 5850 2850 5850
 Wire Wire Line
-	4150 5950 4050 5950
+	2950 5950 2850 5950
 Wire Wire Line
-	4150 6050 4050 6050
+	2950 6050 2850 6050
 Wire Wire Line
-	4150 6150 4050 6150
+	2950 6150 2850 6150
 Wire Wire Line
-	4150 6250 4050 6250
+	2950 6250 2850 6250
 Wire Wire Line
-	4150 6350 4050 6350
+	2950 6350 2850 6350
 Wire Wire Line
-	4150 6450 4050 6450
+	2950 6450 2850 6450
 Wire Wire Line
-	4150 6550 4050 6550
+	2950 6550 2850 6550
 Wire Wire Line
-	4150 6650 4050 6650
+	2950 6650 2850 6650
 Wire Wire Line
-	4150 6750 4050 6750
+	2950 6750 2850 6750
 Wire Wire Line
-	4150 6850 4050 6850
+	2950 6850 2850 6850
 Wire Wire Line
-	4150 6950 4050 6950
+	2950 6950 2850 6950
 Wire Wire Line
-	4450 5450 4550 5450
+	3250 5450 3350 5450
 Wire Wire Line
-	4450 5550 4550 5550
+	3250 5550 3350 5550
 Wire Wire Line
-	4450 5650 4550 5650
+	3250 5650 3350 5650
 Wire Wire Line
-	4450 5750 4550 5750
+	3250 5750 3350 5750
 Wire Wire Line
-	4450 5850 4550 5850
+	3250 5850 3350 5850
 Wire Wire Line
-	4450 5950 4550 5950
+	3250 5950 3350 5950
 Wire Wire Line
-	4450 6050 4550 6050
+	3250 6050 3350 6050
 Wire Wire Line
-	4450 6150 4550 6150
+	3250 6150 3350 6150
 Wire Wire Line
-	4450 6250 4550 6250
+	3250 6250 3350 6250
 Wire Wire Line
-	4450 6350 4550 6350
+	3250 6350 3350 6350
 Wire Wire Line
-	4450 6450 4550 6450
+	3250 6450 3350 6450
 Wire Wire Line
-	4450 6550 4550 6550
+	3250 6550 3350 6550
 Wire Wire Line
-	4450 6650 4550 6650
+	3250 6650 3350 6650
 Wire Wire Line
-	4450 6750 4550 6750
+	3250 6750 3350 6750
 Wire Wire Line
-	4450 6850 4550 6850
+	3250 6850 3350 6850
 Wire Wire Line
-	4450 6950 4550 6950
+	3250 6950 3350 6950
 Wire Wire Line
-	5250 5450 5150 5450
+	4950 5450 4850 5450
 Wire Wire Line
-	5250 5550 5150 5550
+	4950 5550 4850 5550
 Wire Wire Line
-	5250 5650 5150 5650
+	4950 5650 4850 5650
 Wire Wire Line
-	5250 5750 5150 5750
+	4950 5750 4850 5750
 Wire Wire Line
-	5250 5850 5150 5850
+	4950 5850 4850 5850
 Wire Wire Line
-	5250 5950 5150 5950
+	4950 5950 4850 5950
 Wire Wire Line
-	5250 6050 5150 6050
+	4950 6050 4850 6050
 Wire Wire Line
-	5250 6150 5150 6150
+	4950 6150 4850 6150
 Wire Wire Line
-	5250 6250 5150 6250
+	4950 6250 4850 6250
 Wire Wire Line
-	5250 6350 5150 6350
+	4950 6350 4850 6350
 Wire Wire Line
-	5250 6450 5150 6450
+	4950 6450 4850 6450
 Wire Wire Line
-	5250 6550 5150 6550
+	4950 6550 4850 6550
 Wire Wire Line
-	5250 6650 5150 6650
+	4950 6650 4850 6650
 Wire Wire Line
-	5250 6750 5150 6750
+	4950 6750 4850 6750
 Wire Wire Line
-	5250 6850 5150 6850
+	4950 6850 4850 6850
 Wire Wire Line
-	5250 6950 5150 6950
+	4950 6950 4850 6950
 Wire Wire Line
-	5550 5450 5650 5450
+	5250 5450 5350 5450
 Wire Wire Line
-	5550 5550 5650 5550
+	5250 5550 5350 5550
 Wire Wire Line
-	5550 5650 5650 5650
+	5250 5650 5350 5650
 Wire Wire Line
-	5550 5750 5650 5750
+	5250 5750 5350 5750
 Wire Wire Line
-	5550 5850 5650 5850
+	5250 5850 5350 5850
 Wire Wire Line
-	5550 5950 5650 5950
+	5250 5950 5350 5950
 Wire Wire Line
-	5550 6050 5650 6050
+	5250 6050 5350 6050
 Wire Wire Line
-	5550 6150 5650 6150
+	5250 6150 5350 6150
 Wire Wire Line
-	5550 6250 5650 6250
+	5250 6250 5350 6250
 Wire Wire Line
-	5550 6350 5650 6350
+	5250 6350 5350 6350
 Wire Wire Line
-	5550 6450 5650 6450
+	5250 6450 5350 6450
 Wire Wire Line
-	5550 6550 5650 6550
+	5250 6550 5350 6550
 Wire Wire Line
-	5550 6650 5650 6650
+	5250 6650 5350 6650
 Wire Wire Line
-	5550 6750 5650 6750
+	5250 6750 5350 6750
 Wire Wire Line
-	5550 6850 5650 6850
+	5250 6850 5350 6850
 Wire Wire Line
-	5550 6950 5650 6950
+	5250 6950 5350 6950
 Wire Wire Line
-	3050 5450 2950 5450
+	3950 5450 3850 5450
 Wire Wire Line
-	3050 5550 2950 5550
+	3950 5550 3850 5550
 Wire Wire Line
-	3050 5650 2950 5650
+	3950 5650 3850 5650
 Wire Wire Line
-	3050 5750 2950 5750
+	3950 5750 3850 5750
 Wire Wire Line
-	3050 5850 2950 5850
+	3950 5850 3850 5850
 Wire Wire Line
-	3050 5950 2950 5950
+	3950 5950 3850 5950
 Wire Wire Line
-	3050 6050 2950 6050
+	3950 6050 3850 6050
 Wire Wire Line
-	3050 6150 2950 6150
+	3950 6150 3850 6150
 Wire Wire Line
-	3050 6250 2950 6250
+	3950 6250 3850 6250
 Wire Wire Line
-	3050 6350 2950 6350
+	3950 6350 3850 6350
 Wire Wire Line
-	3050 6450 2950 6450
+	3950 6450 3850 6450
 Wire Wire Line
-	3050 6550 2950 6550
+	3950 6550 3850 6550
 Wire Wire Line
-	3050 6650 2950 6650
+	3950 6650 3850 6650
 Wire Wire Line
-	3050 6750 2950 6750
+	3950 6750 3850 6750
 Wire Wire Line
-	3050 6850 2950 6850
+	3950 6850 3850 6850
 Wire Wire Line
-	3050 6950 2950 6950
+	3950 6950 3850 6950
 Wire Wire Line
-	3350 5450 3450 5450
+	4250 5450 4350 5450
 Wire Wire Line
-	3350 5550 3450 5550
+	4250 5550 4350 5550
 Wire Wire Line
-	3350 5650 3450 5650
+	4250 5650 4350 5650
 Wire Wire Line
-	3350 5750 3450 5750
+	4250 5750 4350 5750
 Wire Wire Line
-	3350 5850 3450 5850
+	4250 5850 4350 5850
 Wire Wire Line
-	3350 5950 3450 5950
+	4250 5950 4350 5950
 Wire Wire Line
-	3350 6050 3450 6050
+	4250 6050 4350 6050
 Wire Wire Line
-	3350 6150 3450 6150
+	4250 6150 4350 6150
 Wire Wire Line
-	3350 6250 3450 6250
+	4250 6250 4350 6250
 Wire Wire Line
-	3350 6350 3450 6350
+	4250 6350 4350 6350
 Wire Wire Line
-	3350 6450 3450 6450
+	4250 6450 4350 6450
 Wire Wire Line
-	3350 6550 3450 6550
+	4250 6550 4350 6550
 Wire Wire Line
-	3350 6650 3450 6650
+	4250 6650 4350 6650
 Wire Wire Line
-	3350 6750 3450 6750
+	4250 6750 4350 6750
 Wire Wire Line
-	3350 6850 3450 6850
+	4250 6850 4350 6850
 Wire Wire Line
-	3350 6950 3450 6950
-Text Label 4550 5450 0    50   ~ 0
+	4250 6950 4350 6950
+Text Label 3350 5450 0    50   ~ 0
 A34
-Text Label 4550 5550 0    50   ~ 0
+Text Label 3350 5550 0    50   ~ 0
 A36
-Text Label 4550 5650 0    50   ~ 0
+Text Label 3350 5650 0    50   ~ 0
 A38
-Text Label 4550 5750 0    50   ~ 0
+Text Label 3350 5750 0    50   ~ 0
 A40
-Text Label 4050 5450 2    50   ~ 0
+Text Label 2850 5450 2    50   ~ 0
 A33
-Text Label 4050 5550 2    50   ~ 0
+Text Label 2850 5550 2    50   ~ 0
 A35
-Text Label 4050 5650 2    50   ~ 0
+Text Label 2850 5650 2    50   ~ 0
 A37
-Text Label 4050 5750 2    50   ~ 0
+Text Label 2850 5750 2    50   ~ 0
 A39
-Text Label 4550 5850 0    50   ~ 0
+Text Label 3350 5850 0    50   ~ 0
 A42
-Text Label 4550 5950 0    50   ~ 0
+Text Label 3350 5950 0    50   ~ 0
 A44
-Text Label 4550 6050 0    50   ~ 0
+Text Label 3350 6050 0    50   ~ 0
 A46
-Text Label 4550 6150 0    50   ~ 0
+Text Label 3350 6150 0    50   ~ 0
 A48
-Text Label 4050 5850 2    50   ~ 0
+Text Label 2850 5850 2    50   ~ 0
 A41
-Text Label 4050 5950 2    50   ~ 0
+Text Label 2850 5950 2    50   ~ 0
 A43
-Text Label 4050 6050 2    50   ~ 0
+Text Label 2850 6050 2    50   ~ 0
 A45
-Text Label 4050 6150 2    50   ~ 0
+Text Label 2850 6150 2    50   ~ 0
 A47
 Wire Wire Line
 	8950 1650 9050 1650
@@ -1444,177 +1450,179 @@ Text Label 9050 1050 0    50   ~ 0
 A26
 Text Label 9050 950  0    50   ~ 0
 A25
-Text Label 4550 6250 0    50   ~ 0
+Text Label 3350 6250 0    50   ~ 0
 A50
-Text Label 4550 6350 0    50   ~ 0
+Text Label 3350 6350 0    50   ~ 0
 A52
-Text Label 4550 6450 0    50   ~ 0
+Text Label 3350 6450 0    50   ~ 0
 A54
-Text Label 4550 6550 0    50   ~ 0
+Text Label 3350 6550 0    50   ~ 0
 A56
-Text Label 4050 6250 2    50   ~ 0
+Text Label 2850 6250 2    50   ~ 0
 A49
-Text Label 4050 6350 2    50   ~ 0
+Text Label 2850 6350 2    50   ~ 0
 A51
-Text Label 4050 6450 2    50   ~ 0
+Text Label 2850 6450 2    50   ~ 0
 A53
-Text Label 4050 6550 2    50   ~ 0
+Text Label 2850 6550 2    50   ~ 0
 A55
-Text Label 4550 6650 0    50   ~ 0
+Text Label 3350 6650 0    50   ~ 0
 A58
-Text Label 4550 6750 0    50   ~ 0
+Text Label 3350 6750 0    50   ~ 0
 A60
-Text Label 4550 6850 0    50   ~ 0
+Text Label 3350 6850 0    50   ~ 0
 A62
-Text Label 4550 6950 0    50   ~ 0
+Text Label 3350 6950 0    50   ~ 0
 A64
-Text Label 4050 6650 2    50   ~ 0
+Text Label 2850 6650 2    50   ~ 0
 A57
-Text Label 4050 6750 2    50   ~ 0
+Text Label 2850 6750 2    50   ~ 0
 A59
-Text Label 4050 6850 2    50   ~ 0
+Text Label 2850 6850 2    50   ~ 0
 A61
-Text Label 4050 6950 2    50   ~ 0
+Text Label 2850 6950 2    50   ~ 0
 A63
-Text Label 3450 5450 0    50   ~ 0
+Text Label 4350 5450 0    50   ~ 0
 K2
-Text Label 3450 5550 0    50   ~ 0
+Text Label 4350 5550 0    50   ~ 0
 K4
-Text Label 3450 5650 0    50   ~ 0
+Text Label 4350 5650 0    50   ~ 0
 K6
-Text Label 3450 5750 0    50   ~ 0
+Text Label 4350 5750 0    50   ~ 0
 K8
-Text Label 2950 5450 2    50   ~ 0
+Text Label 3850 5450 2    50   ~ 0
 K1
-Text Label 2950 5550 2    50   ~ 0
+Text Label 3850 5550 2    50   ~ 0
 K3
-Text Label 2950 5650 2    50   ~ 0
+Text Label 3850 5650 2    50   ~ 0
 K5
-Text Label 2950 5750 2    50   ~ 0
+Text Label 3850 5750 2    50   ~ 0
 K7
-Text Label 3450 5850 0    50   ~ 0
+Text Label 4350 5850 0    50   ~ 0
 K10
-Text Label 3450 5950 0    50   ~ 0
+Text Label 4350 5950 0    50   ~ 0
 K12
-Text Label 3450 6050 0    50   ~ 0
+Text Label 4350 6050 0    50   ~ 0
 K14
-Text Label 3450 6150 0    50   ~ 0
+Text Label 4350 6150 0    50   ~ 0
 K16
-Text Label 2950 5850 2    50   ~ 0
+Text Label 3850 5850 2    50   ~ 0
 K9
-Text Label 2950 5950 2    50   ~ 0
+Text Label 3850 5950 2    50   ~ 0
 K11
-Text Label 2950 6050 2    50   ~ 0
+Text Label 3850 6050 2    50   ~ 0
 K13
-Text Label 2950 6150 2    50   ~ 0
+Text Label 3850 6150 2    50   ~ 0
 K15
-Text Label 3450 6250 0    50   ~ 0
+Text Label 4350 6250 0    50   ~ 0
 K18
-Text Label 3450 6350 0    50   ~ 0
+Text Label 4350 6350 0    50   ~ 0
 K20
-Text Label 3450 6550 0    50   ~ 0
+Text Label 4350 6550 0    50   ~ 0
 K22
-Text Label 3450 6750 0    50   ~ 0
+Text Label 4350 6750 0    50   ~ 0
 K24
-Text Label 2950 6250 2    50   ~ 0
+Text Label 3850 6250 2    50   ~ 0
 K17
-Text Label 2950 6350 2    50   ~ 0
+Text Label 3850 6350 2    50   ~ 0
 K19
-Text Label 2950 6450 2    50   ~ 0
+Text Label 3850 6450 2    50   ~ 0
 K21
-Text Label 2950 6550 2    50   ~ 0
+Text Label 3850 6550 2    50   ~ 0
 K23
-Text Label 3450 6450 0    50   ~ 0
+Text Label 4350 6450 0    50   ~ 0
 K26
-Text Label 3450 6650 0    50   ~ 0
+Text Label 4350 6650 0    50   ~ 0
 K28
-Text Label 3450 6850 0    50   ~ 0
+Text Label 4350 6850 0    50   ~ 0
 K30
-Text Label 3450 6950 0    50   ~ 0
+Text Label 4350 6950 0    50   ~ 0
 K32
-Text Label 2950 6650 2    50   ~ 0
+Text Label 3850 6650 2    50   ~ 0
 K25
-Text Label 2950 6750 2    50   ~ 0
+Text Label 3850 6750 2    50   ~ 0
 K27
-Text Label 2950 6850 2    50   ~ 0
+Text Label 3850 6850 2    50   ~ 0
 K29
-Text Label 2950 6950 2    50   ~ 0
+Text Label 3850 6950 2    50   ~ 0
 K31
-Text Label 5650 5450 0    50   ~ 0
+Text Label 5350 5450 0    50   ~ 0
 K34
-Text Label 5650 5550 0    50   ~ 0
+Text Label 5350 5550 0    50   ~ 0
 K36
-Text Label 5650 5650 0    50   ~ 0
+Text Label 5350 5650 0    50   ~ 0
 K38
-Text Label 5650 5750 0    50   ~ 0
+Text Label 5350 5750 0    50   ~ 0
 K40
-Text Label 5150 5450 2    50   ~ 0
+Text Label 4850 5450 2    50   ~ 0
 K33
-Text Label 5150 5550 2    50   ~ 0
+Text Label 4850 5550 2    50   ~ 0
 K35
-Text Label 5150 5650 2    50   ~ 0
+Text Label 4850 5650 2    50   ~ 0
 K37
-Text Label 5150 5750 2    50   ~ 0
+Text Label 4850 5750 2    50   ~ 0
 K39
-Text Label 5650 5850 0    50   ~ 0
+Text Label 5350 5850 0    50   ~ 0
 K42
-Text Label 5650 5950 0    50   ~ 0
+Text Label 5350 5950 0    50   ~ 0
 K44
-Text Label 5650 6050 0    50   ~ 0
+Text Label 5350 6050 0    50   ~ 0
 K46
-Text Label 5650 6150 0    50   ~ 0
+Text Label 5350 6150 0    50   ~ 0
 K48
-Text Label 5150 5850 2    50   ~ 0
+Text Label 4850 5850 2    50   ~ 0
 K41
-Text Label 5150 5950 2    50   ~ 0
+Text Label 4850 5950 2    50   ~ 0
 K43
-Text Label 5150 6050 2    50   ~ 0
+Text Label 4850 6050 2    50   ~ 0
 K45
-Text Label 5150 6150 2    50   ~ 0
+Text Label 4850 6150 2    50   ~ 0
 K47
-Text Label 5650 6250 0    50   ~ 0
+Text Label 5350 6250 0    50   ~ 0
 K50
-Text Label 5650 6350 0    50   ~ 0
+Text Label 5350 6350 0    50   ~ 0
 K52
-Text Label 5650 6450 0    50   ~ 0
+Text Label 5350 6450 0    50   ~ 0
 K54
-Text Label 5650 6550 0    50   ~ 0
+Text Label 5350 6550 0    50   ~ 0
 K56
-Text Label 5150 6250 2    50   ~ 0
+Text Label 4850 6250 2    50   ~ 0
 K49
-Text Label 5150 6350 2    50   ~ 0
+Text Label 4850 6350 2    50   ~ 0
 K51
-Text Label 5150 6450 2    50   ~ 0
+Text Label 4850 6450 2    50   ~ 0
 K53
-Text Label 5150 6550 2    50   ~ 0
+Text Label 4850 6550 2    50   ~ 0
 K55
-Text Label 5650 6650 0    50   ~ 0
+Text Label 5350 6650 0    50   ~ 0
 K58
-Text Label 5650 6750 0    50   ~ 0
+Text Label 5350 6750 0    50   ~ 0
 K60
-Text Label 5650 6850 0    50   ~ 0
+Text Label 5350 6850 0    50   ~ 0
 K62
-Text Label 5650 6950 0    50   ~ 0
+Text Label 5350 6950 0    50   ~ 0
 K64
-Text Label 5150 6650 2    50   ~ 0
+Text Label 4850 6650 2    50   ~ 0
 K57
-Text Label 5150 6750 2    50   ~ 0
+Text Label 4850 6750 2    50   ~ 0
 K59
-Text Label 5150 6850 2    50   ~ 0
+Text Label 4850 6850 2    50   ~ 0
 K61
-Text Label 5150 6950 2    50   ~ 0
+Text Label 4850 6950 2    50   ~ 0
 K63
 $Comp
 L agg-kicad:CONN_02x16 J?
 U 1 1 637218E9
-P 3250 5450
+P 4150 5450
 AR Path="/637218E9" Ref="J?"  Part="1" 
-AR Path="/636F06DD/637218E9" Ref="J202"  Part="1" 
-F 0 "J202" H 3200 5550 50  0000 C CNN
-F 1 "K_1_32" H 3200 3850 50  0000 C CNN
-F 2 "" H 3250 5450 50  0001 C CNN
-F 3 "" H 3250 5450 50  0001 C CNN
-	1    3250 5450
+AR Path="/636F06DD/637218E9" Ref="J203"  Part="1" 
+F 0 "J203" H 4100 5550 50  0000 C CNN
+F 1 "K_1_32" H 4100 3850 50  0000 C CNN
+F 2 "agg:DIL-254P-32" H 4150 5450 50  0001 C CNN
+F 3 "" H 4150 5450 50  0001 C CNN
+F 4 "IPL1-116-01-L-D-RA-K" H 4150 5450 50  0001 C CNN "MPN"
+F 5 "2856270" H 4150 5450 50  0001 C CNN "Farnell"
+	1    4150 5450
 	1    0    0    -1  
 $EndComp
 Entry Wire Line
@@ -1777,13 +1785,13 @@ Entry Wire Line
 	3700 2350 3800 2450
 Entry Wire Line
 	3700 2450 3800 2550
-Text Label 1700 850  2    50   ~ 0
+Text Label 1700 800  2    50   ~ 0
 GA[1..64]
-Text Label 1700 1750 2    50   ~ 0
+Text Label 1700 1700 2    50   ~ 0
 GK[1..64]
-Text Label 3700 850  2    50   ~ 0
+Text Label 3700 800  2    50   ~ 0
 GA[1..64]
-Text Label 3700 1750 2    50   ~ 0
+Text Label 3700 1700 2    50   ~ 0
 GK[1..64]
 Wire Wire Line
 	5800 950  6000 950 
@@ -2169,111 +2177,111 @@ Entry Wire Line
 	1700 4350 1800 4450
 Entry Wire Line
 	1700 4450 1800 4550
-Text Label 5700 850  2    50   ~ 0
+Text Label 5700 800  2    50   ~ 0
 GA[1..64]
-Text Label 7700 850  2    50   ~ 0
+Text Label 7700 800  2    50   ~ 0
 GA[1..64]
-Text Label 1700 2850 2    50   ~ 0
+Text Label 1700 2800 2    50   ~ 0
 GA[1..64]
-Text Label 3700 2850 2    50   ~ 0
+Text Label 3700 2800 2    50   ~ 0
 GA[1..64]
-Text Label 5700 2850 2    50   ~ 0
+Text Label 5700 2800 2    50   ~ 0
 GA[1..64]
-Text Label 7700 2850 2    50   ~ 0
+Text Label 7700 2800 2    50   ~ 0
 GA[1..64]
-Text Label 5700 1750 2    50   ~ 0
+Text Label 5700 1700 2    50   ~ 0
 GK[1..64]
-Text Label 7700 1750 2    50   ~ 0
+Text Label 7700 1700 2    50   ~ 0
 GK[1..64]
-Text Label 1700 3750 2    50   ~ 0
+Text Label 1700 3700 2    50   ~ 0
 GK[1..64]
-Text Label 3700 3750 2    50   ~ 0
+Text Label 3700 3700 2    50   ~ 0
 GK[1..64]
-Text Label 5700 3750 2    50   ~ 0
-GK[1..64]
-Text Label 7700 3750 2    50   ~ 0
+Text Label 5700 3700 2    50   ~ 0
 GK[1..64]
 $Sheet
-S 8500 5150 900  1000
+S 7500 5150 900  1000
 U 7CCBE6C5
 F0 "Shift Registers" 50
 F1 "shiftregs.sch" 50
-F2 "GK[1..64]" O R 9400 5550 50 
-F3 "GA[1..64]" O R 9400 5250 50 
-F4 "~MR" I L 8500 6050 50 
-F5 "SHCPA" I L 8500 5350 50 
-F6 "STCP" I L 8500 5850 50 
-F7 "~OE" I L 8500 5950 50 
-F8 "DSA" I L 8500 5250 50 
-F9 "SHCPK" I L 8500 5650 50 
-F10 "DSK" I L 8500 5550 50 
+F2 "GK[1..64]" O R 8400 5550 50 
+F3 "GA[1..64]" O R 8400 5250 50 
+F4 "~MR" I L 7500 6050 50 
+F5 "SHCPA" I L 7500 5350 50 
+F6 "STCP" I L 7500 5850 50 
+F7 "~OE" I L 7500 5950 50 
+F8 "DSA" I L 7500 5250 50 
+F9 "SHCPK" I L 7500 5650 50 
+F10 "DSK" I L 7500 5550 50 
 $EndSheet
-Text Label 9500 5550 0    50   ~ 0
+Text Label 8500 5550 0    50   ~ 0
 GK[1..64]
-Text Label 9500 5250 0    50   ~ 0
+Text Label 8500 5250 0    50   ~ 0
 GA[1..64]
-Text HLabel 8400 6050 0    50   Input ~ 0
+Text HLabel 7400 6050 0    50   Input ~ 0
 ~MR
 Wire Wire Line
-	8400 6050 8500 6050
-Text HLabel 8400 5350 0    50   Input ~ 0
-SHCPA
+	7400 6050 7500 6050
+Text HLabel 7400 5350 0    50   Input ~ 0
+ACLK
 Wire Wire Line
-	8400 5350 8500 5350
-Text HLabel 8400 5850 0    50   Input ~ 0
+	7400 5350 7500 5350
+Text HLabel 7400 5850 0    50   Input ~ 0
 STCP
 Wire Wire Line
-	8400 5850 8500 5850
-Text HLabel 8400 5950 0    50   Input ~ 0
+	7400 5850 7500 5850
+Text HLabel 7400 5950 0    50   Input ~ 0
 ~OE
 Wire Wire Line
-	8400 5950 8500 5950
-Text HLabel 8400 5250 0    50   Input ~ 0
-DSA
+	7400 5950 7500 5950
+Text HLabel 7400 5250 0    50   Input ~ 0
+ADAT
 Wire Wire Line
-	8400 5250 8500 5250
-Text HLabel 8400 5650 0    50   Input ~ 0
-SHCPK
+	7400 5250 7500 5250
+Text HLabel 7400 5650 0    50   Input ~ 0
+KCLK
 Wire Wire Line
-	8400 5650 8500 5650
-Text HLabel 8400 5550 0    50   Input ~ 0
-DSK
+	7400 5650 7500 5650
+Text HLabel 7400 5550 0    50   Input ~ 0
+KDAT
 Wire Wire Line
-	8400 5550 8500 5550
+	7400 5550 7500 5550
 Wire Bus Line
-	9500 5250 9400 5250
+	8500 5250 8400 5250
 Wire Bus Line
-	9500 5550 9400 5550
+	8500 5550 8400 5550
+Text Label 7700 3700 2    50   ~ 0
+GK[1..64]
 Wire Bus Line
-	1700 850  1700 1550
+	1700 3700 1700 4450
 Wire Bus Line
-	1700 1750 1700 2450
+	1700 2800 1700 3550
 Wire Bus Line
-	3700 850  3700 1550
+	1700 1700 1700 2450
 Wire Bus Line
-	3700 1750 3700 2450
+	1700 800  1700 1550
 Wire Bus Line
-	5700 850  5700 1550
+	3700 800  3700 1550
 Wire Bus Line
-	5700 1750 5700 2450
+	3700 1700 3700 2450
 Wire Bus Line
-	5700 2850 5700 3550
+	3700 3700 3700 4450
 Wire Bus Line
-	5700 3750 5700 4450
+	3700 2800 3700 3550
 Wire Bus Line
-	7700 850  7700 1550
+	5700 1700 5700 2450
 Wire Bus Line
-	7700 1750 7700 2450
+	5700 800  5700 1550
 Wire Bus Line
-	7700 2850 7700 3550
+	7700 800  7700 1550
 Wire Bus Line
-	7700 3750 7700 4450
+	7700 1700 7700 2450
 Wire Bus Line
-	3700 2850 3700 3550
+	7700 2800 7700 3550
 Wire Bus Line
-	3700 3750 3700 4450
+	7700 3700 7700 4450
 Wire Bus Line
-	1700 2850 1700 3550
+	5700 3700 5700 4450
 Wire Bus Line
-	1700 3750 1700 4450
+	5700 2800 5700 3550
 $EndSCHEMATC
