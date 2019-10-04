@@ -388,6 +388,18 @@ X D 3 0 100 50 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# agg-kicad_PART
+#
+DEF agg-kicad_PART X 0 40 Y Y 1 F N
+F0 "X" 50 100 50 H V L CNN
+F1 "agg-kicad_PART" 50 0 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 0 150 500 -50 0 1 0 f
+ENDDRAW
+ENDDEF
+#
 # agg-kicad_PNP
 #
 DEF agg-kicad_PNP Q 0 0 Y N 1 F N

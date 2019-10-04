@@ -1093,7 +1093,6 @@ Text Label 9250 2950 0    50   ~ 0
 GA63
 Text Label 9250 3050 0    50   ~ 0
 GA64
-NoConn ~ 9200 3150
 Text Label 3100 3950 0    50   ~ 0
 GK1
 Text Label 3100 4050 0    50   ~ 0
@@ -1220,7 +1219,6 @@ Text Label 9250 5950 0    50   ~ 0
 GK63
 Text Label 9250 6050 0    50   ~ 0
 GK64
-NoConn ~ 9200 6150
 Text Label 7200 5350 0    50   ~ 0
 GK49
 $Comp
@@ -2711,6 +2709,14 @@ Wire Wire Line
 	5100 6150 6250 6150
 Wire Wire Line
 	8300 6150 7150 6150
+Text HLabel 9600 3150 2    50   Output ~ 0
+DSAO
+Wire Wire Line
+	9600 3150 9200 3150
+Text HLabel 9600 6150 2    50   Output ~ 0
+DSKO
+Wire Wire Line
+	9600 6150 9200 6150
 Wire Bus Line
 	9550 2200 9550 2950
 Wire Bus Line
