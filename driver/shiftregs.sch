@@ -490,69 +490,69 @@ Wire Wire Line
 	8800 4900 8800 4800
 Wire Wire Line
 	8800 4800 8900 4800
-Text Label 3650 2500 0    50   ~ 0
-GA1
-Text Label 3650 2600 0    50   ~ 0
-GA2
-Text Label 3650 2700 0    50   ~ 0
-GA3
-Text Label 3650 2800 0    50   ~ 0
-GA4
-Text Label 3650 2900 0    50   ~ 0
-GA5
-Text Label 3650 3000 0    50   ~ 0
-GA6
-Text Label 3650 3100 0    50   ~ 0
-GA7
 Text Label 3650 3200 0    50   ~ 0
+GA1
+Text Label 3650 3100 0    50   ~ 0
+GA2
+Text Label 3650 3000 0    50   ~ 0
+GA3
+Text Label 3650 2900 0    50   ~ 0
+GA4
+Text Label 3650 2800 0    50   ~ 0
+GA5
+Text Label 3650 2700 0    50   ~ 0
+GA6
+Text Label 3650 2600 0    50   ~ 0
+GA7
+Text Label 3650 2500 0    50   ~ 0
 GA8
-Text Label 5650 2500 0    50   ~ 0
-GA9
-Text Label 5650 2600 0    50   ~ 0
-GA10
-Text Label 5650 2700 0    50   ~ 0
-GA11
-Text Label 5650 2800 0    50   ~ 0
-GA12
-Text Label 5650 2900 0    50   ~ 0
-GA13
-Text Label 5650 3000 0    50   ~ 0
-GA14
-Text Label 5650 3100 0    50   ~ 0
-GA15
 Text Label 5650 3200 0    50   ~ 0
+GA9
+Text Label 5650 3100 0    50   ~ 0
+GA10
+Text Label 5650 3000 0    50   ~ 0
+GA11
+Text Label 5650 2900 0    50   ~ 0
+GA12
+Text Label 5650 2800 0    50   ~ 0
+GA13
+Text Label 5650 2700 0    50   ~ 0
+GA14
+Text Label 5650 2600 0    50   ~ 0
+GA15
+Text Label 5650 2500 0    50   ~ 0
 GA16
-Text Label 7700 2500 0    50   ~ 0
-GA17
-Text Label 7700 2600 0    50   ~ 0
-GA18
-Text Label 7700 2700 0    50   ~ 0
-GA19
-Text Label 7700 2800 0    50   ~ 0
-GA20
-Text Label 7700 2900 0    50   ~ 0
-GA21
-Text Label 7700 3000 0    50   ~ 0
-GA22
-Text Label 7700 3100 0    50   ~ 0
-GA23
 Text Label 7700 3200 0    50   ~ 0
+GA17
+Text Label 7700 3100 0    50   ~ 0
+GA18
+Text Label 7700 3000 0    50   ~ 0
+GA19
+Text Label 7700 2900 0    50   ~ 0
+GA20
+Text Label 7700 2800 0    50   ~ 0
+GA21
+Text Label 7700 2700 0    50   ~ 0
+GA22
+Text Label 7700 2600 0    50   ~ 0
+GA23
+Text Label 7700 2500 0    50   ~ 0
 GA24
-Text Label 9750 2500 0    50   ~ 0
-GA25
-Text Label 9750 2600 0    50   ~ 0
-GA26
-Text Label 9750 2700 0    50   ~ 0
-GA27
-Text Label 9750 2800 0    50   ~ 0
-GA28
-Text Label 9750 2900 0    50   ~ 0
-GA29
-Text Label 9750 3000 0    50   ~ 0
-GA30
-Text Label 9750 3100 0    50   ~ 0
-GA31
 Text Label 9750 3200 0    50   ~ 0
+GA25
+Text Label 9750 3100 0    50   ~ 0
+GA26
+Text Label 9750 3000 0    50   ~ 0
+GA27
+Text Label 9750 2900 0    50   ~ 0
+GA28
+Text Label 9750 2800 0    50   ~ 0
+GA29
+Text Label 9750 2700 0    50   ~ 0
+GA30
+Text Label 9750 2600 0    50   ~ 0
+GA31
+Text Label 9750 2500 0    50   ~ 0
 GA32
 Text Label 3600 4100 0    50   ~ 0
 GK1

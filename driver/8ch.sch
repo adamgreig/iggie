@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 6 7
 Title "IGGie Driver Board"
 Date "2019-09-26"
 Rev "1"
@@ -1678,7 +1678,7 @@ Wire Wire Line
 	4750 4850 4850 4850
 Text HLabel 4850 4850 2    50   UnSpc ~ 0
 A6
-Text HLabel 4850 5000 2    50   UnSpc ~ 0
+Text HLabel 4250 2300 2    50   UnSpc ~ 0
 K6
 Text HLabel 4450 5300 0    50   Input ~ 0
 GK6
@@ -2275,4 +2275,6 @@ Text HLabel 3350 2700 2    50   UnSpc ~ 0
 K1
 Text HLabel 3350 2550 2    50   UnSpc ~ 0
 A1
+Text HLabel 4850 5000 2    50   UnSpc ~ 0
+K6
 $EndSCHEMATC

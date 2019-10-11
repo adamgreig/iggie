@@ -761,9 +761,9 @@ Text Label 5050 5300 0    50   ~ 0
 K18
 Text Label 5050 5400 0    50   ~ 0
 K20
-Text Label 5050 5600 0    50   ~ 0
+Text Label 5050 5500 0    50   ~ 0
 K22
-Text Label 5050 5800 0    50   ~ 0
+Text Label 5050 5600 0    50   ~ 0
 K24
 Text Label 4550 5300 2    50   ~ 0
 K17
@@ -773,9 +773,9 @@ Text Label 4550 5500 2    50   ~ 0
 K21
 Text Label 4550 5600 2    50   ~ 0
 K23
-Text Label 5050 5500 0    50   ~ 0
-K26
 Text Label 5050 5700 0    50   ~ 0
+K26
+Text Label 5050 5800 0    50   ~ 0
 K28
 Text Label 5050 5900 0    50   ~ 0
 K30
