@@ -1,4 +1,4 @@
-488069483632303
+498910911102303
 agg
 0201
 
@@ -287,19 +287,19 @@ BNC_PCB_RA_5-1634556-0
 5
 2
 agg
-CHIPv1_0
-
-
-0
-80
-80
-agg
 ChipFET-1206-8
 
 
 0
 8
 8
+agg
+CHIPv1_0
+
+
+0
+80
+80
 agg
 D2PAK
 TO-263
@@ -700,6 +700,13 @@ HVQFN24-NXP
 33
 25
 agg
+IPL1-116-02-L-SH
+
+
+0
+18
+16
+agg
 KEYSTONE5016
 
 
@@ -734,6 +741,20 @@ LAB01
 0
 24
 24
+agg
+Lattice-BG121
+
+
+0
+121
+121
+agg
+Lattice-SG48
+
+
+0
+90
+49
 agg
 LGA-16L-ST
 
@@ -790,20 +811,6 @@ LQFP-144
 0
 144
 144
-agg
-Lattice-BG121
-
-
-0
-121
-121
-agg
-Lattice-SG48
-
-
-0
-90
-49
 agg
 M2.5_HOLE
 
@@ -1127,26 +1134,19 @@ PIZERO
 40
 40
 agg
-PSG01550
-
-
-0
-3
-3
-agg
-PULSE_32x100
-
-
-0
-3
-2
-agg
 PowerFLAT-5x6
 
 
 0
 14
 6
+agg
+PowerPair-3x3
+
+
+0
+10
+5
 agg
 PowerPAK-1212-8
 
@@ -1169,12 +1169,19 @@ PowerPAK-SO-8
 9
 3
 agg
-PowerPair-3x3
+PSG01550
 
 
 0
-10
-5
+3
+3
+agg
+PULSE_32x100
+
+
+0
+3
+2
 agg
 QFN-16-EP-NXP
 
@@ -2086,6 +2093,13 @@ ULTRA-FIT-01x03
 3
 3
 agg
+uQFN-10L
+
+
+0
+10
+10
+agg
 US8-3.1mm
 
 
@@ -2218,10 +2232,3 @@ XTAL-50x32
 0
 2
 2
-agg
-uQFN-10L
-
-
-0
-10
-10

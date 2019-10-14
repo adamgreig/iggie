@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:iggie-driver-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,21 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L agg-kicad:CONN_02x16 J?
-U 1 1 63721298
-P 2850 4500
-AR Path="/63721298" Ref="J?"  Part="1" 
-AR Path="/636F06DD/63721298" Ref="J201"  Part="1" 
-F 0 "J201" H 2800 4600 50  0000 C CNN
-F 1 "A_1_32" H 2800 2900 50  0000 C CNN
-F 2 "agg:DIL-254P-32" H 2850 4500 50  0001 C CNN
-F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 2850 4500 50  0001 C CNN
-F 4 "IPL1-116-01-L-D-RA-K" H 2850 4500 50  0001 C CNN "MPN"
-F 5 "2856270" H 2850 4500 50  0001 C CNN "Farnell"
-	1    2850 4500
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 2200 1750 950  1700
 U 637212C6
@@ -501,198 +486,6 @@ Text Label 9250 3300 0    50   ~ 0
 K31
 Text Label 9250 3400 0    50   ~ 0
 K32
-Text Label 3050 5600 0    50   ~ 0
-A24
-Text Label 3050 5500 0    50   ~ 0
-A22
-Text Label 3050 5400 0    50   ~ 0
-A20
-Text Label 3050 5300 0    50   ~ 0
-A18
-Text Label 3050 5200 0    50   ~ 0
-A16
-Text Label 3050 5100 0    50   ~ 0
-A14
-Text Label 3050 5000 0    50   ~ 0
-A12
-Text Label 3050 4900 0    50   ~ 0
-A10
-Text Label 3050 4800 0    50   ~ 0
-A8
-Text Label 3050 4700 0    50   ~ 0
-A6
-Text Label 3050 4600 0    50   ~ 0
-A4
-Text Label 3050 4500 0    50   ~ 0
-A2
-Text Label 2550 5600 2    50   ~ 0
-A23
-Text Label 2550 5500 2    50   ~ 0
-A21
-Text Label 2550 5400 2    50   ~ 0
-A19
-Text Label 2550 5300 2    50   ~ 0
-A17
-Text Label 2550 4900 2    50   ~ 0
-A9
-Text Label 2550 5200 2    50   ~ 0
-A15
-Text Label 2550 5100 2    50   ~ 0
-A13
-Text Label 2550 5000 2    50   ~ 0
-A11
-Text Label 2550 4800 2    50   ~ 0
-A7
-Text Label 2550 4700 2    50   ~ 0
-A5
-Text Label 2550 4600 2    50   ~ 0
-A3
-Text Label 2550 4500 2    50   ~ 0
-A1
-Text Label 3050 5700 0    50   ~ 0
-A26
-Text Label 3050 5800 0    50   ~ 0
-A28
-Text Label 3050 5900 0    50   ~ 0
-A30
-Text Label 3050 6000 0    50   ~ 0
-A32
-Text Label 2550 5700 2    50   ~ 0
-A25
-Text Label 2550 5800 2    50   ~ 0
-A27
-Text Label 2550 5900 2    50   ~ 0
-A29
-Text Label 2550 6000 2    50   ~ 0
-A31
-Wire Wire Line
-	2550 4500 2650 4500
-Wire Wire Line
-	2550 4600 2650 4600
-Wire Wire Line
-	2550 4700 2650 4700
-Wire Wire Line
-	2550 4800 2650 4800
-Wire Wire Line
-	2550 4900 2650 4900
-Wire Wire Line
-	2550 5000 2650 5000
-Wire Wire Line
-	2550 5100 2650 5100
-Wire Wire Line
-	2550 5200 2650 5200
-Wire Wire Line
-	2550 5300 2650 5300
-Wire Wire Line
-	2550 5400 2650 5400
-Wire Wire Line
-	2550 5500 2650 5500
-Wire Wire Line
-	2550 5600 2650 5600
-Wire Wire Line
-	2550 5700 2650 5700
-Wire Wire Line
-	2550 5800 2650 5800
-Wire Wire Line
-	2550 5900 2650 5900
-Wire Wire Line
-	2550 6000 2650 6000
-Wire Wire Line
-	2950 4500 3050 4500
-Wire Wire Line
-	2950 4600 3050 4600
-Wire Wire Line
-	2950 4700 3050 4700
-Wire Wire Line
-	2950 4800 3050 4800
-Wire Wire Line
-	2950 4900 3050 4900
-Wire Wire Line
-	2950 5000 3050 5000
-Wire Wire Line
-	2950 5100 3050 5100
-Wire Wire Line
-	2950 5200 3050 5200
-Wire Wire Line
-	2950 5300 3050 5300
-Wire Wire Line
-	2950 5400 3050 5400
-Wire Wire Line
-	2950 5500 3050 5500
-Wire Wire Line
-	2950 5600 3050 5600
-Wire Wire Line
-	2950 5700 3050 5700
-Wire Wire Line
-	2950 5800 3050 5800
-Wire Wire Line
-	2950 5900 3050 5900
-Wire Wire Line
-	2950 6000 3050 6000
-Wire Wire Line
-	4650 4500 4550 4500
-Wire Wire Line
-	4650 4600 4550 4600
-Wire Wire Line
-	4650 4700 4550 4700
-Wire Wire Line
-	4650 4800 4550 4800
-Wire Wire Line
-	4650 4900 4550 4900
-Wire Wire Line
-	4650 5000 4550 5000
-Wire Wire Line
-	4650 5100 4550 5100
-Wire Wire Line
-	4650 5200 4550 5200
-Wire Wire Line
-	4650 5300 4550 5300
-Wire Wire Line
-	4650 5400 4550 5400
-Wire Wire Line
-	4650 5500 4550 5500
-Wire Wire Line
-	4650 5600 4550 5600
-Wire Wire Line
-	4650 5700 4550 5700
-Wire Wire Line
-	4650 5800 4550 5800
-Wire Wire Line
-	4650 5900 4550 5900
-Wire Wire Line
-	4650 6000 4550 6000
-Wire Wire Line
-	4950 4500 5050 4500
-Wire Wire Line
-	4950 4600 5050 4600
-Wire Wire Line
-	4950 4700 5050 4700
-Wire Wire Line
-	4950 4800 5050 4800
-Wire Wire Line
-	4950 4900 5050 4900
-Wire Wire Line
-	4950 5000 5050 5000
-Wire Wire Line
-	4950 5100 5050 5100
-Wire Wire Line
-	4950 5200 5050 5200
-Wire Wire Line
-	4950 5300 5050 5300
-Wire Wire Line
-	4950 5400 5050 5400
-Wire Wire Line
-	4950 5500 5050 5500
-Wire Wire Line
-	4950 5600 5050 5600
-Wire Wire Line
-	4950 5700 5050 5700
-Wire Wire Line
-	4950 5800 5050 5800
-Wire Wire Line
-	4950 5900 5050 5900
-Wire Wire Line
-	4950 6000 5050 6000
 Wire Wire Line
 	9150 2500 9250 2500
 Wire Wire Line
@@ -725,85 +518,6 @@ Text Label 9250 1900 0    50   ~ 0
 A26
 Text Label 9250 1800 0    50   ~ 0
 A25
-Text Label 5050 4500 0    50   ~ 0
-K2
-Text Label 5050 4600 0    50   ~ 0
-K4
-Text Label 5050 4700 0    50   ~ 0
-K6
-Text Label 5050 4800 0    50   ~ 0
-K8
-Text Label 4550 4500 2    50   ~ 0
-K1
-Text Label 4550 4600 2    50   ~ 0
-K3
-Text Label 4550 4700 2    50   ~ 0
-K5
-Text Label 4550 4800 2    50   ~ 0
-K7
-Text Label 5050 4900 0    50   ~ 0
-K10
-Text Label 5050 5000 0    50   ~ 0
-K12
-Text Label 5050 5100 0    50   ~ 0
-K14
-Text Label 5050 5200 0    50   ~ 0
-K16
-Text Label 4550 4900 2    50   ~ 0
-K9
-Text Label 4550 5000 2    50   ~ 0
-K11
-Text Label 4550 5100 2    50   ~ 0
-K13
-Text Label 4550 5200 2    50   ~ 0
-K15
-Text Label 5050 5300 0    50   ~ 0
-K18
-Text Label 5050 5400 0    50   ~ 0
-K20
-Text Label 5050 5500 0    50   ~ 0
-K22
-Text Label 5050 5600 0    50   ~ 0
-K24
-Text Label 4550 5300 2    50   ~ 0
-K17
-Text Label 4550 5400 2    50   ~ 0
-K19
-Text Label 4550 5500 2    50   ~ 0
-K21
-Text Label 4550 5600 2    50   ~ 0
-K23
-Text Label 5050 5700 0    50   ~ 0
-K26
-Text Label 5050 5800 0    50   ~ 0
-K28
-Text Label 5050 5900 0    50   ~ 0
-K30
-Text Label 5050 6000 0    50   ~ 0
-K32
-Text Label 4550 5700 2    50   ~ 0
-K25
-Text Label 4550 5800 2    50   ~ 0
-K27
-Text Label 4550 5900 2    50   ~ 0
-K29
-Text Label 4550 6000 2    50   ~ 0
-K31
-$Comp
-L agg-kicad:CONN_02x16 J?
-U 1 1 637218E9
-P 4850 6000
-AR Path="/637218E9" Ref="J?"  Part="1" 
-AR Path="/636F06DD/637218E9" Ref="J202"  Part="1" 
-F 0 "J202" H 4800 6100 50  0000 C CNN
-F 1 "K_1_32" H 4800 4400 50  0000 C CNN
-F 2 "agg:DIL-254P-32" H 4850 6000 50  0001 C CNN
-F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 4850 6000 50  0001 C CNN
-F 4 "IPL1-116-01-L-D-RA-K" H 4850 6000 50  0001 C CNN "MPN"
-F 5 "2856270" H 4850 6000 50  0001 C CNN "Farnell"
-	1    4850 6000
-	1    0    0    1   
-$EndComp
 Entry Wire Line
 	1900 1700 2000 1800
 Entry Wire Line
@@ -1169,20 +883,324 @@ Wire Wire Line
 	7650 5500 7550 5500
 Wire Wire Line
 	7550 5400 7650 5400
+$Comp
+L agg-kicad:CONN_01x16 J201
+U 1 1 5DA5D3E1
+P 2700 4500
+F 0 "J201" H 2650 4600 50  0000 L CNN
+F 1 "A_1_16" H 2650 2900 50  0000 L CNN
+F 2 "agg:IPL1-116-02-L-SH" H 2700 4500 50  0001 C CNN
+F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 2700 4500 50  0001 C CNN
+F 4 "IPL1-116-02-L-SH-K" H 2700 4500 50  0001 C CNN "Samtec"
+	1    2700 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4500 2500 4500
+Text Label 2500 4500 2    50   ~ 0
+A1
+Text Label 2500 4600 2    50   ~ 0
+A2
+Text Label 2500 4700 2    50   ~ 0
+A3
+Text Label 2500 4800 2    50   ~ 0
+A4
+Text Label 2500 4900 2    50   ~ 0
+A5
+Text Label 2500 5000 2    50   ~ 0
+A6
+Text Label 2500 5100 2    50   ~ 0
+A7
+Text Label 2500 5200 2    50   ~ 0
+A8
+Text Label 2500 5300 2    50   ~ 0
+A9
+Text Label 2500 5400 2    50   ~ 0
+A10
+Text Label 2500 5500 2    50   ~ 0
+A11
+Text Label 2500 5600 2    50   ~ 0
+A12
+Text Label 2500 5700 2    50   ~ 0
+A13
+Text Label 2500 5800 2    50   ~ 0
+A14
+Text Label 2500 5900 2    50   ~ 0
+A15
+Text Label 2500 6000 2    50   ~ 0
+A16
+Wire Wire Line
+	2600 4600 2500 4600
+Wire Wire Line
+	2600 4700 2500 4700
+Wire Wire Line
+	2600 4800 2500 4800
+Wire Wire Line
+	2600 4900 2500 4900
+Wire Wire Line
+	2600 5000 2500 5000
+Wire Wire Line
+	2600 5100 2500 5100
+Wire Wire Line
+	2600 5200 2500 5200
+Wire Wire Line
+	2600 5300 2500 5300
+Wire Wire Line
+	2600 5400 2500 5400
+Wire Wire Line
+	2600 5500 2500 5500
+Wire Wire Line
+	2600 5600 2500 5600
+Wire Wire Line
+	2600 5700 2500 5700
+Wire Wire Line
+	2600 5800 2500 5800
+Wire Wire Line
+	2600 5900 2500 5900
+Wire Wire Line
+	2600 6000 2500 6000
+$Comp
+L agg-kicad:CONN_01x16 J202
+U 1 1 5DAB9A02
+P 3400 4500
+F 0 "J202" H 3350 4600 50  0000 L CNN
+F 1 "A_17_32" H 3350 2900 50  0000 L CNN
+F 2 "agg:IPL1-116-02-L-SH" H 3400 4500 50  0001 C CNN
+F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 3400 4500 50  0001 C CNN
+F 4 "IPL1-116-02-L-SH-K" H 3400 4500 50  0001 C CNN "Samtec"
+	1    3400 4500
+	-1   0    0    -1  
+$EndComp
+Text Label 3200 4500 2    50   ~ 0
+A17
+Text Label 3200 4600 2    50   ~ 0
+A18
+Text Label 3200 4700 2    50   ~ 0
+A19
+Text Label 3200 4800 2    50   ~ 0
+A20
+Text Label 3200 4900 2    50   ~ 0
+A21
+Text Label 3200 5000 2    50   ~ 0
+A22
+Text Label 3200 5100 2    50   ~ 0
+A23
+Text Label 3200 5200 2    50   ~ 0
+A24
+Text Label 3200 5300 2    50   ~ 0
+A25
+Text Label 3200 5400 2    50   ~ 0
+A26
+Text Label 3200 5500 2    50   ~ 0
+A27
+Text Label 3200 5600 2    50   ~ 0
+A28
+Text Label 3200 5700 2    50   ~ 0
+A29
+Text Label 3200 5800 2    50   ~ 0
+A30
+Text Label 3200 5900 2    50   ~ 0
+A31
+Text Label 3200 6000 2    50   ~ 0
+A32
+Wire Wire Line
+	3200 4500 3300 4500
+Wire Wire Line
+	3200 4600 3300 4600
+Wire Wire Line
+	3200 4700 3300 4700
+Wire Wire Line
+	3200 4800 3300 4800
+Wire Wire Line
+	3200 4900 3300 4900
+Wire Wire Line
+	3200 5000 3300 5000
+Wire Wire Line
+	3200 5100 3300 5100
+Wire Wire Line
+	3200 5200 3300 5200
+Wire Wire Line
+	3200 5300 3300 5300
+Wire Wire Line
+	3200 5400 3300 5400
+Wire Wire Line
+	3200 5500 3300 5500
+Wire Wire Line
+	3200 5600 3300 5600
+Wire Wire Line
+	3200 5700 3300 5700
+Wire Wire Line
+	3200 5800 3300 5800
+Wire Wire Line
+	3200 5900 3300 5900
+Wire Wire Line
+	3200 6000 3300 6000
+$Comp
+L agg-kicad:CONN_01x16 J203
+U 1 1 5DAF577B
+P 3750 6000
+F 0 "J203" H 3700 6100 50  0000 L CNN
+F 1 "K_1_16" H 3700 4400 50  0000 L CNN
+F 2 "agg:IPL1-116-02-L-SH" H 3750 6000 50  0001 C CNN
+F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 3750 6000 50  0001 C CNN
+F 4 "IPL1-116-02-L-SH-K" H 3750 6000 50  0001 C CNN "Samtec"
+	1    3750 6000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3850 4500 3950 4500
+Wire Wire Line
+	3850 4600 3950 4600
+Wire Wire Line
+	3850 4700 3950 4700
+Wire Wire Line
+	3850 4800 3950 4800
+Wire Wire Line
+	3850 4900 3950 4900
+Wire Wire Line
+	3850 5000 3950 5000
+Wire Wire Line
+	3850 5100 3950 5100
+Wire Wire Line
+	3850 5200 3950 5200
+Wire Wire Line
+	3850 5300 3950 5300
+Wire Wire Line
+	3850 5400 3950 5400
+Wire Wire Line
+	3850 5500 3950 5500
+Wire Wire Line
+	3850 5600 3950 5600
+Wire Wire Line
+	3850 5700 3950 5700
+Wire Wire Line
+	3850 5800 3950 5800
+Wire Wire Line
+	3850 5900 3950 5900
+Wire Wire Line
+	3850 6000 3950 6000
+$Comp
+L agg-kicad:CONN_01x16 J204
+U 1 1 5DB088AA
+P 4450 6000
+F 0 "J204" H 4400 6100 50  0000 L CNN
+F 1 "K_1_16" H 4400 4400 50  0000 L CNN
+F 2 "agg:IPL1-116-02-L-SH" H 4450 6000 50  0001 C CNN
+F 3 "http://suddendocs.samtec.com/catalog_english/ipl1.pdf" H 4450 6000 50  0001 C CNN
+F 4 "IPL1-116-02-L-SH-K" H 4450 6000 50  0001 C CNN "Samtec"
+	1    4450 6000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4550 4500 4650 4500
+Wire Wire Line
+	4550 4600 4650 4600
+Wire Wire Line
+	4550 4700 4650 4700
+Wire Wire Line
+	4550 4800 4650 4800
+Wire Wire Line
+	4550 4900 4650 4900
+Wire Wire Line
+	4550 5000 4650 5000
+Wire Wire Line
+	4550 5100 4650 5100
+Wire Wire Line
+	4550 5200 4650 5200
+Wire Wire Line
+	4550 5300 4650 5300
+Wire Wire Line
+	4550 5400 4650 5400
+Wire Wire Line
+	4550 5500 4650 5500
+Wire Wire Line
+	4550 5600 4650 5600
+Wire Wire Line
+	4550 5700 4650 5700
+Wire Wire Line
+	4550 5800 4650 5800
+Wire Wire Line
+	4550 5900 4650 5900
+Wire Wire Line
+	4550 6000 4650 6000
+Text Label 3950 4500 0    50   ~ 0
+K1
+Text Label 3950 4600 0    50   ~ 0
+K2
+Text Label 3950 4700 0    50   ~ 0
+K3
+Text Label 3950 4800 0    50   ~ 0
+K4
+Text Label 3950 4900 0    50   ~ 0
+K5
+Text Label 3950 5000 0    50   ~ 0
+K6
+Text Label 3950 5100 0    50   ~ 0
+K7
+Text Label 3950 5200 0    50   ~ 0
+K8
+Text Label 3950 5300 0    50   ~ 0
+K9
+Text Label 3950 5400 0    50   ~ 0
+K10
+Text Label 3950 5500 0    50   ~ 0
+K11
+Text Label 3950 5600 0    50   ~ 0
+K12
+Text Label 3950 5700 0    50   ~ 0
+K13
+Text Label 3950 5800 0    50   ~ 0
+K14
+Text Label 3950 5900 0    50   ~ 0
+K15
+Text Label 3950 6000 0    50   ~ 0
+K16
+Text Label 4650 4500 0    50   ~ 0
+K17
+Text Label 4650 4600 0    50   ~ 0
+K18
+Text Label 4650 4700 0    50   ~ 0
+K19
+Text Label 4650 4800 0    50   ~ 0
+K20
+Text Label 4650 4900 0    50   ~ 0
+K21
+Text Label 4650 5000 0    50   ~ 0
+K22
+Text Label 4650 5100 0    50   ~ 0
+K23
+Text Label 4650 5200 0    50   ~ 0
+K24
+Text Label 4650 5300 0    50   ~ 0
+K25
+Text Label 4650 5400 0    50   ~ 0
+K26
+Text Label 4650 5500 0    50   ~ 0
+K27
+Text Label 4650 5600 0    50   ~ 0
+K28
+Text Label 4650 5700 0    50   ~ 0
+K29
+Text Label 4650 5800 0    50   ~ 0
+K30
+Text Label 4650 5900 0    50   ~ 0
+K31
+Text Label 4650 6000 0    50   ~ 0
+K32
 Wire Bus Line
-	1900 2550 1900 3300
+	7900 2550 7900 3300
 Wire Bus Line
-	1900 1650 1900 2400
-Wire Bus Line
-	3900 1650 3900 2400
-Wire Bus Line
-	3900 2550 3900 3300
+	7900 1650 7900 2400
 Wire Bus Line
 	5900 2550 5900 3300
 Wire Bus Line
 	5900 1650 5900 2400
 Wire Bus Line
-	7900 1650 7900 2400
+	3900 2550 3900 3300
 Wire Bus Line
-	7900 2550 7900 3300
+	3900 1650 3900 2400
+Wire Bus Line
+	1900 2550 1900 3300
+Wire Bus Line
+	1900 1650 1900 2400
 $EndSCHEMATC
