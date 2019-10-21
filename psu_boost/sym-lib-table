@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name agg)(type Legacy)(uri ${KIPRJMOD}/../agg-kicad/agg-kicad.lib)(options "")(descr ""))
-)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/adam/Projects/iggie/psu/psu.sch</source>
+      <source>/home/adam/Projects/iggie/psu/pcb/psu.sch</source>
     <date>Tue 10 Sep 2019 21:59:52 BST</date>
     <tool>Eeschema 5.1.4-e60b266~84~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
@@ -1863,7 +1863,7 @@
   </libparts>
   <libraries>
     <library logical="agg">
-      <uri>/home/adam/Projects/iggie/psu/../agg-kicad/agg-kicad.lib</uri>
+        <uri>/home/adam/Projects/iggie/firmware/psu/../agg-kicad/agg-kicad.lib</uri>
     </library>
   </libraries>
   <nets>
