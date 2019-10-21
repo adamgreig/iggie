@@ -1,0 +1,20 @@
+[package]
+name = "iggie-psu"
+version = "0.1.0"
+authors = ["Adam Greig <adam@adamgreig.com>"]
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.6.1"
+cortex-m-rt = "0.6.10"
+panic-halt = "0.2.0"
+
+[dependencies.stm32f3]
+path = "/home/adam/Projects/stm32-rs/stm32f3"
+features = ["stm32f3x4", "rt"]
+
+[profile.release]
+codegen-units = 1
+incremental = false
+debug = true
+lto = true
