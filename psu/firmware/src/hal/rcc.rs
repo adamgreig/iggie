@@ -35,7 +35,7 @@ impl RCC {
 
         // Configure PLL: 25MHz HSE /5 *14 = 70MHz PLL
         // APB1: 35MHz, APB2: 70MHz, AHB: 70MHz
-        modify_reg!(stm32ral::rcc, rcc, CFGR2, PREDIV: Div5);
+        modify_reg!(stm32ral::rcc, rcc, CFGR2, PREDIV: Div5, ADC12PRES: Div1);
         modify_reg!(stm32ral::rcc, rcc, CFGR, PLLSRC: HSE_Div_PREDIV, PLLMUL: Mul14);
         modify_reg!(stm32ral::rcc, rcc, CFGR, PPRE2: Div1, PPRE1: Div2, HPRE: Div1);
         modify_reg!(stm32ral::rcc, rcc, CR, PLLON: On);
