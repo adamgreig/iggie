@@ -1,4 +1,4 @@
-use stm32ral::{rcc, flash, read_reg, modify_reg};
+use stm32ral::{rcc, flash, read_reg, write_reg, modify_reg};
 
 pub struct RCC {
     rcc: rcc::Instance,
@@ -45,11 +45,15 @@ impl RCC {
         modify_reg!(stm32ral::rcc, rcc, CFGR, SW: PLL);
         while read_reg!(stm32ral::rcc, rcc, CFGR, SWS != PLL) {}
 
+        // Set HRTIM1 to run off PLL VCO output
+        write_reg!(stm32ral::rcc, rcc, CFGR3, 1<<12);
+
         // Enable peripheral clocks
         modify_reg!(stm32ral::rcc, rcc, AHBENR,
                     ADC12EN: Enabled, IOPAEN: Enabled, IOPBEN: Enabled, DMA1EN: Enabled);
         modify_reg!(stm32ral::rcc, rcc, APB1ENR, DAC1EN: Enabled, DAC2EN: Enabled);
-        modify_reg!(stm32ral::rcc, rcc, APB2ENR, HRTIM1EN: Enabled, USART1EN: Enabled);
+        modify_reg!(stm32ral::rcc, rcc, APB2ENR,
+                    HRTIM1EN: Enabled, USART1EN: Enabled, SYSCFGEN: Enabled);
 
         // Enable TIM1 only for prototyping
         modify_reg!(stm32ral::rcc, rcc, APB2ENR, TIM1EN: Enabled);

@@ -2,14 +2,14 @@
 #[repr(align(4))]
 pub struct Telem {
     magic: u32,
-    v_in: f32,
-    i_in: f32,
-    v_out: f32,
-    i_out: f32,
-    v_q: f32,
-    i_q: f32,
-    ref_v_q: u16,
-    ref_i_q: u16,
+    pub v_in: f32,
+    pub i_in: f32,
+    pub v_out: f32,
+    pub i_out: f32,
+    pub v_q: f32,
+    pub i_q: f32,
+    pub ref_v_q: u16,
+    pub ref_i_q: u16,
 }
 
 impl Telem {

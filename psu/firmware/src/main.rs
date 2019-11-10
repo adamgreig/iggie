@@ -4,8 +4,6 @@
 use panic_halt as _;
 use rtfm::cyccnt::U32Ext;
 
-use stm32ral::{write_reg, modify_reg};
-
 pub mod hal;
 pub mod app;
 
@@ -14,14 +12,18 @@ use app::ToBytes;
 #[rtfm::app(device=stm32ral::stm32f3::stm32f3x4, monotonic=rtfm::cyccnt::CYCCNT, peripherals=true)]
 const APP: () = {
     struct Resources {
-        // GPIOB is used by heartbeat thread to flash LED
-        gpiob: stm32ral::gpio::Instance,
+        // GPIO is used by heartbeat thread to flash LED
+        gpio: hal::gpio::GPIO,
         // USART is used by telem thread to send telemetry
         usart1: hal::usart::USART,
         // DMA is used by USART and ADCs
         dma1: hal::dma::DMA,
         // ADC is used to run control loops and update telem
         adc: hal::adc::ADC,
+        // DAC is used to adjust comparator thresholds
+        dac: hal::dac::DAC,
+        // HRTIM
+        hrtim: hal::hrtim::HRTIM,
 
         #[init([0; 4])]
         adc_buf1: [u16; 4],
@@ -31,7 +33,7 @@ const APP: () = {
         telem: app::Telem,
     }
 
-    #[init(spawn=[heartbeat, send_telem], resources=[adc_buf1, adc_buf2])]
+    #[init(spawn=[heartbeat, send_telem, ramp_dac], resources=[adc_buf1, adc_buf2])]
     fn init(mut cx: init::Context) -> init::LateResources {
         cx.core.DCB.enable_trace();
         cx.core.DWT.enable_cycle_counter();
@@ -52,38 +54,43 @@ const APP: () = {
         let mut adc = hal::adc::ADC::new(cx.device.ADC1, cx.device.ADC2);
         adc.setup();
 
+        // Initialise comparators
+        let comp = hal::comp::Comp::new(cx.device.COMP);
+        comp.setup();
+
+        // Initialise DAC
+        let dac = hal::dac::DAC::new(cx.device.DAC1);
+        dac.setup();
+
+        // Initialise HRTIM
+        let hrtim = hal::hrtim::HRTIM::new(
+            cx.device.HRTIM_Master, cx.device.HRTIM_TIMA, cx.device.HRTIM_Common);
+        hrtim.setup();
+
         // Initialise GPIOs
-        let gpioa = &cx.device.GPIOA;
-        let gpiob = &cx.device.GPIOB;
-        // Set PA8 to 0V otherwise it floats high
-        modify_reg!(stm32ral::gpio, gpioa, MODER, MODER8: Output);
-        modify_reg!(stm32ral::gpio, gpioa, ODR, ODR8: 0);
-        modify_reg!(stm32ral::gpio, gpioa, OSPEEDR, OSPEEDR8: HighSpeed);
-        // Set both LEDs to outputs
-        modify_reg!(stm32ral::gpio, gpiob, MODER, MODER3: Output, MODER4: Output);
-        modify_reg!(stm32ral::gpio, gpiob, ODR, ODR3: 0, ODR4: 0);
-        // Set PB6 to USART Tx (AF7)
-        modify_reg!(stm32ral::gpio, gpiob, AFRL, AFRL6: AF7);
-        modify_reg!(stm32ral::gpio, gpiob, MODER, MODER6: Alternate);
-        // Set PA0, 1, 2, 3, 6, 7 to analogue input
-        modify_reg!(stm32ral::gpio, gpioa, MODER, MODER0: Analog, MODER1: Analog, MODER2: Analog,
-                                                  MODER3: Analog, MODER6: Analog, MODER7: Analog);
+        let gpio = hal::gpio::GPIO::new(cx.device.GPIOA, cx.device.GPIOB);
+        gpio.setup();
 
         // Prototyping: Set up TIM1 to generate very occasional short pulses on CH1
+        /*
         let tim1 = &cx.device.TIM1;
         modify_reg!(stm32ral::tim1, tim1, CCMR1, CC1S: Output, OC1M: PwmMode1);
         modify_reg!(stm32ral::tim1, tim1, CCER, CC1P: 0, CC1E: 1);
         modify_reg!(stm32ral::tim1, tim1, BDTR, MOE: Enabled);
-        write_reg!(stm32ral::tim1, tim1, ARR, 0x0FF0);
+        write_reg!(stm32ral::tim1, tim1, ARR, 0x4FF0);
         write_reg!(stm32ral::tim1, tim1, PSC, 8);
         write_reg!(stm32ral::tim1, tim1, CCR1, 10);
-        //modify_reg!(stm32ral::tim1, tim1, CR1, CEN: Enabled);
-        // Prototyping: connect GD to TIM1 CH1 (AF6)
-        //modify_reg!(stm32ral::gpio, gpioa, AFRH, AFRH8: AF6);
-        //modify_reg!(stm32ral::gpio, gpioa, MODER, MODER8: Alternate);
+        modify_reg!(stm32ral::tim1, tim1, CR1, CEN: Enabled);
+        */
+
+        // Set a dummy DAC level for prototyping
+        dac.set_ch1(2200);
 
         // Start ADC conversion
         adc.start(&dma, &mut cx.resources.adc_buf1, &mut cx.resources.adc_buf2);
+
+        // Start HRTIM
+        hrtim.start();
 
         // Start heartbeat task
         cx.spawn.heartbeat().unwrap();
@@ -91,20 +98,18 @@ const APP: () = {
         // Start telem sender
         cx.spawn.send_telem().unwrap();
 
+        cx.spawn.ramp_dac().unwrap();
+
         // Release peripherals as late resources for use by other tasks
-        init::LateResources { gpiob: cx.device.GPIOB, usart1: usart, dma1: dma, adc: adc }
+        init::LateResources { usart1: usart, dma1: dma, adc, gpio, dac, hrtim }
     }
 
     // Heartbeat task runs 10 times a second and toggles an LED
-    #[task(resources=[gpiob], schedule=[heartbeat])]
+    #[task(resources=[gpio], schedule=[heartbeat])]
     fn heartbeat(cx: heartbeat::Context) {
         static mut STATE: bool = false;
         *STATE = !*STATE;
-        if *STATE {
-            write_reg!(stm32ral::gpio, cx.resources.gpiob, BSRR, BS3: Set);
-        } else {
-            write_reg!(stm32ral::gpio, cx.resources.gpiob, BSRR, BR3: Reset);
-        }
+        cx.resources.gpio.set_400v_led(*STATE);
         cx.schedule.heartbeat(cx.scheduled + 7_000_000.cycles()).unwrap();
     }
 
@@ -115,6 +120,25 @@ const APP: () = {
         telem.update_adc(*cx.resources.adc_buf1, *cx.resources.adc_buf2);
         cx.resources.usart1.transmit(dma, &telem.to_bytes());
         cx.schedule.send_telem(cx.scheduled + 7_000_000.cycles()).unwrap();
+    }
+
+    #[task(resources=[dac, telem], schedule=[ramp_dac])]
+    fn ramp_dac(cx: ramp_dac::Context) {
+        static mut LEVEL: u16 = 0;
+        const SETPOINT: f32 = 80.0;
+        let err = SETPOINT - cx.resources.telem.v_out;
+        if err > 0.0 {
+            if *LEVEL < 3400 {
+                *LEVEL += 1;
+            }
+        } else {
+            if *LEVEL > 1000 {
+                *LEVEL -= 1;
+            }
+        }
+        cx.resources.dac.set_ch1(*LEVEL);
+        cx.resources.telem.ref_i_q = *LEVEL;
+        cx.schedule.ramp_dac(cx.scheduled + 80_000.cycles()).unwrap();
     }
 
     // Manually define an idle task with just NOPs to prevent the microcontroller
