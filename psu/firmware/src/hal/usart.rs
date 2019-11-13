@@ -24,6 +24,7 @@ impl USART {
         dma.usart1_enable(data);
     }
 
+    /// If TC flag is set and the DMA transfer has completed, clear TC and disable DMA.
     pub fn isr(&self, dma: &DMA) {
         if read_reg!(stm32ral::usart, self.usart, ISR, TC == 1) {
             if !dma.usart1_busy() {

@@ -30,9 +30,9 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_master, self.master, MCR,
                    MREPU: Enabled, PREEN: Enabled, CONT: Continuous, CKPSC: 6);
 
-        // Set period to maximum for prototyping at low frequency
-        // XXX: Either set this to something higher-freq or dynamically adjust at runtime
-        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0xBFDF);
+        // Set period to ensure regular pulses at startup; during operation DCM detection on V_Q
+        // triggers the next charge cycle and causes a software reset of the master timer.
+        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0xA000);
 
         // Note: no master compare units used; we start TIMA on master reset each master period
 
@@ -55,22 +55,24 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_tima, self.tima, RSTA1R,
                    EXTEVNT1: 1, PER: SetInactive);
 
-        // Configure EEV1 to be blanked by CMP1
-        write_reg!(stm32ral::hrtim_tima, self.tima, EEFAR1, EE1FLTR: BlankResetToCompare1);
+        // Configure EEV1 and EEV2 to be blanked by CMP1
+        write_reg!(stm32ral::hrtim_tima, self.tima, EEFAR1,
+                   EE1FLTR: BlankResetToCompare1, EE2FLTR: BlankResetToCompare1);
 
-        // Configure TIMA to be reset by master period
-        write_reg!(stm32ral::hrtim_tima, self.tima, RSTAR, MSTPER: ResetCounter);
+        // Configure TIMA to be reset by master period and EEV2 (COMP4, V_Q, DCM detect)
+        write_reg!(stm32ral::hrtim_tima, self.tima, RSTAR,
+                   MSTPER: ResetCounter, EXTEVNT2: 1);
 
         // Configure capture on EEV1
         write_reg!(stm32ral::hrtim_tima, self.tima, CPT1ACR, EXEV1CPT: TriggerCapture);
 
         // Enable FLT2 (nRUN input)
-        // Disabled for development
-        //write_reg!(stm32ral::hrtim_tima, self.tima, FLTAR, FLT2EN: Active);
+        write_reg!(stm32ral::hrtim_tima, self.tima, FLTAR, FLT2EN: Active);
 
-        // Configure external event conditioning
+        // Configure external event conditioning for EEV1 and EEV2
         write_reg!(stm32ral::hrtim_common, self.common, EECR1,
-                   EE1FAST: Asynchronous, EE1SRC: Src2);
+                   EE1FAST: Asynchronous, EE1SNS: Rising, EE1POL: ActiveHigh, EE1SRC: Src2,
+                   EE2FAST: Resynchronized, EE2SNS: Falling, EE2POL: ActiveLow, EE2SRC: Src2);
 
         // Configure fault input conditioning
         write_reg!(stm32ral::hrtim_common, self.common, FLTINR1,
@@ -80,15 +82,39 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_tima, self.tima, OUTAR,
                    FAULT1: SetInactive, IDLES1: Inactive, POL1: ActiveHigh);
 
+        // Enable fault interrupt
+        write_reg!(stm32ral::hrtim_common, self.common, IER, FLT2IE: Enabled, SYSFLTIE: Enabled);
+
         // Force an update of master and TIMA preload registers
         write_reg!(stm32ral::hrtim_common, self.common, CR2, MSWU: Update, TASWU: Update);
     }
 
-    pub fn start(&self) {
+    pub fn enable(&self) {
         // Enable outputs
         write_reg!(stm32ral::hrtim_common, self.common, OENR, TA1OEN: Enable);
 
         // Begin counting
         modify_reg!(stm32ral::hrtim_master, self.master, MCR, TACEN: Enabled, MCEN: Enabled);
+    }
+
+    pub fn disable(&self) {
+        // Disable outputs
+        write_reg!(stm32ral::hrtim_common, self.common, ODISR, TA1ODIS: Disable);
+
+        // Stop counting
+        modify_reg!(stm32ral::hrtim_master, self.master, MCR, TACEN: Disabled, MCEN: Disabled);
+    }
+
+    pub fn flt_isr(&self) {
+        // Clear ISR bits
+        if read_reg!(stm32ral::hrtim_common, self.common, ISR, FLT2 == Event) {
+            write_reg!(stm32ral::hrtim_common, self.common, ICR, FLT2C: Clear);
+        }
+        if read_reg!(stm32ral::hrtim_common, self.common, ISR, SYSFLT == Event) {
+            write_reg!(stm32ral::hrtim_common, self.common, ICR, SYSFLTC: Clear);
+        }
+
+        // Move from FAULT state to normal disabled state
+        self.disable();
     }
 }

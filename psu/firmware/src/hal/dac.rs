@@ -10,7 +10,7 @@ impl DAC {
     }
 
     pub fn setup(&self) {
-        write_reg!(stm32ral::dac, self.dac, CR, EN2: Enabled, EN1: Enabled);
+        write_reg!(stm32ral::dac, self.dac, CR, BOFF2: 1, EN2: Enabled, EN1: Enabled);
     }
 
     pub fn set_ch1(&self, val: u16) {

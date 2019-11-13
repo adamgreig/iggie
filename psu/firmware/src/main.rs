@@ -1,13 +1,17 @@
 #![no_std]
 #![no_main]
 
+const V_SET: f32 = 250.0;
+const V_LIM: f32 = 420.0;
+const I_LIM: f32 = 0.100;
+
 use panic_halt as _;
 use rtfm::cyccnt::U32Ext;
 
 pub mod hal;
-pub mod app;
+pub mod telem;
 
-use app::ToBytes;
+use telem::ToBytes;
 
 #[rtfm::app(device=stm32ral::stm32f3::stm32f3x4, monotonic=rtfm::cyccnt::CYCCNT, peripherals=true)]
 const APP: () = {
@@ -29,8 +33,8 @@ const APP: () = {
         adc_buf1: [u16; 4],
         #[init([0; 2])]
         adc_buf2: [u16; 2],
-        #[init(app::Telem::new())]
-        telem: app::Telem,
+        #[init(telem::Telem::new())]
+        telem: telem::Telem,
     }
 
     #[init(spawn=[heartbeat, send_telem, ramp_dac], resources=[adc_buf1, adc_buf2])]
@@ -71,26 +75,19 @@ const APP: () = {
         let gpio = hal::gpio::GPIO::new(cx.device.GPIOA, cx.device.GPIOB);
         gpio.setup();
 
-        // Prototyping: Set up TIM1 to generate very occasional short pulses on CH1
-        /*
-        let tim1 = &cx.device.TIM1;
-        modify_reg!(stm32ral::tim1, tim1, CCMR1, CC1S: Output, OC1M: PwmMode1);
-        modify_reg!(stm32ral::tim1, tim1, CCER, CC1P: 0, CC1E: 1);
-        modify_reg!(stm32ral::tim1, tim1, BDTR, MOE: Enabled);
-        write_reg!(stm32ral::tim1, tim1, ARR, 0x4FF0);
-        write_reg!(stm32ral::tim1, tim1, PSC, 8);
-        write_reg!(stm32ral::tim1, tim1, CCR1, 10);
-        modify_reg!(stm32ral::tim1, tim1, CR1, CEN: Enabled);
-        */
+        // Set initial DAC level for current feedback
+        dac.set_ch1(0);
 
-        // Set a dummy DAC level for prototyping
-        dac.set_ch1(2200);
+        // Set initial DAC level for DCM detection
+        // Measured 1.28V at Vq(adc) node in midpoint of falling edge at DCM
+        // 1.28/3.30 * 4096 = 1589
+        dac.set_ch2(1589);
 
         // Start ADC conversion
         adc.start(&dma, &mut cx.resources.adc_buf1, &mut cx.resources.adc_buf2);
 
         // Start HRTIM
-        hrtim.start();
+        hrtim.enable();
 
         // Start heartbeat task
         cx.spawn.heartbeat().unwrap();
@@ -113,11 +110,10 @@ const APP: () = {
         cx.schedule.heartbeat(cx.scheduled + 7_000_000.cycles()).unwrap();
     }
 
-    #[task(resources=[telem, usart1, dma1, adc_buf1, adc_buf2], schedule=[send_telem])]
+    #[task(resources=[telem, usart1, dma1], schedule=[send_telem])]
     fn send_telem(cx: send_telem::Context) {
         let telem = cx.resources.telem;
         let dma = cx.resources.dma1;
-        telem.update_adc(*cx.resources.adc_buf1, *cx.resources.adc_buf2);
         cx.resources.usart1.transmit(dma, &telem.to_bytes());
         cx.schedule.send_telem(cx.scheduled + 7_000_000.cycles()).unwrap();
     }
@@ -125,25 +121,24 @@ const APP: () = {
     #[task(resources=[dac, telem], schedule=[ramp_dac])]
     fn ramp_dac(cx: ramp_dac::Context) {
         static mut LEVEL: u16 = 0;
-        const SETPOINT: f32 = 80.0;
-        let err = SETPOINT - cx.resources.telem.v_out;
+        let err = V_SET - cx.resources.telem.v_out;
         if err > 0.0 {
             if *LEVEL < 3400 {
                 *LEVEL += 1;
             }
         } else {
-            if *LEVEL > 1000 {
+            if *LEVEL > 10 {
                 *LEVEL -= 1;
             }
         }
         cx.resources.dac.set_ch1(*LEVEL);
-        cx.resources.telem.ref_i_q = *LEVEL;
+        cx.resources.telem.update_ref_i_q(*LEVEL);
         cx.schedule.ramp_dac(cx.scheduled + 80_000.cycles()).unwrap();
     }
 
-    // Manually define an idle task with just NOPs to prevent the microcontroller
-    // entering sleep mode, which makes attaching the debugger more annoying but
-    // has no benefit in this mains-powered application.
+    // Define an idle task with just NOPs to prevent the microcontroller entering sleep mode,
+    // which would make attaching the debugger more annoying and has no benefit in this
+    // mains-powered application.
     #[idle]
     fn idle(_: idle::Context) -> ! {
         loop {
@@ -151,14 +146,38 @@ const APP: () = {
         }
     }
 
+    // Run USART1 ISR to handle disabling DMA at end of transfer
     #[task(binds=USART1_EXTI25, resources=[usart1, dma1])]
     fn usart1(cx: usart1::Context) {
         cx.resources.usart1.isr(cx.resources.dma1);
     }
 
-    #[task(binds=ADC1_2, resources=[adc])]
+    // Run ADC ISR to handle new ADC data.
+    #[task(binds=ADC1_2, resources=[adc, hrtim, gpio, telem, adc_buf1, adc_buf2])]
     fn adc1_2(cx: adc1_2::Context) {
         cx.resources.adc.isr();
+
+        let telem = cx.resources.telem;
+        telem.update_adc(*cx.resources.adc_buf1, *cx.resources.adc_buf2);
+
+        // Check output voltage and current against limits.
+        if telem.v_out >= V_LIM || telem.i_out >= I_LIM {
+            if telem.v_out >= V_LIM {
+                telem.set_fault(telem::FaultCode::VLim);
+            } else if telem.i_out >= I_LIM {
+                telem.set_fault(telem::FaultCode::ILim);
+            }
+            cx.resources.hrtim.disable();
+            cx.resources.gpio.set_err_led(true);
+        }
+    }
+
+    // Handle HRTIM fault: caused by SYSFLT or FLT2 (our nRUN input)
+    #[task(binds=HRTIM_FLT, resources=[hrtim, gpio, telem])]
+    fn hrtim_flt(cx: hrtim_flt::Context) {
+        cx.resources.hrtim.flt_isr();
+        cx.resources.telem.set_fault(telem::FaultCode::NoRun);
+        cx.resources.gpio.set_err_led(true);
     }
 
     // We require at least one interrupt vector defined here per software task

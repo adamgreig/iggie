@@ -32,18 +32,28 @@ impl GPIO {
         modify_reg!(stm32ral::gpio, gpioa, MODER, MODER0: Analog, MODER1: Analog, MODER2: Analog,
                                                   MODER3: Analog, MODER6: Analog, MODER7: Analog);
 
+        // Set PB0 to analogue input for COMP4
+        modify_reg!(stm32ral::gpio, gpiob, MODER, MODER0: Analog);
+
+        // Set PA15 to HRTIM1_FLT2 for fault detection
+        modify_reg!(stm32ral::gpio, gpioa, AFRH, AFRH15: AF13);
+        modify_reg!(stm32ral::gpio, gpioa, MODER, MODER15: Alternate);
+
+        // Prototyping COMP and DAC outputs:
+
         // Set COMP2 output to PA12 for prototyping
         modify_reg!(stm32ral::gpio, gpioa, AFRH, AFRH12: AF8);
         modify_reg!(stm32ral::gpio, gpioa, MODER, MODER12: Alternate);
 
+        // Set COMP4 output to PB1 for prototyping
+        modify_reg!(stm32ral::gpio, gpiob, AFRL, AFRL1: AF8);
+        modify_reg!(stm32ral::gpio, gpiob, MODER, MODER1: Alternate);
+
         // Set DAC1_OUT1 output to PA4 for prototyping
         modify_reg!(stm32ral::gpio, gpioa, MODER, MODER4: Analog);
 
-        // Connect GD to TIM1 for prototyping
-        /*
-        modify_reg!(stm32ral::gpio, gpioa, AFRH, AFRH8: AF6);
-        modify_reg!(stm32ral::gpio, gpioa, MODER, MODER8: Alternate);
-        */
+        // Set DAC1_OUT2 output to PA5 for prototyping
+        modify_reg!(stm32ral::gpio, gpioa, MODER, MODER5: Analog);
     }
 
     pub fn set_400v_led(&self, state: bool) {
