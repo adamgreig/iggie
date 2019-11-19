@@ -1,9 +1,9 @@
 #![no_std]
 #![no_main]
 
-const V_SET: f32 = 250.0;
-const V_LIM: f32 = 420.0;
-const I_LIM: f32 = 0.100;
+const V_SET: f32 = 400.0;
+const V_LIM: f32 = 700.0;
+const I_LIM: f32 = 1.000;
 
 use panic_halt as _;
 use rtfm::cyccnt::U32Ext;
