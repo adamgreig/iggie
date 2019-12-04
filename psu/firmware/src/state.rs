@@ -9,7 +9,7 @@ pub enum FaultCode {
 
 #[repr(C)]
 #[repr(align(4))]
-pub struct Telem {
+pub struct State {
     magic: u32,
     pub v_in: f32,
     pub i_in: f32,
@@ -22,9 +22,9 @@ pub struct Telem {
     _1: u8,
 }
 
-impl Telem {
-    pub const fn new() -> Telem {
-        Telem {
+impl State {
+    pub const fn new() -> State {
+        State {
             magic: 0x74656c65,
             v_in: 0.0, i_in: 0.0, v_out: 0.0, i_out: 0.0, v_q: 0.0, i_q: 0.0,
             ref_i_q: 0, fault_code: FaultCode::NoFault, _1: 0,
@@ -64,4 +64,4 @@ pub unsafe trait ToBytes: Sized {
     }
 }
 
-unsafe impl ToBytes for Telem {}
+unsafe impl ToBytes for State {}

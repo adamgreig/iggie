@@ -6,3 +6,4 @@ pub mod gpio;
 pub mod comp;
 pub mod dac;
 pub mod hrtim;
+pub mod tim2;

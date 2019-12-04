@@ -40,6 +40,11 @@ impl ADC {
                    CONT: Continuous, DMACFG: Circular, DMAEN: Enabled);
 
         // Configure sample times
+        // ADC clock is 70MHz (direct from PLL, no division).
+        // We set 61.5 cycles of sampling time. Additionally at 12 bits there are 12.5 cycles
+        // of conversion time, for a total of 74 samples per channel.
+        // With four channels, ADC1 obtains 236.5kS/s, and with two channels,
+        // ADC2 obtains 472.97kS/s.
         write_reg!(stm32ral::adc, self.adc1, SMPR1,
                    SMP1: Cycles61_5, SMP2: Cycles61_5, SMP3: Cycles61_5, SMP4: Cycles61_5);
         write_reg!(stm32ral::adc, self.adc2, SMPR1,

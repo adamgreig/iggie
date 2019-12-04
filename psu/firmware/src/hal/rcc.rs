@@ -51,11 +51,9 @@ impl RCC {
         // Enable peripheral clocks
         modify_reg!(stm32ral::rcc, rcc, AHBENR,
                     ADC12EN: Enabled, IOPAEN: Enabled, IOPBEN: Enabled, DMA1EN: Enabled);
-        modify_reg!(stm32ral::rcc, rcc, APB1ENR, DAC1EN: Enabled, DAC2EN: Enabled);
+        modify_reg!(stm32ral::rcc, rcc, APB1ENR,
+                    TIM2EN: Enabled, DAC1EN: Enabled, DAC2EN: Enabled);
         modify_reg!(stm32ral::rcc, rcc, APB2ENR,
                     HRTIM1EN: Enabled, USART1EN: Enabled, SYSCFGEN: Enabled);
-
-        // Enable TIM1 only for prototyping
-        modify_reg!(stm32ral::rcc, rcc, APB2ENR, TIM1EN: Enabled);
     }
 }

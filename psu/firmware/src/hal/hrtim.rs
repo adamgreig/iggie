@@ -32,7 +32,7 @@ impl HRTIM {
 
         // Set period to ensure regular pulses at startup; during operation DCM detection on V_Q
         // triggers the next charge cycle and causes a software reset of the master timer.
-        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0xA000);
+        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0x8000);
 
         // Note: no master compare units used; we start TIMA on master reset each master period
 
@@ -42,7 +42,9 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_tima, self.tima, TIMACR,
                    PREEN: Enabled, TxRSTU: Enabled, CKPSCx: 6);
 
-        // Configure period to 100 counts maximum
+        // Configure period to 100 counts maximum.
+        // This gives us 1.4µs, which at 5µH and 24V gives 6.7A, which is close to
+        // our maximum peak current limit.
         write_reg!(stm32ral::hrtim_tima, self.tima, PERAR, 100);
 
         // Configure CMP1 to derive blanking signal for first 280ns
