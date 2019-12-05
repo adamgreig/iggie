@@ -45,7 +45,7 @@ impl HRTIM {
         // Configure period to 100 counts maximum.
         // This gives us 1.4µs, which at 5µH and 24V gives 6.7A, which is close to
         // our maximum peak current limit.
-        write_reg!(stm32ral::hrtim_tima, self.tima, PERAR, 100);
+        write_reg!(stm32ral::hrtim_tima, self.tima, PERAR, 120);
 
         // Configure CMP1 to derive blanking signal for first 280ns
         write_reg!(stm32ral::hrtim_tima, self.tima, CMP1AR, 20);

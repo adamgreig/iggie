@@ -18,20 +18,20 @@ const IREF_MAX: i16 = 3800;
 /// Proportional gain.
 /// We know that roughly 3000 counts on the output gives 400V for a moderate load,
 /// suggesting K_P near 3000/400. Round down somewhat to reduce overshoot.
-const K_P: f32 = 5.0;
+const K_P: f32 = 8.0;
 /// Integral gain.
 /// We expect this to make up a good proportion of the final control signal,
 /// so set to near K_P.
-const K_I: f32 = 4.0;
+const K_I: f32 = 5.0;
 /// Derivative gain.
 /// TBC.
-const K_D: f32 = 1.0;
+const K_D: f32 = 0.0;
 /// Limits on integral gain.
 /// Since we expect the final control signal to be significantly integral based,
 /// set a high limit sufficient to reach the maximum control value.
 const I_MIN: f32 = 0.0;
 const I_MAX: f32 = (IREF_MAX as f32) / K_I;
-const I_THR: f32 = 100.0;
+const I_THR: f32 = 500.0;
 
 use panic_halt as _;
 use rtfm::cyccnt::U32Ext;
@@ -80,9 +80,9 @@ const APP: () = {
         cx.core.DWT.enable_cycle_counter();
 
         // Set up Kalman filters for Vout and Iout.
-        // At 236.5kS/s, dt=4.2286µs
-        let vout_kal = kalman::Kalman::new(2.0, 0.5, 4.2286e-6, 0.0);
-        let iout_kal = kalman::Kalman::new(0.001, 0.001, 4.2286e-6, 0.0);
+        // At 90.2kS/s, dt=4.2286µs
+        let vout_kal = kalman::Kalman::new(10.0, 0.1, 1.10857e-6, 0.0);
+        let iout_kal = kalman::Kalman::new(0.01, 0.002, 1.10857e-6, 0.0);
 
         // Set up PID control loop.
         // We run PID off TIM2 at 10kHz so dt=1/10e3
@@ -172,32 +172,21 @@ const APP: () = {
     }
 
     // Run control loop at fixed frequency on TIM2
-    #[task(binds=TIM2, resources=[tim2, dac, state])]
+    #[task(binds=TIM2, resources=[tim2, dac, state, ctrl_pid, vout_kal])]
     fn ctrl_loop(cx: ctrl_loop::Context) {
-        // Output variable is IREF, from 0 to 4096, sets the current limit reference.
+        // Control loop output ranges from 0 to 4096 and sets the I_Q limit reference.
         // 4096 corresponds to 3.3V at the comparator which corresponds to 6.47A.
         // We limit to IREF_MAX=3800 -> 3.06V -> 6.0A, our design point peak current.
-        static mut IREF: i16 = 0;
 
-        // Determine error from constant setpoint compared to latest ADC reading of output.
-        let err = V_SET - cx.resources.state.v_out;
+        let (vout, dvout) = cx.resources.vout_kal.get();
 
-        // Find proportional correction
-        const K_P: f32 = 0.001;
-        let k = K_P * err;
-        let k = k as i16;
-        *IREF += k;
-
-        // Saturate IREF at limits
-        if *IREF > IREF_MAX {
-            *IREF = IREF_MAX;
-        } else if *IREF < 0 {
-            *IREF = 0;
-        }
+        let pid = cx.resources.ctrl_pid;
+        let action = pid.control_step(V_SET, vout, dvout) as i16;
+        let action = if action < 0 { 0 } else if action > IREF_MAX { IREF_MAX } else { action };
 
         // Update DAC and telemetry
-        cx.resources.dac.set_ch1(*IREF as u16);
-        cx.resources.state.update_ref_i_q(*IREF as u16);
+        cx.resources.dac.set_ch1(action as u16);
+        cx.resources.state.update_ref_i_q(action as u16);
 
         // Clear interrupt pending flag
         cx.resources.tim2.isr();
@@ -220,18 +209,31 @@ const APP: () = {
     }
 
     // Run ADC ISR to handle new ADC data.
-    #[task(binds=ADC1_2, resources=[adc, hrtim, gpio, state, adc_buf1, adc_buf2])]
+    #[task(binds=ADC1_2,
+           resources=[adc, hrtim, gpio, state, adc_buf1, adc_buf2, vout_kal, iout_kal])]
     fn adc1_2(cx: adc1_2::Context) {
         cx.resources.adc.isr();
 
         let state = cx.resources.state;
         state.update_adc(*cx.resources.adc_buf1, *cx.resources.adc_buf2);
 
+        // Update Kalman filters
+        cx.resources.vout_kal.predict();
+        cx.resources.vout_kal.update(state.v_out);
+        cx.resources.iout_kal.predict();
+        cx.resources.iout_kal.update(state.i_out);
+
         // Check output voltage and current against limits.
-        if state.v_out >= V_LIM || state.i_out >= I_LIM {
-            if state.v_out >= V_LIM {
+        let (vout, _) = cx.resources.vout_kal.get();
+        let (iout, _) = cx.resources.iout_kal.get();
+
+        state.v_out = vout;
+        state.i_out = iout;
+
+        if vout >= V_LIM || iout >= I_LIM {
+            if vout >= V_LIM {
                 state.set_fault(state::FaultCode::VLim);
-            } else if state.i_out >= I_LIM {
+            } else if iout >= I_LIM {
                 state.set_fault(state::FaultCode::ILim);
             }
             cx.resources.hrtim.disable();

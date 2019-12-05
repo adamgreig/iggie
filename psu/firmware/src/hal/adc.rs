@@ -31,7 +31,7 @@ impl ADC {
 
         // Enable interrupt on end of conversion sequence
         write_reg!(stm32ral::adc, self.adc1, IER, EOSIE: Enabled);
-        write_reg!(stm32ral::adc, self.adc2, IER, EOSIE: Enabled);
+        //write_reg!(stm32ral::adc, self.adc2, IER, EOSIE: Enabled);
 
         // Configure for continuous DMA data
         write_reg!(stm32ral::adc, self.adc1, CFGR,
@@ -41,14 +41,14 @@ impl ADC {
 
         // Configure sample times
         // ADC clock is 70MHz (direct from PLL, no division).
-        // We set 61.5 cycles of sampling time. Additionally at 12 bits there are 12.5 cycles
-        // of conversion time, for a total of 74 samples per channel.
-        // With four channels, ADC1 obtains 236.5kS/s, and with two channels,
-        // ADC2 obtains 472.97kS/s.
+        // We set 181.5 cycles of sampling time. Additionally at 12 bits there are 12.5 cycles
+        // of conversion time, for a total of 194 samples per channel.
+        // With four channels, ADC1 obtains 90.2kS/s, and with two channels,
+        // ADC2 obtains 180.4kS/s.
         write_reg!(stm32ral::adc, self.adc1, SMPR1,
-                   SMP1: Cycles61_5, SMP2: Cycles61_5, SMP3: Cycles61_5, SMP4: Cycles61_5);
+                   SMP1: Cycles181_5, SMP2: Cycles181_5, SMP3: Cycles181_5, SMP4: Cycles181_5);
         write_reg!(stm32ral::adc, self.adc2, SMPR1,
-                   SMP3: Cycles61_5, SMP4: Cycles61_5);
+                   SMP3: Cycles181_5, SMP4: Cycles181_5);
 
         // Configure sampling sequence
         write_reg!(stm32ral::adc, self.adc1, SQR1, L: 4 - 1, SQ1: 1, SQ2: 2, SQ3: 3, SQ4: 4);

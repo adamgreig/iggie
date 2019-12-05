@@ -1,5 +1,7 @@
 //! A simple PID control loop
 
+use cortex_m_semihosting::hprintln;
+
 /// PID controller implementation.
 ///
 /// At each timestep the current process value and its derivative are required.
@@ -56,6 +58,8 @@ impl PID {
         let p = self.k_p * err;
         let i = self.k_i * self.i;
         let d = self.k_d * -xdot;
+
+        //hprintln!("p={} i={} d={}", p, i, d);
 
         // Sum to get overall control action
         p + i + d
