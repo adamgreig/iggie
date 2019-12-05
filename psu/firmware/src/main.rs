@@ -18,20 +18,19 @@ const IREF_MAX: i16 = 3800;
 /// Proportional gain.
 /// We know that roughly 3000 counts on the output gives 400V for a moderate load,
 /// suggesting K_P near 3000/400. Round down somewhat to reduce overshoot.
-const K_P: f32 = 8.0;
+const K_P: f32 = 10.0;
 /// Integral gain.
 /// We expect this to make up a good proportion of the final control signal,
 /// so set to near K_P.
-const K_I: f32 = 5.0;
+const K_I: f32 = 20.0;
 /// Derivative gain.
 /// TBC.
-const K_D: f32 = 0.0;
+const K_D: f32 = 0.8;
 /// Limits on integral gain.
 /// Since we expect the final control signal to be significantly integral based,
 /// set a high limit sufficient to reach the maximum control value.
-const I_MIN: f32 = 0.0;
 const I_MAX: f32 = (IREF_MAX as f32) / K_I;
-const I_THR: f32 = 500.0;
+const I_MIN: f32 = -I_MAX / 2.0;
 
 use panic_halt as _;
 use rtfm::cyccnt::U32Ext;
@@ -81,12 +80,12 @@ const APP: () = {
 
         // Set up Kalman filters for Vout and Iout.
         // At 90.2kS/s, dt=4.2286µs
-        let vout_kal = kalman::Kalman::new(10.0, 0.1, 1.10857e-6, 0.0);
+        let vout_kal = kalman::Kalman::new(10.0, 0.01, 1.10857e-6, 0.0);
         let iout_kal = kalman::Kalman::new(0.01, 0.002, 1.10857e-6, 0.0);
 
         // Set up PID control loop.
         // We run PID off TIM2 at 10kHz so dt=1/10e3
-        let ctrl_pid = pid::PID::new(1.0/10e3, K_P, K_I, K_D, I_MIN, I_MAX, I_THR);
+        let ctrl_pid = pid::PID::new(1.0/10e3, K_P, K_I, K_D, I_MIN, I_MAX);
 
         // Initialise device clocks
         let rcc = hal::rcc::RCC::new(cx.device.RCC, cx.device.Flash);
