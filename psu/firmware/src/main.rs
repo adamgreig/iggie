@@ -3,37 +3,54 @@
 
 // Control loop parameters
 
-/// Setpoint voltage. Typically 400V.
+/// Setpoint voltage (V).
+/// Typically 400V.
 const V_SET: f32 = 400.0;
-/// Overvoltage limit before a fault is triggered.
-/// This has some filtering. Typically 440V.
+
+/// Overvoltage limit before a fault is triggered (V).
+/// This has some filtering.
 const V_LIM: f32 = 440.0;
-/// Overcurrent limit before a fault is triggered.
-/// This is slightly filtered. Typically 0.100A.
+
+/// Overcurrent limit before a fault is triggered (A).
+/// This is slightly filtered.
 const I_LIM: f32 = 0.100;
 
-/// Maximum control signal.
+/// Minimum output voltage before a fault is triggered after timeout (V).
+const V_MIN: f32 = 370.0;
+
+/// Timeout after which VOut must be at least V_MIN (cycles).
+const V_TIMEOUT: u32 = 500_000_000;
+
+/// Minimum permitted input voltage (V).
+const VIN_MIN: f32 = 20.0;
+
+/// Maximum permitted input voltage (V).
+const VIN_MAX: f32 = 30.0;
+
+/// Maximum permitted input current (A).
+const IIN_MAX: f32 = 3.0;
+
+/// Maximum control signal. Absolute maximum is 4095.
 const IREF_MAX: i16 = 3800;
 
-/// Proportional gain.
-/// We know that roughly 3000 counts on the output gives 400V for a moderate load,
-/// suggesting K_P near 3000/400. Round down somewhat to reduce overshoot.
-const K_P: f32 = 10.0;
-/// Integral gain.
-/// We expect this to make up a good proportion of the final control signal,
-/// so set to near K_P.
-const K_I: f32 = 20.0;
-/// Derivative gain.
-/// TBC.
-const K_D: f32 = 0.8;
+/// Proportional gain
+const K_P: f32 = 20.0;
+
+/// Integral gain
+const K_I: f32 = 30.0;
+
+/// Derivative gain
+const K_D: f32 = 8.0;
+
 /// Limits on integral gain.
 /// Since we expect the final control signal to be significantly integral based,
 /// set a high limit sufficient to reach the maximum control value.
 const I_MAX: f32 = (IREF_MAX as f32) / K_I;
 const I_MIN: f32 = -I_MAX / 2.0;
 
-use panic_halt as _;
-use rtfm::cyccnt::U32Ext;
+use core::panic::PanicInfo;
+use cortex_m_rt::exception;
+use rtfm::cyccnt::{Instant, Duration, U32Ext};
 
 pub mod hal;
 pub mod state;
@@ -66,10 +83,13 @@ const APP: () = {
         adc_buf2: [u16; 2],
         #[init(state::State::new())]
         state: state::State,
+        #[init(false)]
+        start_elapsed: bool,
 
         ctrl_pid: pid::PID,
         vout_kal: kalman::Kalman,
         iout_kal: kalman::Kalman,
+        start_time: Instant,
     }
 
     #[init(spawn=[heartbeat, send_telem], resources=[adc_buf1, adc_buf2])]
@@ -80,7 +100,7 @@ const APP: () = {
 
         // Set up Kalman filters for Vout and Iout.
         // At 90.2kS/s, dt=4.2286µs
-        let vout_kal = kalman::Kalman::new(10.0, 0.01, 1.10857e-6, 0.0);
+        let vout_kal = kalman::Kalman::new(80.0, 0.001, 1.10857e-6, 0.0);
         let iout_kal = kalman::Kalman::new(0.01, 0.002, 1.10857e-6, 0.0);
 
         // Set up PID control loop.
@@ -135,31 +155,62 @@ const APP: () = {
         // Start ADC conversion
         adc.start(&dma1, &mut cx.resources.adc_buf1, &mut cx.resources.adc_buf2);
 
-        // Start heartbeat task
-        cx.spawn.heartbeat().unwrap();
-
         // Start telem sender
         cx.spawn.send_telem().unwrap();
 
         // Start periodic control loop interrupts
         tim2.start();
 
-        // Start HRTIM
-        hrtim.enable();
+        // Start heartbeat task
+        cx.spawn.heartbeat().unwrap();
+
+        // Dummy start time since we can't const initialise it
+        let start_time = Instant::now();
 
         // Release peripherals as late resources for use by other tasks
         init::LateResources {
-            ctrl_pid, vout_kal, iout_kal, usart1, dma1, adc, gpio, dac, hrtim, tim2
+            ctrl_pid, vout_kal, iout_kal, usart1, dma1, adc, gpio, dac, hrtim, tim2, start_time,
         }
     }
 
-    // Heartbeat task runs 10 times a second and toggles an LED
-    #[task(resources=[gpio], schedule=[heartbeat])]
+    // Heartbeat task runs 50 times a second.
+    // Sets status LEDs and checks for nRUN.
+    #[task(resources=[gpio, state, hrtim, start_time, start_elapsed], schedule=[heartbeat])]
     fn heartbeat(cx: heartbeat::Context) {
-        static mut STATE: bool = false;
-        *STATE = !*STATE;
-        cx.resources.gpio.set_400v_led(*STATE);
-        cx.schedule.heartbeat(cx.scheduled + 7_000_000.cycles()).unwrap();
+        static mut LED_STATE: bool = false;
+        *LED_STATE = !*LED_STATE;
+
+        match cx.resources.state.fault_state {
+            state::FaultState::Stopped => {
+                cx.resources.gpio.set_400v_led(false);
+                cx.resources.gpio.set_err_led(false);
+                if cx.resources.gpio.get_run() {
+                    *cx.resources.start_time = Instant::now();
+                    *cx.resources.start_elapsed = false;
+                    cx.resources.state.set_fault(state::FaultCode::NoFault);
+                    cx.resources.state.set_state_running();
+                    cx.resources.hrtim.enable();
+                }
+            },
+            state::FaultState::Fault => {
+                cx.resources.gpio.set_400v_led(false);
+                cx.resources.gpio.set_err_led(true);
+            },
+            state::FaultState::Running => {
+                if !*cx.resources.start_elapsed {
+                    // Calling elapsed() after more than 2^31 cycles have passed (~30s)
+                    // causes an unavoidable panic, so try to avoid that (!).
+                    let timeout = Duration::from_cycles(V_TIMEOUT);
+                    if cx.resources.start_time.elapsed() > timeout {
+                        *cx.resources.start_elapsed = true;
+                    }
+                }
+                cx.resources.gpio.set_400v_led(*LED_STATE);
+                cx.resources.gpio.set_err_led(false);
+            },
+        }
+
+        cx.schedule.heartbeat(cx.scheduled + 1_400_000.cycles()).unwrap();
     }
 
     #[task(resources=[state, usart1, dma1], schedule=[send_telem])]
@@ -180,12 +231,30 @@ const APP: () = {
         let (vout, dvout) = cx.resources.vout_kal.get();
 
         let pid = cx.resources.ctrl_pid;
-        let action = pid.control_step(V_SET, vout, dvout) as i16;
-        let action = if action < 0 { 0 } else if action > IREF_MAX { IREF_MAX } else { action };
 
-        // Update DAC and telemetry
-        cx.resources.dac.set_ch1(action as u16);
-        cx.resources.state.update_ref_i_q(action as u16);
+        match cx.resources.state.fault_state {
+            state::FaultState::Running => {
+                // When running, compute PID update
+                let action = pid.control_step(V_SET, vout, dvout) as i16;
+                // Clamp action to bounds
+                let action = if action < 0 { 0 }
+                             else if action > IREF_MAX { IREF_MAX }
+                             else { action };
+                // Update DAC and telemetry
+                cx.resources.dac.set_ch1(action as u16);
+                cx.resources.state.update_ref_i_q(action as u16);
+            },
+
+            state::FaultState::Stopped | state::FaultState::Fault => {
+                // When stopped or faulted, reset the controller and clear the DAC.
+                pid.zero();
+                cx.resources.dac.set_ch1(0);
+                cx.resources.state.update_ref_i_q(0);
+            },
+        }
+
+        // Update integrator in state
+        cx.resources.state.update_pid_i(pid.get_i());
 
         // Clear interrupt pending flag
         cx.resources.tim2.isr();
@@ -208,8 +277,8 @@ const APP: () = {
     }
 
     // Run ADC ISR to handle new ADC data.
-    #[task(binds=ADC1_2,
-           resources=[adc, hrtim, gpio, state, adc_buf1, adc_buf2, vout_kal, iout_kal])]
+    #[task(binds=ADC1_2, resources=[adc, hrtim, state, adc_buf1, adc_buf2,
+                                    vout_kal, iout_kal, start_elapsed])]
     fn adc1_2(cx: adc1_2::Context) {
         cx.resources.adc.isr();
 
@@ -229,23 +298,46 @@ const APP: () = {
         state.v_out = vout;
         state.i_out = iout;
 
-        if vout >= V_LIM || iout >= I_LIM {
+        if state.fault_state == state::FaultState::Running {
+            let mut fault = false;
             if vout >= V_LIM {
                 state.set_fault(state::FaultCode::VLim);
-            } else if iout >= I_LIM {
-                state.set_fault(state::FaultCode::ILim);
+                fault = true;
             }
-            cx.resources.hrtim.disable();
-            cx.resources.gpio.set_err_led(true);
+            if iout >= I_LIM {
+                state.set_fault(state::FaultCode::ILim);
+                fault = true;
+            }
+            if state.v_in <= VIN_MIN {
+                state.set_fault(state::FaultCode::VInLow);
+                fault = true;
+            } else if state.v_in >= VIN_MAX {
+                state.set_fault(state::FaultCode::VInHigh);
+                fault = true;
+            }
+            if state.i_in >= IIN_MAX {
+                state.set_fault(state::FaultCode::IInHigh);
+                fault = true;
+            }
+            if state.fault_state == state::FaultState::Running {
+                if *cx.resources.start_elapsed && state.v_out <= V_MIN {
+                    state.set_fault(state::FaultCode::NoVOut);
+                    fault = true;
+                }
+            }
+            if fault {
+                state.set_state_fault();
+                cx.resources.hrtim.disable();
+            }
         }
     }
 
     // Handle HRTIM fault: caused by SYSFLT or FLT2 (our nRUN input)
-    #[task(binds=HRTIM_FLT, resources=[hrtim, gpio, state])]
+    #[task(binds=HRTIM_FLT, resources=[hrtim, state])]
     fn hrtim_flt(cx: hrtim_flt::Context) {
         cx.resources.hrtim.flt_isr();
         cx.resources.state.set_fault(state::FaultCode::NoRun);
-        cx.resources.gpio.set_err_led(true);
+        cx.resources.state.set_state_stopped();
     }
 
     // We require at least one interrupt vector defined here per software task
@@ -254,3 +346,29 @@ const APP: () = {
         fn FLASH();
     }
 };
+
+use core::fmt::Write;
+use cortex_m_semihosting::hio;
+
+#[panic_handler]
+unsafe fn panic(info: &PanicInfo) -> ! {
+    // On panic, manually trigger fault and hard loop.
+    hal::hrtim::HRTIM::global_disable();
+    hal::gpio::GPIO::global_set_err_led();
+    if let Ok(mut hstdout) = hio::hstdout() {
+        writeln!(hstdout, "{}", info).ok();
+    }
+    loop {
+        cortex_m::asm::nop();
+    }
+}
+
+#[exception]
+unsafe fn HardFault(_ef: &cortex_m_rt::ExceptionFrame) -> ! {
+    // On hard fault, manually trigger fault and hard loop.
+    hal::hrtim::HRTIM::global_disable();
+    hal::gpio::GPIO::global_set_err_led();
+    loop {
+        cortex_m::asm::nop();
+    }
+}

@@ -1,4 +1,4 @@
-use stm32ral::{gpio, modify_reg, write_reg};
+use stm32ral::{gpio, modify_reg, write_reg, read_reg};
 
 pub struct GPIO {
     gpioa: gpio::Instance,
@@ -70,5 +70,13 @@ impl GPIO {
         } else {
             write_reg!(stm32ral::gpio, self.gpiob, BSRR, BR4: Reset);
         }
+    }
+
+    pub fn get_run(&self) -> bool {
+        read_reg!(stm32ral::gpio, self.gpioa, IDR, IDR15 == Low)
+    }
+
+    pub unsafe fn global_set_err_led() {
+        write_reg!(stm32ral::gpio, GPIOB, BSRR, BS4: Set);
     }
 }

@@ -5,6 +5,18 @@ pub enum FaultCode {
     VLim    = 2,
     ILim    = 3,
     NoIQ    = 4,
+    NoVOut  = 5,
+    VInLow  = 6,
+    VInHigh = 7,
+    IInHigh = 8,
+}
+
+#[repr(u8)]
+#[derive(PartialEq)]
+pub enum FaultState {
+    Stopped = 0,
+    Running = 1,
+    Fault   = 2,
 }
 
 #[repr(C)]
@@ -17,17 +29,18 @@ pub struct State {
     pub i_out: f32,
     pub v_q: f32,
     pub i_q: f32,
+    pub pid_i: f32,
     pub ref_i_q: u16,
     pub fault_code: FaultCode,
-    _1: u8,
+    pub fault_state: FaultState,
 }
 
 impl State {
     pub const fn new() -> State {
         State {
             magic: 0x74656c65,
-            v_in: 0.0, i_in: 0.0, v_out: 0.0, i_out: 0.0, v_q: 0.0, i_q: 0.0,
-            ref_i_q: 0, fault_code: FaultCode::NoFault, _1: 0,
+            v_in: 0.0, i_in: 0.0, v_out: 0.0, i_out: 0.0, v_q: 0.0, i_q: 0.0, pid_i: 0.0,
+            ref_i_q: 0, fault_code: FaultCode::NoFault, fault_state: FaultState::Stopped,
         }
     }
 
@@ -43,12 +56,28 @@ impl State {
         self.i_q = (iq as f32) * (3.3 * (1.0 / 0.51) / 4096.0);
     }
 
+    pub fn update_pid_i(&mut self, pid_i: f32) {
+        self.pid_i = pid_i;
+    }
+
     pub fn update_ref_i_q(&mut self, ref_i_q: u16) {
         self.ref_i_q = ref_i_q;
     }
 
     pub fn set_fault(&mut self, fault: FaultCode) {
         self.fault_code = fault;
+    }
+
+    pub fn set_state_stopped(&mut self) {
+        self.fault_state = FaultState::Stopped;
+    }
+
+    pub fn set_state_running(&mut self) {
+        self.fault_state = FaultState::Running;
+    }
+
+    pub fn set_state_fault(&mut self) {
+        self.fault_state = FaultState::Fault;
     }
 }
 

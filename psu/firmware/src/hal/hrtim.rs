@@ -119,4 +119,9 @@ impl HRTIM {
         // Move from FAULT state to normal disabled state
         self.disable();
     }
+
+    pub unsafe fn global_disable() {
+        write_reg!(stm32ral::hrtim_common, HRTIM_Common, ODISR, TA1ODIS: Disable);
+        write_reg!(stm32ral::hrtim_master, HRTIM_Master, MCR, TACEN: Disabled, MCEN: Disabled);
+    }
 }

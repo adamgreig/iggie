@@ -26,6 +26,10 @@ impl PID {
         PID { dt, k_p, k_i, k_d, i_min, i_max, i: 0.0 }
     }
 
+    pub fn zero(&mut self) {
+        self.i = 0.0;
+    }
+
     pub fn control_step(&mut self, setpoint: f32, x: f32, xdot: f32) -> f32 {
         // Compute error between setpoint and filtered process value
         let err = setpoint - x;
@@ -47,5 +51,9 @@ impl PID {
 
         // Sum to get overall control action
         p + i + d
+    }
+
+    pub fn get_i(&self) -> f32 {
+        self.i
     }
 }
