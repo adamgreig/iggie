@@ -19,6 +19,7 @@ const I_LIM: f32 = 0.100;
 const V_MIN: f32 = 370.0;
 
 /// Timeout after which VOut must be at least V_MIN (cycles).
+/// Typically 380V.
 const V_TIMEOUT: u32 = 500_000_000;
 
 /// Minimum permitted input voltage (V).
@@ -347,17 +348,11 @@ const APP: () = {
     }
 };
 
-use core::fmt::Write;
-use cortex_m_semihosting::hio;
-
 #[panic_handler]
-unsafe fn panic(info: &PanicInfo) -> ! {
+unsafe fn panic(_info: &PanicInfo) -> ! {
     // On panic, manually trigger fault and hard loop.
     hal::hrtim::HRTIM::global_disable();
     hal::gpio::GPIO::global_set_err_led();
-    if let Ok(mut hstdout) = hio::hstdout() {
-        writeln!(hstdout, "{}", info).ok();
-    }
     loop {
         cortex_m::asm::nop();
     }
