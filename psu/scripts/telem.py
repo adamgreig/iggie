@@ -46,8 +46,8 @@ def main():
             fault = FAULTS.get(fault, "?")
             state = STATES.get(state, "?")
             print(f"{blink} V_in: {v_in: 3.02f}V    I_in: {i_in: 3.02f}A    "
-                  f"V_out: {v_out: 3.00f}V    I_out: {1000*i_out: 3.01f}mA    "
-                  f"V_Q: {v_q: 3.02f}V    I_Q: { i_q: 3.02f}A    "
+                  f"V_out: {v_out: 6.00f}V    I_out: {1000*i_out: 6.01f}mA    "
+                  f"V_Q: {v_q: 7.02f}V    I_Q: { i_q: 3.02f}A    "
                   f"PID I: {pid_i:5.01f}    ",
                   f"Ref I_Q: {ref_i_q:05}    Fault: {fault}  State: {state}",
                   " "*10,
