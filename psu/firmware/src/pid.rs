@@ -47,8 +47,6 @@ impl PID {
         let i = self.k_i * self.i;
         let d = self.k_d * -xdot;
 
-        //hprintln!("p={} i={} d={}", p, i, d);
-
         // Sum to get overall control action
         p + i + d
     }
