@@ -5,18 +5,18 @@
 
 /// Setpoint voltage (V).
 /// Typically 400V.
-const V_SET: f32 = 400.0;
+const V_SET: f32 = 370.0;
 
 /// Overvoltage limit before a fault is triggered (V).
 /// This has some filtering.
-const V_LIM: f32 = 440.0;
+const V_LIM: f32 = 400.0;
 
 /// Overcurrent limit before a fault is triggered (A).
 /// This is slightly filtered.
 const I_LIM: f32 = 0.100;
 
 /// Minimum output voltage before a fault is triggered after timeout (V).
-const V_MIN: f32 = 370.0;
+const V_MIN: f32 = 340.0;
 
 /// Timeout after which VOut must be at least V_MIN (cycles).
 /// Typically 380V.
@@ -47,7 +47,7 @@ const K_D: f32 = 8.0;
 /// Since we expect the final control signal to be significantly integral based,
 /// set a high limit sufficient to reach the maximum control value.
 const I_MAX: f32 = (IREF_MAX as f32) / K_I;
-const I_MIN: f32 = -I_MAX / 2.0;
+const I_MIN: f32 = -I_MAX;
 
 use core::panic::PanicInfo;
 use cortex_m_rt::exception;
