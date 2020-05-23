@@ -136,7 +136,7 @@ impl Kalman {
         self.P[1][1] = self.Pp[1][1] - k * self.Pp[1][0] * self.Pp[0][1];
     }
 
-    /// Run a Kalamn predict step
+    /// Run a Kalman predict step
     ///
     /// Call this function whenever an updated prediction `xp` is required.
     ///
