@@ -24,7 +24,7 @@ STATES = {
 
 
 def main():
-    s = serial.Serial("/dev/ttyACM1", 1000000)
+    s = serial.Serial("/dev/ttyACM1", 3500000)
 
     while True:
         # Align to magic

@@ -49,6 +49,9 @@ const K_D: f32 = 16.0;
 const I_MAX: f32 = (IREF_MAX as f32) / K_I;
 const I_MIN: f32 = -I_MAX;
 
+const TELEM_ADC_DIRECT: bool = false;
+const TELEM_ADC_CH: usize = 0;
+
 use core::panic::PanicInfo;
 use cortex_m_rt::exception;
 use rtfm::cyccnt::{Instant, Duration, U32Ext};
@@ -98,8 +101,8 @@ const APP: () = {
         cx.core.DWT.enable_cycle_counter();
 
         // Set up Kalman filters for Vout and Iout.
-        let vout_kal = kalman::Kalman::new(80.0, 0.001, 1.10857e-6, 0.0);
-        let iout_kal = kalman::Kalman::new(0.01, 0.002, 1.10857e-6, 0.0);
+        let vout_kal = kalman::Kalman::new(1e6, 1e0,  1.10857e-5, 0.0);
+        let iout_kal = kalman::Kalman::new(1e1, 1e-5, 1.10857e-5, 0.0);
 
         // Set up PID control loop.
         // We run PID off TIM2 at 10kHz so dt=1/10e3
@@ -154,7 +157,9 @@ const APP: () = {
         adc.start(&dma1, &mut cx.resources.adc_buf);
 
         // Start telem sender
-        cx.spawn.send_telem().unwrap();
+        if !TELEM_ADC_DIRECT {
+            cx.spawn.send_telem().unwrap();
+        }
 
         // Start periodic control loop interrupts
         tim2.start();
@@ -296,10 +301,15 @@ const APP: () = {
     }
 
     // Run ADC ISR to handle new ADC data.
-    #[task(binds=ADC1_2, resources=[adc, hrtim, state, adc_buf,
+    #[task(binds=ADC1_2, resources=[adc, hrtim, state, adc_buf, usart1,
                                     vout_kal, iout_kal, start_elapsed])]
     fn adc1_2(cx: adc1_2::Context) {
         cx.resources.adc.isr();
+
+        // Transmit ADC telemetry directly if other telem disabled
+        if TELEM_ADC_DIRECT {
+            cx.resources.usart1.transmit_u16(cx.resources.adc_buf[TELEM_ADC_CH]);
+        }
 
         let state = cx.resources.state;
         state.update_adc(*cx.resources.adc_buf);
