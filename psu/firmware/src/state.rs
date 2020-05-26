@@ -27,10 +27,10 @@ pub struct State {
     pub i_in: f32,
     pub v_out: f32,
     pub i_out: f32,
-    pub v_q: f32,
-    pub i_q: f32,
     pub pid_i: f32,
     pub ref_i_q: u16,
+    pub duty: u16,
+    _padding: u16,
     pub fault_code: FaultCode,
     pub fault_state: FaultState,
 }
@@ -39,21 +39,19 @@ impl State {
     pub const fn new() -> State {
         State {
             magic: 0x74656c65,
-            v_in: 0.0, i_in: 0.0, v_out: 0.0, i_out: 0.0, v_q: 0.0, i_q: 0.0, pid_i: 0.0,
-            ref_i_q: 0, fault_code: FaultCode::NoFault, fault_state: FaultState::Stopped,
+            v_in: 0.0, i_in: 0.0, v_out: 0.0, i_out: 0.0,
+            pid_i: 0.0, ref_i_q: 0, duty: 0, _padding: 0,
+            fault_code: FaultCode::NoFault, fault_state: FaultState::Stopped,
         }
     }
 
-    pub fn update_adc(&mut self, buf1: [u16; 4], buf2: [u16; 2]) {
-        let [vout, iout, iin, vin] = buf1;
-        let [vq, iq] = buf2;
+    pub fn update_adc(&mut self, buf: [u16; 4]) {
+        let [vout, iout, iin, vin] = buf;
 
         self.v_in = (vin as f32) * (3.3 * 11.0 / 4096.0);
         self.i_in = (iin as f32) * (3.3 / 4096.0);
-        self.v_out = (vout as f32) * (3.3 * 200.6 / 4096.0);
+        self.v_out = (vout as f32) * (3.3 * 200.6 / 4096.0) * 1.0244266;
         self.i_out = (iout as f32) * (3.3 * 0.04 / 4096.0);
-        self.v_q = (vq as f32) * (3.3 * 21.0 / 4096.0);
-        self.i_q = (iq as f32) * (3.3 * (1.0 / 0.51) / 4096.0);
     }
 
     pub fn update_pid_i(&mut self, pid_i: f32) {
@@ -62,6 +60,10 @@ impl State {
 
     pub fn update_ref_i_q(&mut self, ref_i_q: u16) {
         self.ref_i_q = ref_i_q;
+    }
+
+    pub fn update_duty(&mut self, duty: u16) {
+        self.duty = duty;
     }
 
     pub fn set_fault(&mut self, fault: FaultCode) {

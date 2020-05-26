@@ -4,26 +4,25 @@
 // Control loop parameters
 
 /// Setpoint voltage (V).
-/// Typically 400V.
+/// Typically 370V.
 const V_SET: f32 = 370.0;
 
 /// Overvoltage limit before a fault is triggered (V).
 /// This has some filtering.
-const V_LIM: f32 = 400.0;
+const V_LIM: f32 = 420.0;
 
 /// Overcurrent limit before a fault is triggered (A).
 /// This is slightly filtered.
 const I_LIM: f32 = 0.100;
 
 /// Minimum output voltage before a fault is triggered after timeout (V).
-const V_MIN: f32 = 340.0;
+const V_MIN: f32 = 330.0;
 
-/// Timeout after which VOut must be at least V_MIN (cycles).
-/// Typically 380V.
+/// Timeout after which VOut must be at least V_MIN (cycles at 70MHz).
 const V_TIMEOUT: u32 = 500_000_000;
 
 /// Minimum permitted input voltage (V).
-const VIN_MIN: f32 = 20.0;
+const VIN_MIN: f32 = 18.0;
 
 /// Maximum permitted input voltage (V).
 const VIN_MAX: f32 = 30.0;
@@ -32,16 +31,17 @@ const VIN_MAX: f32 = 30.0;
 const IIN_MAX: f32 = 3.0;
 
 /// Maximum control signal. Absolute maximum is 4095.
+/// This controls the per-cycle current limit, where 3800=6A.
 const IREF_MAX: i16 = 3800;
 
 /// Proportional gain
 const K_P: f32 = 20.0;
 
 /// Integral gain
-const K_I: f32 = 30.0;
+const K_I: f32 = 60.0;
 
 /// Derivative gain
-const K_D: f32 = 8.0;
+const K_D: f32 = 16.0;
 
 /// Limits on integral gain.
 /// Since we expect the final control signal to be significantly integral based,
@@ -79,9 +79,7 @@ const APP: () = {
         tim2: hal::tim2::TIM2,
 
         #[init([0; 4])]
-        adc_buf1: [u16; 4],
-        #[init([0; 2])]
-        adc_buf2: [u16; 2],
+        adc_buf: [u16; 4],
         #[init(state::State::new())]
         state: state::State,
         #[init(false)]
@@ -93,14 +91,13 @@ const APP: () = {
         start_time: Instant,
     }
 
-    #[init(spawn=[heartbeat, send_telem], resources=[adc_buf1, adc_buf2])]
+    #[init(spawn=[heartbeat, send_telem], resources=[adc_buf])]
     fn init(mut cx: init::Context) -> init::LateResources {
         // Enable DWT to allow use for software tasks
         cx.core.DCB.enable_trace();
         cx.core.DWT.enable_cycle_counter();
 
         // Set up Kalman filters for Vout and Iout.
-        // At 90.2kS/s, dt=4.2286µs
         let vout_kal = kalman::Kalman::new(80.0, 0.001, 1.10857e-6, 0.0);
         let iout_kal = kalman::Kalman::new(0.01, 0.002, 1.10857e-6, 0.0);
 
@@ -121,7 +118,7 @@ const APP: () = {
         dma1.setup();
 
         // Initialise ADCs
-        let mut adc = hal::adc::ADC::new(cx.device.ADC1, cx.device.ADC2);
+        let mut adc = hal::adc::ADC::new(cx.device.ADC1);
         adc.setup();
 
         // Initialise comparators
@@ -154,7 +151,7 @@ const APP: () = {
         dac.set_ch2(1589);
 
         // Start ADC conversion
-        adc.start(&dma1, &mut cx.resources.adc_buf1, &mut cx.resources.adc_buf2);
+        adc.start(&dma1, &mut cx.resources.adc_buf);
 
         // Start telem sender
         cx.spawn.send_telem().unwrap();
@@ -214,6 +211,7 @@ const APP: () = {
         cx.schedule.heartbeat(cx.scheduled + 1_400_000.cycles()).unwrap();
     }
 
+    // Send serialised state over UART via DMA at 10Hz
     #[task(resources=[state, usart1, dma1], schedule=[send_telem])]
     fn send_telem(cx: send_telem::Context) {
         let state = cx.resources.state;
@@ -223,14 +221,14 @@ const APP: () = {
     }
 
     // Run control loop at fixed frequency on TIM2
-    #[task(binds=TIM2, resources=[tim2, dac, state, ctrl_pid, vout_kal])]
+    #[task(binds=TIM2, resources=[tim2, dac, hrtim, state, ctrl_pid, vout_kal])]
     fn ctrl_loop(cx: ctrl_loop::Context) {
         // Control loop output ranges from 0 to 4096 and sets the I_Q limit reference.
         // 4096 corresponds to 3.3V at the comparator which corresponds to 6.47A.
         // We limit to IREF_MAX=3800 -> 3.06V -> 6.0A, our design point peak current.
 
         let (vout, dvout) = cx.resources.vout_kal.get();
-
+        let iout = cx.resources.state.i_out;
         let pid = cx.resources.ctrl_pid;
 
         match cx.resources.state.fault_state {
@@ -244,6 +242,26 @@ const APP: () = {
                 // Update DAC and telemetry
                 cx.resources.dac.set_ch1(action as u16);
                 cx.resources.state.update_ref_i_q(action as u16);
+
+                // Update duty cycle. When Vout is above 95% of target we
+                // reduce duty cycle based on output current.
+                let duty = if vout > 0.95*V_SET {
+                    if iout < 0.002 {
+                        // Set to 5% below 2mA
+                        50
+                    } else if iout < 0.020 {
+                        // Scale from 10% to 100% between 2mA and 20mA
+                        (50.0 + (1000.0-50.0)/(0.020-0.002) * (iout - 0.002)) as u16
+                    } else {
+                        // Set to 100% above 20mA
+                        1000
+                    }
+                } else {
+                    // Full duty cycle while charging
+                    1000
+                };
+                cx.resources.hrtim.set_duty(duty);
+                cx.resources.state.update_duty(duty);
             },
 
             state::FaultState::Stopped | state::FaultState::Fault => {
@@ -278,13 +296,13 @@ const APP: () = {
     }
 
     // Run ADC ISR to handle new ADC data.
-    #[task(binds=ADC1_2, resources=[adc, hrtim, state, adc_buf1, adc_buf2,
+    #[task(binds=ADC1_2, resources=[adc, hrtim, state, adc_buf,
                                     vout_kal, iout_kal, start_elapsed])]
     fn adc1_2(cx: adc1_2::Context) {
         cx.resources.adc.isr();
 
         let state = cx.resources.state;
-        state.update_adc(*cx.resources.adc_buf1, *cx.resources.adc_buf2);
+        state.update_adc(*cx.resources.adc_buf);
 
         // Update Kalman filters
         cx.resources.vout_kal.predict();
@@ -296,6 +314,7 @@ const APP: () = {
         let (vout, _) = cx.resources.vout_kal.get();
         let (iout, _) = cx.resources.iout_kal.get();
 
+        // Store filtered Vout and iout in state
         state.v_out = vout;
         state.i_out = iout;
 

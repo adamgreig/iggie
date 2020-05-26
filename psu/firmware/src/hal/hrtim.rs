@@ -32,7 +32,7 @@ impl HRTIM {
 
         // Set period to ensure regular pulses at startup; during operation DCM detection on V_Q
         // triggers the next charge cycle and causes a software reset of the master timer.
-        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0x8000);
+        write_reg!(stm32ral::hrtim_master, self.master, MPER, 0x4000);
 
         // Note: no master compare units used; we start TIMA on master reset each master period
 
@@ -42,9 +42,9 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_tima, self.tima, TIMACR,
                    PREEN: Enabled, TxRSTU: Enabled, CKPSCx: 6);
 
-        // Configure period to 100 counts maximum.
-        // This gives us 1.4µs, which at 5µH and 24V gives 6.7A, which is close to
-        // our maximum peak current limit.
+        // Configure period to 120 counts maximum.
+        // In principle 100 counts gives 1.4µs, which at 5µH and 24V gives 6.7A,
+        // but we give a little slack to allow lower input voltage or output overload.
         write_reg!(stm32ral::hrtim_tima, self.tima, PERAR, 120);
 
         // Configure CMP1 to derive blanking signal for first 280ns
@@ -71,6 +71,22 @@ impl HRTIM {
         // Enable FLT2 (nRUN input)
         write_reg!(stm32ral::hrtim_tima, self.tima, FLTAR, FLT2EN: Active);
 
+        // Configure burst mode controller:
+        // Continuous mode, clocked from f_HRTIM/512 (68kHz),
+        // preload registers, master clock unaffected, timer A clock stopped during idle.
+        write_reg!(stm32ral::hrtim_common, self.common, BMCR,
+                   BME: Disabled, BMOM: Continuous, BMCLK: Clock, BMPRSC: Div512,
+                   BMPREN: Enabled, MTBM: Normal, TABM: Stopped);
+
+        // Disable all burst mode triggers; we'll trigger manually in enable().
+        write_reg!(stm32ral::hrtim_common, self.common, BMTRGR, 0);
+
+        // Set idle time to 0 initially.
+        write_reg!(stm32ral::hrtim_common, self.common, BMCMPR, 0);
+
+        // Set period to 1000 counts = 68Hz
+        write_reg!(stm32ral::hrtim_common, self.common, BMPER, 1000);
+
         // Configure external event conditioning for EEV1 and EEV2
         write_reg!(stm32ral::hrtim_common, self.common, EECR1,
                    EE1FAST: Asynchronous, EE1SNS: Rising, EE1POL: ActiveHigh, EE1SRC: Src2,
@@ -80,9 +96,10 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_common, self.common, FLTINR1,
                    FLT2F: Disabled, FLT2SRC: Input, FLT2P: ActiveHigh, FLT2E: Enabled);
 
-        // Configure outputs
+        // Configure outputs.
+        // Output A1: active high, idle inactive, set inactive on fault, idle on burst
         write_reg!(stm32ral::hrtim_tima, self.tima, OUTAR,
-                   FAULT1: SetInactive, IDLES1: Inactive, POL1: ActiveHigh);
+                   FAULT1: SetInactive, IDLEM1: SetIdle, IDLES1: Inactive, POL1: ActiveHigh);
 
         // Enable fault interrupt
         write_reg!(stm32ral::hrtim_common, self.common, IER, FLT2IE: Enabled, SYSFLTIE: Enabled);
@@ -91,17 +108,36 @@ impl HRTIM {
         write_reg!(stm32ral::hrtim_common, self.common, CR2, MSWU: Update, TASWU: Update);
     }
 
+    /// Enable HRTIM and begin driving outputs.
     pub fn enable(&self) {
         // Enable outputs
         write_reg!(stm32ral::hrtim_common, self.common, OENR, TA1OEN: Enable);
 
         // Begin counting
         modify_reg!(stm32ral::hrtim_master, self.master, MCR, TACEN: Enabled, MCEN: Enabled);
+
+        // Trigger burst mode with 0 initial idle period
+        write_reg!(stm32ral::hrtim_common, self.common, BMCMPR, 0);
+        modify_reg!(stm32ral::hrtim_common, self.common, BMCR, BME: Enabled);
+        write_reg!(stm32ral::hrtim_common, self.common, BMTRGR, SW: Trigger);
     }
 
+    /// Set burst mode duty cycle.
+    ///
+    /// `duty` may take values from 0 to 1000, where 0 is 0% duty (outputs always off)
+    /// and 1000 is 100% duty (outputs never forced off).
+    pub fn set_duty(&self, duty: u16) {
+        let duty = if duty > 1000 { 1000u32 } else { duty as u32 };
+        write_reg!(stm32ral::hrtim_common, self.common, BMCMPR, 1000-duty);
+    }
+
+    /// Disable HRTIM, stopping outputs and counters.
     pub fn disable(&self) {
         // Disable outputs
         write_reg!(stm32ral::hrtim_common, self.common, ODISR, TA1ODIS: Disable);
+
+        // Stop burst mode
+        modify_reg!(stm32ral::hrtim_common, self.common, BMCR, BME: Disabled);
 
         // Stop counting
         modify_reg!(stm32ral::hrtim_master, self.master, MCR, TACEN: Disabled, MCEN: Disabled);
