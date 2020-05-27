@@ -38,10 +38,10 @@ const IREF_MAX: i16 = 3800;
 const K_P: f32 = 20.0;
 
 /// Integral gain
-const K_I: f32 = 60.0;
+const K_I: f32 = 120.0;
 
 /// Derivative gain
-const K_D: f32 = 16.0;
+const K_D: f32 = 20.0;
 
 /// Limits on integral gain.
 /// Since we expect the final control signal to be significantly integral based,
