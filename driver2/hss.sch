@@ -1,0 +1,560 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 8
+Title "High-Side Switch Connectors"
+Date "2020-07-15"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L agg-kicad:CONN_02x05 J?
+U 1 1 5F11888B
+P 4050 2700
+F 0 "J?" H 3950 2800 50  0000 L CNN
+F 1 "HSS0-15" H 4000 2200 50  0000 C CNN
+F 2 "" H 4050 2700 50  0001 C CNN
+F 3 "" H 4050 2700 50  0001 C CNN
+	1    4050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F1208B6
+P 3750 3150
+F 0 "#PWR?" H 3620 3190 50  0001 L CNN
+F 1 "GND" H 3750 3050 50  0000 C CNN
+F 2 "" H 3750 3150 50  0001 C CNN
+F 3 "" H 3750 3150 50  0001 C CNN
+	1    3750 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3150 3750 3100
+Wire Wire Line
+	3750 3100 3850 3100
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F120F32
+P 4250 3150
+F 0 "#PWR?" H 4120 3190 50  0001 L CNN
+F 1 "GND" H 4250 3050 50  0000 C CNN
+F 2 "" H 4250 3150 50  0001 C CNN
+F 3 "" H 4250 3150 50  0001 C CNN
+	1    4250 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3100 4250 3100
+Wire Wire Line
+	4250 3100 4250 3150
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F1219B1
+P 3800 2650
+F 0 "#PWR?" H 3800 2760 50  0001 L CNN
+F 1 "3v3" H 3800 2740 50  0000 C CNN
+F 2 "" H 3800 2650 50  0001 C CNN
+F 3 "" H 3800 2650 50  0001 C CNN
+	1    3800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F121D47
+P 4200 2650
+F 0 "#PWR?" H 4200 2760 50  0001 L CNN
+F 1 "3v3" H 4200 2740 50  0000 C CNN
+F 2 "" H 4200 2650 50  0001 C CNN
+F 3 "" H 4200 2650 50  0001 C CNN
+	1    4200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2650 4200 2700
+Wire Wire Line
+	4200 2700 4150 2700
+Wire Wire Line
+	3800 2650 3800 2700
+Wire Wire Line
+	3800 2700 3850 2700
+Wire Wire Line
+	3850 2800 3750 2800
+Wire Wire Line
+	3850 2900 3750 2900
+Wire Wire Line
+	3850 3000 3750 3000
+Wire Wire Line
+	4150 2800 4250 2800
+Wire Wire Line
+	4150 2900 4250 2900
+Wire Wire Line
+	4150 3000 4250 3000
+Text Label 3750 2800 0    50   ~ 0
+A0
+Wire Wire Line
+	4250 3000 4250 3100
+Connection ~ 4250 3100
+Text Label 4250 2800 2    50   ~ 0
+A1
+Text Label 3750 2900 0    50   ~ 0
+A2
+Text Label 4250 2900 2    50   ~ 0
+A3
+Text Label 3750 3000 0    50   ~ 0
+E0
+Wire Bus Line
+	3950 2250 4100 2250
+Text Label 4100 2250 0    50   ~ 0
+A[0..3]
+Text HLabel 3950 2250 0    50   Input ~ 0
+A[0..3]
+Text HLabel 3950 2350 0    50   Input ~ 0
+E[0..3]
+Wire Bus Line
+	3950 2350 4100 2350
+Text Label 4100 2350 0    50   ~ 0
+E[0..3]
+$Comp
+L agg-kicad:CONN_02x05 J?
+U 1 1 5F134081
+P 4050 3700
+F 0 "J?" H 3950 3800 50  0000 L CNN
+F 1 "HSS16-31" H 4000 3200 50  0000 C CNN
+F 2 "" H 4050 3700 50  0001 C CNN
+F 3 "" H 4050 3700 50  0001 C CNN
+	1    4050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F134087
+P 3750 4150
+F 0 "#PWR?" H 3620 4190 50  0001 L CNN
+F 1 "GND" H 3750 4050 50  0000 C CNN
+F 2 "" H 3750 4150 50  0001 C CNN
+F 3 "" H 3750 4150 50  0001 C CNN
+	1    3750 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4150 3750 4100
+Wire Wire Line
+	3750 4100 3850 4100
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F13408F
+P 4250 4150
+F 0 "#PWR?" H 4120 4190 50  0001 L CNN
+F 1 "GND" H 4250 4050 50  0000 C CNN
+F 2 "" H 4250 4150 50  0001 C CNN
+F 3 "" H 4250 4150 50  0001 C CNN
+	1    4250 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4100 4250 4100
+Wire Wire Line
+	4250 4100 4250 4150
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F134097
+P 3800 3650
+F 0 "#PWR?" H 3800 3760 50  0001 L CNN
+F 1 "3v3" H 3800 3740 50  0000 C CNN
+F 2 "" H 3800 3650 50  0001 C CNN
+F 3 "" H 3800 3650 50  0001 C CNN
+	1    3800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F13409D
+P 4200 3650
+F 0 "#PWR?" H 4200 3760 50  0001 L CNN
+F 1 "3v3" H 4200 3740 50  0000 C CNN
+F 2 "" H 4200 3650 50  0001 C CNN
+F 3 "" H 4200 3650 50  0001 C CNN
+	1    4200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3650 4200 3700
+Wire Wire Line
+	4200 3700 4150 3700
+Wire Wire Line
+	3800 3650 3800 3700
+Wire Wire Line
+	3800 3700 3850 3700
+Wire Wire Line
+	3850 3800 3750 3800
+Wire Wire Line
+	3850 3900 3750 3900
+Wire Wire Line
+	3850 4000 3750 4000
+Wire Wire Line
+	4150 3800 4250 3800
+Wire Wire Line
+	4150 3900 4250 3900
+Wire Wire Line
+	4150 4000 4250 4000
+Text Label 3750 3800 0    50   ~ 0
+A0
+Wire Wire Line
+	4250 4000 4250 4100
+Connection ~ 4250 4100
+Text Label 4250 3800 2    50   ~ 0
+A1
+Text Label 3750 3900 0    50   ~ 0
+A2
+Text Label 4250 3900 2    50   ~ 0
+A3
+Text Label 3750 4000 0    50   ~ 0
+E1
+$Comp
+L agg-kicad:CONN_02x05 J?
+U 1 1 5F134FBA
+P 4050 4700
+F 0 "J?" H 3950 4800 50  0000 L CNN
+F 1 "HSS32-47" H 4000 4200 50  0000 C CNN
+F 2 "" H 4050 4700 50  0001 C CNN
+F 3 "" H 4050 4700 50  0001 C CNN
+	1    4050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F134FC4
+P 3750 5150
+F 0 "#PWR?" H 3620 5190 50  0001 L CNN
+F 1 "GND" H 3750 5050 50  0000 C CNN
+F 2 "" H 3750 5150 50  0001 C CNN
+F 3 "" H 3750 5150 50  0001 C CNN
+	1    3750 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5150 3750 5100
+Wire Wire Line
+	3750 5100 3850 5100
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F134FD0
+P 4250 5150
+F 0 "#PWR?" H 4120 5190 50  0001 L CNN
+F 1 "GND" H 4250 5050 50  0000 C CNN
+F 2 "" H 4250 5150 50  0001 C CNN
+F 3 "" H 4250 5150 50  0001 C CNN
+	1    4250 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5100 4250 5100
+Wire Wire Line
+	4250 5100 4250 5150
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F134FDC
+P 3800 4650
+F 0 "#PWR?" H 3800 4760 50  0001 L CNN
+F 1 "3v3" H 3800 4740 50  0000 C CNN
+F 2 "" H 3800 4650 50  0001 C CNN
+F 3 "" H 3800 4650 50  0001 C CNN
+	1    3800 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F134FE6
+P 4200 4650
+F 0 "#PWR?" H 4200 4760 50  0001 L CNN
+F 1 "3v3" H 4200 4740 50  0000 C CNN
+F 2 "" H 4200 4650 50  0001 C CNN
+F 3 "" H 4200 4650 50  0001 C CNN
+	1    4200 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4650 4200 4700
+Wire Wire Line
+	4200 4700 4150 4700
+Wire Wire Line
+	3800 4650 3800 4700
+Wire Wire Line
+	3800 4700 3850 4700
+Wire Wire Line
+	3850 4800 3750 4800
+Wire Wire Line
+	3850 4900 3750 4900
+Wire Wire Line
+	3850 5000 3750 5000
+Wire Wire Line
+	4150 4800 4250 4800
+Wire Wire Line
+	4150 4900 4250 4900
+Wire Wire Line
+	4150 5000 4250 5000
+Text Label 3750 4800 0    50   ~ 0
+A0
+Wire Wire Line
+	4250 5000 4250 5100
+Connection ~ 4250 5100
+Text Label 4250 4800 2    50   ~ 0
+A1
+Text Label 3750 4900 0    50   ~ 0
+A2
+Text Label 4250 4900 2    50   ~ 0
+A3
+Text Label 3750 5000 0    50   ~ 0
+E2
+$Comp
+L agg-kicad:CONN_02x05 J?
+U 1 1 5F135001
+P 4050 5700
+F 0 "J?" H 3950 5800 50  0000 L CNN
+F 1 "HSS48-63" H 4000 5200 50  0000 C CNN
+F 2 "" H 4050 5700 50  0001 C CNN
+F 3 "" H 4050 5700 50  0001 C CNN
+	1    4050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F13500B
+P 3750 6150
+F 0 "#PWR?" H 3620 6190 50  0001 L CNN
+F 1 "GND" H 3750 6050 50  0000 C CNN
+F 2 "" H 3750 6150 50  0001 C CNN
+F 3 "" H 3750 6150 50  0001 C CNN
+	1    3750 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 6150 3750 6100
+Wire Wire Line
+	3750 6100 3850 6100
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F135017
+P 4250 6150
+F 0 "#PWR?" H 4120 6190 50  0001 L CNN
+F 1 "GND" H 4250 6050 50  0000 C CNN
+F 2 "" H 4250 6150 50  0001 C CNN
+F 3 "" H 4250 6150 50  0001 C CNN
+	1    4250 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 6100 4250 6100
+Wire Wire Line
+	4250 6100 4250 6150
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F135023
+P 3800 5650
+F 0 "#PWR?" H 3800 5760 50  0001 L CNN
+F 1 "3v3" H 3800 5740 50  0000 C CNN
+F 2 "" H 3800 5650 50  0001 C CNN
+F 3 "" H 3800 5650 50  0001 C CNN
+	1    3800 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F13502D
+P 4200 5650
+F 0 "#PWR?" H 4200 5760 50  0001 L CNN
+F 1 "3v3" H 4200 5740 50  0000 C CNN
+F 2 "" H 4200 5650 50  0001 C CNN
+F 3 "" H 4200 5650 50  0001 C CNN
+	1    4200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5650 4200 5700
+Wire Wire Line
+	4200 5700 4150 5700
+Wire Wire Line
+	3800 5650 3800 5700
+Wire Wire Line
+	3800 5700 3850 5700
+Wire Wire Line
+	3850 5800 3750 5800
+Wire Wire Line
+	3850 5900 3750 5900
+Wire Wire Line
+	3850 6000 3750 6000
+Wire Wire Line
+	4150 5800 4250 5800
+Wire Wire Line
+	4150 5900 4250 5900
+Wire Wire Line
+	4150 6000 4250 6000
+Text Label 3750 5800 0    50   ~ 0
+A0
+Wire Wire Line
+	4250 6000 4250 6100
+Connection ~ 4250 6100
+Text Label 4250 5800 2    50   ~ 0
+A1
+Text Label 3750 5900 0    50   ~ 0
+A2
+Text Label 4250 5900 2    50   ~ 0
+A3
+Text Label 3750 6000 0    50   ~ 0
+E3
+$Comp
+L agg-kicad:C C?
+U 1 1 5F147EB7
+P 4500 2850
+F 0 "C?" H 4550 2920 50  0000 C CNN
+F 1 "10µ" H 4550 2780 50  0000 C CNN
+F 2 "agg:0603" H 4500 2850 50  0001 C CNN
+F 3 "" H 4500 2850 50  0001 C CNN
+	1    4500 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F149161
+P 4500 2800
+F 0 "#PWR?" H 4500 2910 50  0001 L CNN
+F 1 "3v3" H 4500 2890 50  0000 C CNN
+F 2 "" H 4500 2800 50  0001 C CNN
+F 3 "" H 4500 2800 50  0001 C CNN
+	1    4500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F1493B4
+P 4500 3000
+F 0 "#PWR?" H 4370 3040 50  0001 L CNN
+F 1 "GND" H 4500 2900 50  0000 C CNN
+F 2 "" H 4500 3000 50  0001 C CNN
+F 3 "" H 4500 3000 50  0001 C CNN
+	1    4500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3000 4500 2950
+Wire Wire Line
+	4500 2850 4500 2800
+$Comp
+L agg-kicad:C C?
+U 1 1 5F14F295
+P 4500 3850
+F 0 "C?" H 4550 3920 50  0000 C CNN
+F 1 "10µ" H 4550 3780 50  0000 C CNN
+F 2 "agg:0603" H 4500 3850 50  0001 C CNN
+F 3 "" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F14F29B
+P 4500 3800
+F 0 "#PWR?" H 4500 3910 50  0001 L CNN
+F 1 "3v3" H 4500 3890 50  0000 C CNN
+F 2 "" H 4500 3800 50  0001 C CNN
+F 3 "" H 4500 3800 50  0001 C CNN
+	1    4500 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F14F2A1
+P 4500 4000
+F 0 "#PWR?" H 4370 4040 50  0001 L CNN
+F 1 "GND" H 4500 3900 50  0000 C CNN
+F 2 "" H 4500 4000 50  0001 C CNN
+F 3 "" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4000 4500 3950
+Wire Wire Line
+	4500 3850 4500 3800
+$Comp
+L agg-kicad:C C?
+U 1 1 5F151062
+P 4500 4850
+F 0 "C?" H 4550 4920 50  0000 C CNN
+F 1 "10µ" H 4550 4780 50  0000 C CNN
+F 2 "agg:0603" H 4500 4850 50  0001 C CNN
+F 3 "" H 4500 4850 50  0001 C CNN
+	1    4500 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F151068
+P 4500 4800
+F 0 "#PWR?" H 4500 4910 50  0001 L CNN
+F 1 "3v3" H 4500 4890 50  0000 C CNN
+F 2 "" H 4500 4800 50  0001 C CNN
+F 3 "" H 4500 4800 50  0001 C CNN
+	1    4500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F15106E
+P 4500 5000
+F 0 "#PWR?" H 4370 5040 50  0001 L CNN
+F 1 "GND" H 4500 4900 50  0000 C CNN
+F 2 "" H 4500 5000 50  0001 C CNN
+F 3 "" H 4500 5000 50  0001 C CNN
+	1    4500 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5000 4500 4950
+Wire Wire Line
+	4500 4850 4500 4800
+$Comp
+L agg-kicad:C C?
+U 1 1 5F153431
+P 4500 5850
+F 0 "C?" H 4550 5920 50  0000 C CNN
+F 1 "10µ" H 4550 5780 50  0000 C CNN
+F 2 "agg:0603" H 4500 5850 50  0001 C CNN
+F 3 "" H 4500 5850 50  0001 C CNN
+	1    4500 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L agg-kicad:3v3 #PWR?
+U 1 1 5F153437
+P 4500 5800
+F 0 "#PWR?" H 4500 5910 50  0001 L CNN
+F 1 "3v3" H 4500 5890 50  0000 C CNN
+F 2 "" H 4500 5800 50  0001 C CNN
+F 3 "" H 4500 5800 50  0001 C CNN
+	1    4500 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR?
+U 1 1 5F15343D
+P 4500 6000
+F 0 "#PWR?" H 4370 6040 50  0001 L CNN
+F 1 "GND" H 4500 5900 50  0000 C CNN
+F 2 "" H 4500 6000 50  0001 C CNN
+F 3 "" H 4500 6000 50  0001 C CNN
+	1    4500 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 6000 4500 5950
+Wire Wire Line
+	4500 5850 4500 5800
+$EndSCHEMATC

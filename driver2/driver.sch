@@ -1,0 +1,118 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4300 4250 900  700 
+U 5EF9470A
+F0 "ECP5" 50
+F1 "ecp5.sch" 50
+$EndSheet
+$Sheet
+S 2400 4200 1100 900 
+U 5EFDB9A7
+F0 "Low-Side Switches" 50
+F1 "lss.sch" 50
+$EndSheet
+$Sheet
+S 5900 5450 600  1200
+U 5F0FCADA
+F0 "Ethernet" 50
+F1 "ethernet.sch" 50
+F2 "CRS_DV" O L 5900 5750 50 
+F3 "REF_CLK" O L 5900 5550 50 
+F4 "TX_EN" I L 5900 5950 50 
+F5 "RXD[0..1]" O L 5900 5850 50 
+F6 "TXD[0..1]" I L 5900 6050 50 
+F7 "MDIO" B L 5900 6350 50 
+F8 "MDC" I L 5900 6250 50 
+F9 "~RST" I L 5900 6550 50 
+$EndSheet
+$Sheet
+S 2850 6000 1050 750 
+U 5F0FCAE9
+F0 "PSU" 50
+F1 "psu.sch" 50
+$EndSheet
+$Sheet
+S 5050 2450 600  300 
+U 5F0FD3F5
+F0 "High-Side Switch Connectors" 50
+F1 "hss.sch" 50
+F2 "A[0..3]" I L 5050 2550 50 
+F3 "E[0..3]" I L 5050 2650 50 
+$EndSheet
+$Sheet
+S 1900 2650 600  800 
+U 5F117D14
+F0 "USB" 50
+F1 "usb.sch" 50
+F2 "TCK" O R 2500 2750 50 
+F3 "TDI" O R 2500 2850 50 
+F4 "TDO" I R 2500 2950 50 
+F5 "TMS" O R 2500 3050 50 
+F6 "TXD" O R 2500 3250 50 
+F7 "RXD" I R 2500 3350 50 
+$EndSheet
+$Sheet
+S 6500 3700 1000 750 
+U 5F7F513B
+F0 "Transducers" 50
+F1 "transducers.sch" 50
+$EndSheet
+$Comp
+L agg-kicad:PART X?
+U 1 1 5F7F6838
+P 500 7700
+F 0 "X?" H 550 7800 50  0000 L CNN
+F 1 "M3 MOUNT" H 550 7700 50  0000 L CNN
+F 2 "agg:M3_MOUNT" H 500 7700 50  0001 C CNN
+F 3 "" H 500 7700 50  0001 C CNN
+	1    500  7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:PART X?
+U 1 1 5F7F6AF5
+P 1050 7700
+F 0 "X?" H 1100 7800 50  0000 L CNN
+F 1 "M3 MOUNT" H 1100 7700 50  0000 L CNN
+F 2 "agg:M3_MOUNT" H 1050 7700 50  0001 C CNN
+F 3 "" H 1050 7700 50  0001 C CNN
+	1    1050 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:PART X?
+U 1 1 5F7F6C79
+P 500 7450
+F 0 "X?" H 550 7550 50  0000 L CNN
+F 1 "M3 MOUNT" H 550 7450 50  0000 L CNN
+F 2 "agg:M3_MOUNT" H 500 7450 50  0001 C CNN
+F 3 "" H 500 7450 50  0001 C CNN
+	1    500  7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:PART X?
+U 1 1 5F7F6EC0
+P 1050 7450
+F 0 "X?" H 1100 7550 50  0000 L CNN
+F 1 "M3 MOUNT" H 1100 7450 50  0000 L CNN
+F 2 "agg:M3_MOUNT" H 1050 7450 50  0001 C CNN
+F 3 "" H 1050 7450 50  0001 C CNN
+	1    1050 7450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
