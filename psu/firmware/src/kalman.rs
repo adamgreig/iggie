@@ -32,10 +32,10 @@
 /// We model the system as undergoing an unknown change in derivative
 /// a=d²x/dt² whose value a~N(0, Q), with a constant over each integration period dt.
 ///
-/// Integrating the constant j over a time period dt leads to the process noise 𝘄_k:
+/// Integrating the constant a over a time period dt leads to the process noise 𝘄_k:
 ///
-///     𝘄_k = [ j dt²/2 ]
-///           [ j dt    ]
+///     𝘄_k = [ a dt²/2 ]
+///           [ a dt    ]
 ///
 /// We therefore find 𝗤_k as E[𝘄_k . 𝘄_k'], where E[j²]=Q, the provided process variance.
 /// Note that 𝘄_k~N(0, 𝗤_k).
