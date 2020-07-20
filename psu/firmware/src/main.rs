@@ -54,7 +54,7 @@ const TELEM_ADC_CH: usize = 0;
 
 use core::panic::PanicInfo;
 use cortex_m_rt::exception;
-use rtfm::cyccnt::{Instant, Duration, U32Ext};
+use rtic::cyccnt::{Instant, Duration, U32Ext};
 
 pub mod hal;
 pub mod state;
@@ -63,7 +63,7 @@ pub mod kalman;
 
 use state::ToBytes;
 
-#[rtfm::app(device=stm32ral::stm32f3::stm32f3x4, monotonic=rtfm::cyccnt::CYCCNT, peripherals=true)]
+#[rtic::app(device=stm32ral::stm32f3::stm32f3x4, monotonic=rtic::cyccnt::CYCCNT, peripherals=true)]
 const APP: () = {
     struct Resources {
         // GPIO is used by heartbeat thread to flash LED
@@ -371,7 +371,7 @@ const APP: () = {
     }
 
     // We require at least one interrupt vector defined here per software task
-    // priority level in use, for RTFM to co-opt for software task execution.
+    // priority level in use, for RTIC to co-opt for software task execution.
     extern "C" {
         fn FLASH();
     }
