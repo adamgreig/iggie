@@ -110,6 +110,9 @@ impl HRTIM {
 
     /// Enable HRTIM and begin driving outputs.
     pub fn enable(&self) {
+        // Enable fault interrupt
+        write_reg!(stm32ral::hrtim_common, self.common, IER, FLT2IE: Enabled, SYSFLTIE: Enabled);
+
         // Enable outputs
         write_reg!(stm32ral::hrtim_common, self.common, OENR, TA1OEN: Enable);
 
@@ -151,6 +154,9 @@ impl HRTIM {
         if read_reg!(stm32ral::hrtim_common, self.common, ISR, SYSFLT == Event) {
             write_reg!(stm32ral::hrtim_common, self.common, ICR, SYSFLTC: Clear);
         }
+
+        // Disable fault interrupt (it is re-enabled when the HRTIM is re-enabled)
+        write_reg!(stm32ral::hrtim_common, self.common, IER, FLT2IE: Disabled, SYSFLTIE: Disabled);
 
         // Move from FAULT state to normal disabled state
         self.disable();
