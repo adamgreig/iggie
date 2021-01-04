@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/adam/Projects/iggie/minidriver/minidriver.kicad_sch</source>
+    <date>Mon 04 Jan 2021 23:32:41 GMT</date>
+    <tool>Eeschema 5.99.0-unknown-5db75805bd~106~ubuntu20.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>minidriver.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>4µ7</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2112859</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <property name="Voltage" value="50V"/>
+      <property name="Farnell" value="2112859"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>7cab25b5-6774-49bc-b020-49d587a29ec3</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">2810260</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <property name="Voltage" value="16V"/>
+      <property name="Farnell" value="2810260"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>73fc92d1-055b-4482-8e3c-d6d341ce6c20</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10µ</value>
+      <footprint>agg:0603</footprint>
+      <fields>
+        <field name="Farnell">3013391</field>
+        <field name="Voltage">6.3V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <property name="Voltage" value="6.3V"/>
+      <property name="Farnell" value="3013391"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>9c5010a4-2247-4d20-8828-40647e26dc1d</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">2810260</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <property name="Voltage" value="16V"/>
+      <property name="Farnell" value="2810260"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>41a7fcc8-7337-4e32-acdc-1d133e3e9d98</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">2810260</field>
+        <field name="Voltage">16V</field>
+      </fields>
+      <libsource lib="agg" part="C" description=""/>
+      <property name="Voltage" value="16V"/>
+      <property name="Farnell" value="2810260"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>85fb8383-f3c9-4fa3-9395-b30ade079680</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>agg:0603-LED</footprint>
+      <fields>
+        <field name="Farnell">2290328</field>
+      </fields>
+      <libsource lib="agg" part="LED" description=""/>
+      <property name="Farnell" value="2290328"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>1404cb84-48c9-44c2-9136-67f591637c69</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>TSR1-2433</value>
+      <footprint>agg:TSR1</footprint>
+      <datasheet>http://www.tracopower.com/products/tsr1.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1696319</field>
+      </fields>
+      <libsource lib="agg" part="TSR1" description="TSR1 Switch Mode Regulators"/>
+      <property name="Farnell" value="1696319"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>4e3ebefd-3963-45a0-9c11-8adfb9d4320f</tstamp>
+    </comp>
+    <comp ref="IC2">
+      <value>STM32G070KBT6</value>
+      <footprint>agg:LQFP-32</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stm32g070kb.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3365394</field>
+      </fields>
+      <libsource lib="agg" part="STM32G0xxKx" description="STM32G0 32 pin LQFP package"/>
+      <property name="Farnell" value="3365394"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>af287abd-4a36-4854-bd97-5b8226a27c68</tstamp>
+    </comp>
+    <comp ref="IC3">
+      <value>74HC4514</value>
+      <footprint>agg:SOIC-24-W</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1870944.pdf</datasheet>
+      <fields>
+        <field name="Farnell">2444987</field>
+      </fields>
+      <libsource lib="agg" part="74HC4514" description="4-to-16 line decoder/demultiplexer with input latches"/>
+      <property name="Farnell" value="2444987"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>b6246257-7b04-4bea-a5a1-0c619b3ea3e3</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>HV_IN</value>
+      <footprint>agg:MOLEX-KK-254P-03</footprint>
+      <fields>
+        <field name="Farnell">1360131</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x03" description=""/>
+      <property name="Farnell" value="1360131"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>7671393a-b144-41a3-a56a-826d6bf18704</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>HV_PSU</value>
+      <footprint>agg:MOLEX-KK-254P-04</footprint>
+      <fields>
+        <field name="Farnell">1360132</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x04" description=""/>
+      <property name="Farnell" value="1360132"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>17316c42-a3f0-43bc-9770-11751c7851f6</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>SJ2</value>
+      <footprint>agg:SJ2</footprint>
+      <libsource lib="agg" part="SJ2" description=""/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>0cccd6e2-9a8c-4168-8a60-9c07516ef4ab</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>ANODES</value>
+      <footprint>agg:MOLEX-KK-254P-04</footprint>
+      <fields>
+        <field name="Farnell">1360132</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x04" description=""/>
+      <property name="Farnell" value="1360132"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>e3d0b762-f6c9-4ebc-8dcd-89676bab37c7</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>CATHODES</value>
+      <footprint>agg:MOLEX-KK-254P-04</footprint>
+      <fields>
+        <field name="Farnell">1360132</field>
+      </fields>
+      <libsource lib="agg" part="CONN_01x04" description=""/>
+      <property name="Farnell" value="1360132"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>e99f759b-18a1-4caa-afdb-4fb924fe7951</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>SJ2</value>
+      <footprint>agg:SJ2</footprint>
+      <libsource lib="agg" part="SJ2" description=""/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>b8a2b77f-aca5-42e4-b21d-3450b744872f</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>SJ2</value>
+      <footprint>agg:SJ2</footprint>
+      <libsource lib="agg" part="SJ2" description=""/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>dc7e278d-3bd2-48b5-a719-dabb1111abca</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>SWD</value>
+      <footprint>agg:FTSH-105-01-L-DV-K</footprint>
+      <fields>
+        <field name="Farnell">2856437</field>
+      </fields>
+      <libsource lib="agg" part="SWD" description="Serial Wire Debug Port"/>
+      <property name="Farnell" value="2856437"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>94b0fcdd-68c2-4e7b-8516-28e0b38257cd</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>4a4c62b5-f072-461b-ba86-18a1f1dd7fd7</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6a4546d6-845b-409a-8b85-16053b0b55a9</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>PBHV9050T,215</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/609431.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1829318</field>
+      </fields>
+      <libsource lib="agg" part="PNP" description="PNP BJT Transistor"/>
+      <property name="Farnell" value="1829318"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>f23e66f8-96dd-4d16-9560-c9ccf9b23347</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>f47251ee-e947-48df-b067-77a10739eb59</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>PBHV9050T,215</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/609431.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1829318</field>
+      </fields>
+      <libsource lib="agg" part="PNP" description="PNP BJT Transistor"/>
+      <property name="Farnell" value="1829318"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>42c8db69-c507-4162-a4c3-6d7d94427801</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>f5d2e1cb-3f55-4dc3-9439-1cd68f04a368</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>d434be55-1da0-436b-b690-2edfd64a70f6</tstamp>
+    </comp>
+    <comp ref="Q8">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>a4ecb900-077f-49f6-92fd-7be2a4ff216f</tstamp>
+    </comp>
+    <comp ref="Q9">
+      <value>PBHV9050T,215</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/609431.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1829318</field>
+      </fields>
+      <libsource lib="agg" part="PNP" description="PNP BJT Transistor"/>
+      <property name="Farnell" value="1829318"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>0bb3b4a1-a907-4532-bd00-9191e854f556</tstamp>
+    </comp>
+    <comp ref="Q10">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>ebc76f95-d4a3-414d-bb1e-ad0b709bfa28</tstamp>
+    </comp>
+    <comp ref="Q11">
+      <value>PBHV9050T,215</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/609431.pdf</datasheet>
+      <fields>
+        <field name="Farnell">1829318</field>
+      </fields>
+      <libsource lib="agg" part="PNP" description="PNP BJT Transistor"/>
+      <property name="Farnell" value="1829318"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>88aadaf2-3772-4dbb-8904-89ad120c5b7f</tstamp>
+    </comp>
+    <comp ref="Q12">
+      <value>DMN60H080DS-7</value>
+      <footprint>agg:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2814411.pdf</datasheet>
+      <fields>
+        <field name="Farnell">3127344</field>
+      </fields>
+      <libsource lib="agg" part="NFET" description="Generic N-channel FET"/>
+      <property name="Farnell" value="3127344"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>cb484393-52ec-4492-9a91-ad593fafeb95</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>100</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">9239111</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="9239111"/>
+      <property name="Voltage" value="50V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5a08532d-7e2f-445e-9ea6-6e772c706aeb</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">9239111</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="9239111"/>
+      <property name="Voltage" value="50V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>eb0d9ec9-c38a-4be2-a100-bb90b01ef874</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>1M</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750877</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750877"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>c2698364-cebc-4a4a-987c-1708d6de24fe</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1M</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750877</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750877"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>80c0da7f-ee47-4b6a-88ba-72eb2b53253f</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750850</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750850"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>b0267ed7-7370-43de-8d7f-bb42689f7ac7</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750850</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750850"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>f0242b6a-3487-48e8-ae5d-0467092ed5d4</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>93k1</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2327389</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="2327389"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>fce1ef3b-0c98-4897-9ab3-e2eda6de361c</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>93k1</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2327389</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="2327389"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>7445ca10-b2ba-4439-b132-15d3f10f247c</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1M</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750877</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750877"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>1ce25883-4010-464c-8ba7-de1d7094ca11</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>1M</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750877</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750877"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>3b8e3efe-4b32-4652-b77e-cf6046b18860</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750850</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750850"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>a7b5b872-a47d-4cd8-8a63-d2fcde93df55</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">1750850</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="1750850"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>765b412b-bd02-41dc-b401-3f61a99763b6</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>93k1</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2327389</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="2327389"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>7ce12761-af7f-4f5b-8cd6-824154261645</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>93k1</value>
+      <footprint>agg:1206</footprint>
+      <fields>
+        <field name="Farnell">2327389</field>
+        <field name="Voltage">500V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="2327389"/>
+      <property name="Voltage" value="500V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>83172a30-a982-41d2-86d3-3456b758cb70</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>1k</value>
+      <footprint>agg:0402</footprint>
+      <fields>
+        <field name="Farnell">2331474</field>
+        <field name="Voltage">50V</field>
+      </fields>
+      <libsource lib="agg" part="R" description=""/>
+      <property name="Farnell" value="2331474"/>
+      <property name="Voltage" value="50V"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>fecd1339-2389-4b31-9026-9dd874d3521f</tstamp>
+    </comp>
+    <comp ref="TP1">
+      <value>TESTPAD</value>
+      <footprint>agg:KEYSTONE5016</footprint>
+      <fields>
+        <field name="Farnell">2292858</field>
+      </fields>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <property name="Farnell" value="2292858"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>97b31247-6d5a-42d0-b494-2a9a7a94abd3</tstamp>
+    </comp>
+    <comp ref="TP2">
+      <value>TESTPAD</value>
+      <footprint>agg:KEYSTONE5016</footprint>
+      <fields>
+        <field name="Farnell">2292858</field>
+      </fields>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <property name="Farnell" value="2292858"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>9379ad4a-44a8-4730-87f3-3a5230a582ff</tstamp>
+    </comp>
+    <comp ref="TP3">
+      <value>TESTPAD</value>
+      <footprint>agg:TESTPAD</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6e600a95-1cb2-4fef-97b5-0c48e05f2168</tstamp>
+    </comp>
+    <comp ref="TP4">
+      <value>TESTPAD</value>
+      <footprint>agg:SIL-254P-01</footprint>
+      <libsource lib="agg" part="TESTPAD" description="Test pad"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>cfd70854-1033-4f8c-aa9d-9afbaabd2dbe</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>ed7ea5cf-b852-4e22-ad3a-2730ee12005e</tstamp>
+    </comp>
+    <comp ref="X2">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>d0ceec98-1698-4ac4-b860-24b13862bef0</tstamp>
+    </comp>
+    <comp ref="X3">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6b042948-4663-4e79-8d1d-8a8c92674b9f</tstamp>
+    </comp>
+    <comp ref="X4">
+      <value>M3 MOUNT</value>
+      <footprint>agg:M3_MOUNT</footprint>
+      <libsource lib="agg" part="PART" description="Generic placeholder part"/>
+      <property name="Sheet name" value=""/>
+      <property name="Sheet file" value="minidriver.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>7b459c6f-3d29-48c8-afc7-6db28f9ab23a</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="agg" part="74HC4514">
+      <description>4-to-16 line decoder/demultiplexer with input latches</description>
+      <docs>http://www.farnell.com/datasheets/1870944.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">74HC4514</field>
+        <field name="Footprint">agg:SOIC-24-W</field>
+        <field name="Datasheet">http://www.farnell.com/datasheets/1870944.pdf</field>
+        <field name="Farnell">2444987</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LE" type="input"/>
+        <pin num="2" name="A0" type="input"/>
+        <pin num="3" name="A1" type="input"/>
+        <pin num="4" name="Q7" type="output"/>
+        <pin num="5" name="Q6" type="output"/>
+        <pin num="6" name="Q5" type="output"/>
+        <pin num="7" name="Q4" type="output"/>
+        <pin num="8" name="Q3" type="output"/>
+        <pin num="9" name="Q1" type="output"/>
+        <pin num="10" name="Q2" type="output"/>
+        <pin num="11" name="Q0" type="output"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="Q13" type="output"/>
+        <pin num="14" name="Q12" type="output"/>
+        <pin num="15" name="Q15" type="output"/>
+        <pin num="16" name="Q14" type="output"/>
+        <pin num="17" name="Q9" type="output"/>
+        <pin num="18" name="Q8" type="output"/>
+        <pin num="19" name="Q11" type="output"/>
+        <pin num="20" name="Q10" type="output"/>
+        <pin num="21" name="A2" type="input"/>
+        <pin num="22" name="A3" type="input"/>
+        <pin num="23" name="~E" type="input"/>
+        <pin num="24" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="C">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="CONN_01x03">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="CONN_01x04">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="LED">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="NFET">
+      <description>Generic N-channel FET</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">NFET</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="PART">
+      <description>Generic placeholder part</description>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">PART</field>
+      </fields>
+    </libpart>
+    <libpart lib="agg" part="PNP">
+      <description>PNP BJT Transistor</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">PNP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="passive"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="R">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="SJ2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SJ2</field>
+        <field name="Footprint">agg:SJ2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="STM32G0xxKx">
+      <description>STM32G0 32 pin LQFP package</description>
+      <docs>https://www.st.com/resource/en/datasheet/stm32g070kb.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">STM32G0xxKx</field>
+        <field name="Footprint">agg:LQFP-32</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/stm32g070kb.pdf</field>
+        <field name="Farnell">3365394</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PB9" type="BiDi"/>
+        <pin num="2" name="PC14" type="BiDi"/>
+        <pin num="3" name="PC15" type="BiDi"/>
+        <pin num="4" name="VDD/VDDA" type="power_in"/>
+        <pin num="5" name="VSS/VSSA" type="power_in"/>
+        <pin num="6" name="NRST" type="input"/>
+        <pin num="7" name="PA0" type="BiDi"/>
+        <pin num="8" name="PA1" type="BiDi"/>
+        <pin num="9" name="PA2" type="BiDi"/>
+        <pin num="10" name="PA3" type="BiDi"/>
+        <pin num="11" name="PA4" type="BiDi"/>
+        <pin num="12" name="PA5" type="BiDi"/>
+        <pin num="13" name="PA6" type="BiDi"/>
+        <pin num="14" name="PA7" type="BiDi"/>
+        <pin num="15" name="PB0" type="BiDi"/>
+        <pin num="16" name="PB1" type="BiDi"/>
+        <pin num="17" name="PB2" type="BiDi"/>
+        <pin num="18" name="PA8" type="BiDi"/>
+        <pin num="19" name="PA9" type="BiDi"/>
+        <pin num="20" name="PC6" type="BiDi"/>
+        <pin num="21" name="PA10" type="BiDi"/>
+        <pin num="22" name="PA9/PA11" type="BiDi"/>
+        <pin num="23" name="PA10/PA12" type="BiDi"/>
+        <pin num="24" name="PA13" type="BiDi"/>
+        <pin num="25" name="BOOT0/PA14" type="BiDi"/>
+        <pin num="26" name="PA15" type="BiDi"/>
+        <pin num="27" name="PB3" type="BiDi"/>
+        <pin num="28" name="PB4" type="BiDi"/>
+        <pin num="29" name="PB5" type="BiDi"/>
+        <pin num="30" name="PB6" type="BiDi"/>
+        <pin num="31" name="PB7" type="BiDi"/>
+        <pin num="32" name="PB8" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="SWD">
+      <description>Serial Wire Debug Port</description>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">SWD</field>
+        <field name="Footprint">agg:FTSH-105-01-F-D-K</field>
+        <field name="Toby">FTSH-105-01-F-D-K</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VTref" type="power_in"/>
+        <pin num="2" name="SWDIO/TMS" type="BiDi"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="SWDCLK/TCK" type="BiDi"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="SWO/TDO" type="BiDi"/>
+        <pin num="7" name="KEY" type="NotConnected"/>
+        <pin num="8" name="TDI" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="nRESET" type="openCol"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="TESTPAD">
+      <description>Test pad</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TESTPAD</field>
+        <field name="Footprint">agg:TESTPAD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TP" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="agg" part="TSR1">
+      <description>TSR1 Switch Mode Regulators</description>
+      <docs>http://www.tracopower.com/products/tsr1.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">TSR1</field>
+        <field name="Footprint">agg:TSR1</field>
+        <field name="Datasheet">http://www.tracopower.com/products/tsr1.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="agg">
+      <uri>/home/adam/Projects/iggie/minidriver/../agg-kicad/agg-kicad.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/A0">
+      <node ref="IC2" pin="9" pinfunction="PA2"/>
+      <node ref="IC3" pin="2" pinfunction="A0"/>
+    </net>
+    <net code="2" name="/A1">
+      <node ref="IC2" pin="8" pinfunction="PA1"/>
+      <node ref="IC3" pin="3" pinfunction="A1"/>
+    </net>
+    <net code="3" name="/A2">
+      <node ref="IC2" pin="11" pinfunction="PA4"/>
+      <node ref="IC3" pin="21" pinfunction="A2"/>
+    </net>
+    <net code="4" name="/A3">
+      <node ref="IC2" pin="12" pinfunction="PA5"/>
+      <node ref="IC3" pin="22" pinfunction="A3"/>
+    </net>
+    <net code="5" name="/AN1">
+      <node ref="J4" pin="4" pinfunction="4"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="6" name="/AN2">
+      <node ref="J4" pin="3" pinfunction="3"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="7" name="/AN3">
+      <node ref="J4" pin="2" pinfunction="2"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="8" name="/AN4">
+      <node ref="J4" pin="1" pinfunction="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="9" name="/GA1">
+      <node ref="IC3" pin="20" pinfunction="Q10"/>
+      <node ref="Q1" pin="1" pinfunction="G"/>
+    </net>
+    <net code="10" name="/GA2">
+      <node ref="IC3" pin="19" pinfunction="Q11"/>
+      <node ref="Q7" pin="1" pinfunction="G"/>
+    </net>
+    <net code="11" name="/GA3">
+      <node ref="IC3" pin="14" pinfunction="Q12"/>
+      <node ref="Q2" pin="1" pinfunction="G"/>
+    </net>
+    <net code="12" name="/GA4">
+      <node ref="IC3" pin="13" pinfunction="Q13"/>
+      <node ref="Q8" pin="1" pinfunction="G"/>
+    </net>
+    <net code="13" name="/GK1">
+      <node ref="IC2" pin="29" pinfunction="PB5"/>
+      <node ref="Q4" pin="1" pinfunction="G"/>
+    </net>
+    <net code="14" name="/GK2">
+      <node ref="IC2" pin="30" pinfunction="PB6"/>
+      <node ref="Q10" pin="1" pinfunction="G"/>
+    </net>
+    <net code="15" name="/GK3">
+      <node ref="IC2" pin="31" pinfunction="PB7"/>
+      <node ref="Q6" pin="1" pinfunction="G"/>
+    </net>
+    <net code="16" name="/GK4">
+      <node ref="IC2" pin="32" pinfunction="PB8"/>
+      <node ref="Q12" pin="1" pinfunction="G"/>
+    </net>
+    <net code="17" name="/HV+">
+      <node ref="J1" pin="1" pinfunction="1"/>
+      <node ref="Q11" pin="2" pinfunction="E"/>
+      <node ref="Q3" pin="2" pinfunction="E"/>
+      <node ref="Q5" pin="2" pinfunction="E"/>
+      <node ref="Q9" pin="2" pinfunction="E"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="TP1" pin="1" pinfunction="TP"/>
+    </net>
+    <net code="18" name="/HV-">
+      <node ref="J1" pin="3" pinfunction="3"/>
+      <node ref="J6" pin="1" pinfunction="1"/>
+      <node ref="J7" pin="1" pinfunction="1"/>
+      <node ref="Q1" pin="2" pinfunction="S"/>
+      <node ref="Q10" pin="2" pinfunction="S"/>
+      <node ref="Q12" pin="2" pinfunction="S"/>
+      <node ref="Q2" pin="2" pinfunction="S"/>
+      <node ref="Q4" pin="2" pinfunction="S"/>
+      <node ref="Q6" pin="2" pinfunction="S"/>
+      <node ref="Q7" pin="2" pinfunction="S"/>
+      <node ref="Q8" pin="2" pinfunction="S"/>
+      <node ref="TP2" pin="1" pinfunction="TP"/>
+    </net>
+    <net code="19" name="/K1">
+      <node ref="J5" pin="1" pinfunction="1"/>
+      <node ref="Q4" pin="3" pinfunction="D"/>
+    </net>
+    <net code="20" name="/K2">
+      <node ref="J5" pin="2" pinfunction="2"/>
+      <node ref="Q10" pin="3" pinfunction="D"/>
+    </net>
+    <net code="21" name="/K3">
+      <node ref="J5" pin="3" pinfunction="3"/>
+      <node ref="Q6" pin="3" pinfunction="D"/>
+    </net>
+    <net code="22" name="/K4">
+      <node ref="J5" pin="4" pinfunction="4"/>
+      <node ref="Q12" pin="3" pinfunction="D"/>
+    </net>
+    <net code="23" name="/LE">
+      <node ref="IC2" pin="10" pinfunction="PA3"/>
+      <node ref="IC3" pin="1" pinfunction="LE"/>
+      <node ref="J3" pin="2" pinfunction="2"/>
+    </net>
+    <net code="24" name="/LED">
+      <node ref="IC2" pin="16" pinfunction="PB1"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="25" name="/PSU_UART_TX">
+      <node ref="IC2" pin="15" pinfunction="PB0"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="26" name="/PSU_~RUN">
+      <node ref="IC2" pin="14" pinfunction="PA7"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="27" name="/SWCLK">
+      <node ref="IC2" pin="25" pinfunction="BOOT0/PA14"/>
+      <node ref="P1" pin="4" pinfunction="SWDCLK/TCK"/>
+    </net>
+    <net code="28" name="/SWDIO">
+      <node ref="IC2" pin="24" pinfunction="PA13"/>
+      <node ref="P1" pin="2" pinfunction="SWDIO/TMS"/>
+    </net>
+    <net code="29" name="/nRST">
+      <node ref="C5" pin="1"/>
+      <node ref="IC2" pin="6" pinfunction="NRST"/>
+      <node ref="P1" pin="10" pinfunction="nRESET"/>
+    </net>
+    <net code="30" name="/~E">
+      <node ref="IC2" pin="18" pinfunction="PA8"/>
+      <node ref="IC3" pin="23" pinfunction="~E"/>
+      <node ref="J3" pin="1" pinfunction="1"/>
+    </net>
+    <net code="31" name="3v3">
+      <node ref="C2" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="IC1" pin="3" pinfunction="VOUT"/>
+      <node ref="IC2" pin="4" pinfunction="VDD/VDDA"/>
+      <node ref="IC3" pin="24" pinfunction="VCC"/>
+      <node ref="P1" pin="1" pinfunction="VTref"/>
+      <node ref="TP3" pin="1" pinfunction="TP"/>
+    </net>
+    <net code="32" name="24v">
+      <node ref="C1" pin="1"/>
+      <node ref="IC1" pin="1" pinfunction="VIN"/>
+      <node ref="J2" pin="1" pinfunction="1"/>
+    </net>
+    <net code="33" name="GND">
+      <node ref="C1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="IC1" pin="2" pinfunction="GND"/>
+      <node ref="IC2" pin="5" pinfunction="VSS/VSSA"/>
+      <node ref="IC3" pin="12" pinfunction="GND"/>
+      <node ref="J2" pin="4" pinfunction="4"/>
+      <node ref="J6" pin="2" pinfunction="2"/>
+      <node ref="J7" pin="2" pinfunction="2"/>
+      <node ref="P1" pin="3" pinfunction="GND"/>
+      <node ref="P1" pin="5" pinfunction="GND"/>
+      <node ref="P1" pin="9" pinfunction="GND"/>
+      <node ref="TP4" pin="1" pinfunction="TP"/>
+    </net>
+    <net code="34" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="35" name="Net-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="36" name="Net-(J2-Pad3)">
+      <node ref="J2" pin="3" pinfunction="3"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="37" name="Net-(Q1-Pad3)">
+      <node ref="Q1" pin="3" pinfunction="D"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="38" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3" pinfunction="D"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="39" name="Net-(Q3-Pad1)">
+      <node ref="Q3" pin="1" pinfunction="B"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="40" name="Net-(Q3-Pad3)">
+      <node ref="Q3" pin="3" pinfunction="C"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="41" name="Net-(Q5-Pad1)">
+      <node ref="Q5" pin="1" pinfunction="B"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="42" name="Net-(Q5-Pad3)">
+      <node ref="Q5" pin="3" pinfunction="C"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="43" name="Net-(Q7-Pad3)">
+      <node ref="Q7" pin="3" pinfunction="D"/>
+      <node ref="R9" pin="1"/>
+    </net>
+    <net code="44" name="Net-(Q8-Pad3)">
+      <node ref="Q8" pin="3" pinfunction="D"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="45" name="Net-(Q9-Pad1)">
+      <node ref="Q9" pin="1" pinfunction="B"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="46" name="Net-(Q9-Pad3)">
+      <node ref="Q9" pin="3" pinfunction="C"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="47" name="Net-(Q11-Pad1)">
+      <node ref="Q11" pin="1" pinfunction="B"/>
+      <node ref="R10" pin="2"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="48" name="Net-(Q11-Pad3)">
+      <node ref="Q11" pin="3" pinfunction="C"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="49" name="no_connect_49">
+      <node ref="IC2" pin="1" pinfunction="PB9"/>
+    </net>
+    <net code="50" name="no_connect_50">
+      <node ref="IC2" pin="13" pinfunction="PA6"/>
+    </net>
+    <net code="51" name="no_connect_51">
+      <node ref="IC2" pin="17" pinfunction="PB2"/>
+    </net>
+    <net code="52" name="no_connect_52">
+      <node ref="IC2" pin="19" pinfunction="PA9"/>
+    </net>
+    <net code="53" name="no_connect_53">
+      <node ref="IC2" pin="2" pinfunction="PC14"/>
+    </net>
+    <net code="54" name="no_connect_54">
+      <node ref="IC2" pin="20" pinfunction="PC6"/>
+    </net>
+    <net code="55" name="no_connect_55">
+      <node ref="IC2" pin="21" pinfunction="PA10"/>
+    </net>
+    <net code="56" name="no_connect_56">
+      <node ref="IC2" pin="22" pinfunction="PA9/PA11"/>
+    </net>
+    <net code="57" name="no_connect_57">
+      <node ref="IC2" pin="23" pinfunction="PA10/PA12"/>
+    </net>
+    <net code="58" name="no_connect_58">
+      <node ref="IC2" pin="26" pinfunction="PA15"/>
+    </net>
+    <net code="59" name="no_connect_59">
+      <node ref="IC2" pin="27" pinfunction="PB3"/>
+    </net>
+    <net code="60" name="no_connect_60">
+      <node ref="IC2" pin="28" pinfunction="PB4"/>
+    </net>
+    <net code="61" name="no_connect_61">
+      <node ref="IC2" pin="3" pinfunction="PC15"/>
+    </net>
+    <net code="62" name="no_connect_62">
+      <node ref="IC2" pin="7" pinfunction="PA0"/>
+    </net>
+    <net code="63" name="no_connect_63">
+      <node ref="IC3" pin="10" pinfunction="Q2"/>
+    </net>
+    <net code="64" name="no_connect_64">
+      <node ref="IC3" pin="11" pinfunction="Q0"/>
+    </net>
+    <net code="65" name="no_connect_65">
+      <node ref="IC3" pin="15" pinfunction="Q15"/>
+    </net>
+    <net code="66" name="no_connect_66">
+      <node ref="IC3" pin="16" pinfunction="Q14"/>
+    </net>
+    <net code="67" name="no_connect_67">
+      <node ref="IC3" pin="17" pinfunction="Q9"/>
+    </net>
+    <net code="68" name="no_connect_68">
+      <node ref="IC3" pin="18" pinfunction="Q8"/>
+    </net>
+    <net code="69" name="no_connect_69">
+      <node ref="IC3" pin="4" pinfunction="Q7"/>
+    </net>
+    <net code="70" name="no_connect_70">
+      <node ref="IC3" pin="5" pinfunction="Q6"/>
+    </net>
+    <net code="71" name="no_connect_71">
+      <node ref="IC3" pin="6" pinfunction="Q5"/>
+    </net>
+    <net code="72" name="no_connect_72">
+      <node ref="IC3" pin="7" pinfunction="Q4"/>
+    </net>
+    <net code="73" name="no_connect_73">
+      <node ref="IC3" pin="8" pinfunction="Q3"/>
+    </net>
+    <net code="74" name="no_connect_74">
+      <node ref="IC3" pin="9" pinfunction="Q1"/>
+    </net>
+    <net code="75" name="no_connect_75">
+      <node ref="J1" pin="2" pinfunction="2"/>
+    </net>
+    <net code="76" name="no_connect_76">
+      <node ref="P1" pin="6" pinfunction="SWO/TDO"/>
+    </net>
+    <net code="77" name="no_connect_77">
+      <node ref="P1" pin="8" pinfunction="TDI"/>
+    </net>
+  </nets>
+</export>

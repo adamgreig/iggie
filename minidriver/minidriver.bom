@@ -1,0 +1,105 @@
+Bill Of Materials
+=================
+
+Source file: minidriver.xml
+Date: 2021-01-04T23:32:41.737022
+
+Parts Missing Footprints
+------------------------
+
+
+Parts Missing Order Codes
+-------------------------
+J3     SJ2             agg:SJ2
+J6     SJ2             agg:SJ2
+J7     SJ2             agg:SJ2
+TP3    TESTPAD         agg:TESTPAD
+TP4    TESTPAD         agg:SIL-254P-01
+X1     M3 MOUNT        agg:M3_MOUNT
+X2     M3 MOUNT        agg:M3_MOUNT
+X3     M3 MOUNT        agg:M3_MOUNT
+X4     M3 MOUNT        agg:M3_MOUNT
+
+Inconsistent Order Codes
+------------------------
+  Farnell
+  ~~~~~~~
+    1360132: 
+      J2     HV_PSU          agg:MOLEX-KK-254P-04
+      J4     ANODES          agg:MOLEX-KK-254P-04
+      J5     CATHODES        agg:MOLEX-KK-254P-04
+  Voltage
+  ~~~~~~~
+    50V: 
+      C1     4µ7             agg:1206
+      R1     100             agg:0402
+      R2     100             agg:0402
+      R15    1k              agg:0402
+    500V: 
+      R3     1M              agg:1206
+      R5     10k             agg:1206
+      R6     10k             agg:1206
+      R7     93k1            agg:1206
+      R8     93k1            agg:1206
+      R11    10k             agg:1206
+      R12    10k             agg:1206
+      R13    93k1            agg:1206
+      R14    93k1            agg:1206
+
+Vendor Specific BOMs
+--------------------
+  Farnell
+  ~~~~~~~
+2112859,1,1x 4µ7 1206
+2810260,3,3x 100n 0402
+3013391,1,1x 10µ 0603
+2290328,1,1x LED 0603-LED
+1696319,1,1x TSR1-2433 TSR1
+3365394,1,1x STM32G070KBT6 LQFP-32
+2444987,1,1x 74HC4514 SOIC-24-W
+1360131,1,1x HV_IN MOLEX-KK-254P-03
+1360132,3,3x ANODES HV_PSU CATHODES MOLE
+2856437,1,1x SWD FTSH-105-01-L-DV-K
+3127344,8,8x DMN60H080DS-7 SOT-23
+1829318,4,4x PBHV9050T,215 SOT-23
+9239111,2,2x 100 0402
+1750877,4,4x 1M 1206
+1750850,4,4x 10k 1206
+2327389,4,4x 93k1 1206
+2331474,1,1x 1k 0402
+2292858,2,2x TESTPAD KEYSTONE5016
+
+
+  Voltage
+  ~~~~~~~
+50V,4,4x C1 R1 R2 R15 1206,0402
+16V,3,3x C2 C4 C5 0402
+6.3V,1,1x C3 0603
+500V,12,12x R3 R4 R5 R6 R7 R8 R9 R10 R11 R12 R13 R14 1206
+
+
+Assembly BOM
+------------
+2112859              1   4µ7             1206            C1
+2810260              3   100n            0402            C2 C4 C5
+3013391              1   10µ             0603            C3
+2290328              1   LED             0603-LED        D1
+1696319              1   TSR1-2433       TSR1            IC1
+3365394              1   STM32G070KBT6   LQFP-32         IC2
+2444987              1   74HC4514        SOIC-24-W       IC3
+1360131              1   HV_IN           MOLEX-KK-254P-03 J1
+1360132              3   ANODES,HV_PSU,CATHODES MOLEX-KK-254P-04 J2 J4 J5
+2856437              1   SWD             FTSH-105-01-L-DV-K P1
+3127344              8   DMN60H080DS-7   SOT-23          Q1 Q10 Q12 Q2 Q4 Q6 Q7 Q8
+1829318              4   PBHV9050T,215   SOT-23          Q11 Q3 Q5 Q9
+9239111              2   100             0402            R1 R2
+1750877              4   1M              1206            R10 R3 R4 R9
+1750850              4   10k             1206            R11 R12 R5 R6
+2327389              4   93k1            1206            R13 R14 R7 R8
+2331474              1   1k              0402            R15
+2292858              2   TESTPAD         KEYSTONE5016    TP1 TP2
+50V                  4   4µ7,1k,100      1206,0402       C1 R1 R15 R2
+16V                  3   100n            0402            C2 C4 C5
+6.3V                 1   10µ             0603            C3
+500V                 12  1M,10k,93k1     1206            R10 R11 R12 R13 R14 R3 R4 R5 R6 R7 R8 R9
+
