@@ -343,10 +343,10 @@ impl<'a> Pins<'a> {
         self.a3.set_bool((addr & 0b1000) != 0);
     }
 
-    pub fn set_rows(&self, cols: u8) {
-        self.gk1.set_bool((cols & 0b0001) != 0);
-        self.gk2.set_bool((cols & 0b0010) != 0);
-        self.gk3.set_bool((cols & 0b0100) != 0);
-        self.gk4.set_bool((cols & 0b1000) != 0);
+    pub fn set_row(&self, row: u8) {
+        self.gk1.set_bool(row == 1);
+        self.gk2.set_bool(row == 2);
+        self.gk3.set_bool(row == 3);
+        self.gk4.set_bool(row == 4);
     }
 }

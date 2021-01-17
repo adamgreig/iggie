@@ -16,12 +16,12 @@ impl TIM {
         write_reg!(tim1, self.tim1, CCMR1, OC1M: 0b0110, OC1PE: 1);
         // Polarity active low, enabled.
         write_reg!(tim1, self.tim1, CCER, CC1P: 1, CC1E: 1);
-        // ARR=250 gives 1kHz pulse per line (16kHz update rate).
-        write_reg!(tim1, self.tim1, ARR, 16000);
+        // ARR=250 gives 1kHz pulse per line (64kHz pulses total).
+        write_reg!(tim1, self.tim1, ARR, 250);
         // CCR1=48 gives 3µs pulses.
         write_reg!(tim1, self.tim1, CCR1, 3*16);
         // Enable outputs.
-        write_reg!(tim1, self.tim1, BDTR, MOE: 1);
+        write_reg!(tim1, self.tim1, BDTR, MOE: 0);
         // Enable timer.
         write_reg!(tim1, self.tim1, CR1, ARPE: 1, CEN: 1);
         // Generate update even to load preloaded registers.
@@ -34,5 +34,18 @@ impl TIM {
 
     pub fn clear_sr(&self) {
         write_reg!(tim1, self.tim1, SR, 0);
+    }
+
+    pub fn wait_pulse(&self) {
+        while !self.cc1if_set() { continue };
+        self.clear_sr();
+    }
+
+    pub fn output_enable(&self) {
+        write_reg!(tim1, self.tim1, BDTR, MOE: 1);
+    }
+
+    pub fn output_disable(&self) {
+        write_reg!(tim1, self.tim1, BDTR, MOE: 0);
     }
 }

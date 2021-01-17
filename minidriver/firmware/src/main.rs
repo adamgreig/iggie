@@ -37,27 +37,45 @@ fn main() -> ! {
     tim1.setup();
 
     let mut ctr = 0;
-    let mut idx = 0;
-
-    let cols = [10, 11, 12, 13, 13, 12, 11, 10, 10, 11, 12, 13, 13, 12, 11, 10, 10, 11, 12, 13, 13, 12, 11, 10];
-    let rows = [1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 8, 8, 8, 8, 4, 4, 4, 4, 2, 2, 2, 2];
+    let f1 = [
+        [1, 0, 1, 0],
+        [0, 1, 0, 1],
+        [1, 0, 1, 0],
+        [0, 1, 0, 1],
+    ];
+    let f2 = [
+        [0, 1, 0, 1],
+        [1, 0, 1, 0],
+        [0, 1, 0, 1],
+        [1, 0, 1, 0],
+    ];
+    let mut fbuf: &[[u8; 4]; 4] = &f1;
 
     loop {
-        if tim1.cc1if_set() {
-            tim1.clear_sr();
-
-            pins.set_rows(rows[idx]);
-            pins.set_col(cols[idx]);
-
-            ctr += 1;
-            if ctr == 100 {
-                ctr = 0;
-                idx += 1;
-                if idx == cols.len() {
-                    idx = 0;
+        for row in 1..=4 {
+            pins.set_row(row);
+            for col in 0..=64 {
+                // Set up next pulse
+                pins.set_col(col);
+                if (10..=13).contains(&col) && fbuf[col as usize - 10][row as usize - 1] == 1 {
+                    tim1.output_enable();
+                } else {
+                    tim1.output_disable();
                 }
 
-                pins.led.toggle();
+                // Toggle LED slowly
+                ctr += 1;
+                if ctr == 20000 {
+                    ctr = 0;
+                    pins.led.toggle();
+                    if fbuf == &f1 {
+                        fbuf = &f2;
+                    } else {
+                        fbuf = &f1;
+                    }
+                }
+
+                tim1.wait_pulse();
             }
         }
     }
