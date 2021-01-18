@@ -5,7 +5,7 @@
 
 /// Setpoint voltage (V).
 /// Typically 370V.
-const V_SET: f32 = 370.0;
+const V_SET: f32 = 375.0;
 
 /// Overvoltage limit before a fault is triggered (V).
 /// This has some filtering.
