@@ -14,18 +14,21 @@ impl TIM {
     pub fn setup(&self) {
         // PWM mode 1: active when CNT<CC, else inactive.
         write_reg!(tim1, self.tim1, CCMR1, OC1M: 0b0110, OC1PE: 1);
-        // Polarity active low, enabled.
+        // Output 1 polarity active low and enabled.
         write_reg!(tim1, self.tim1, CCER, CC1P: 1, CC1E: 1);
-        // ARR=250 gives 1kHz pulse per line (64kHz pulses total).
-        write_reg!(tim1, self.tim1, ARR, 250);
-        // CCR1=48 gives 3µs pulses.
-        write_reg!(tim1, self.tim1, CCR1, 3*16);
-        // Enable outputs.
-        write_reg!(tim1, self.tim1, BDTR, MOE: 0);
+        // ARR=1000 gives 64kHz pulse frequency, for 1kHz per column.
+        write_reg!(tim1, self.tim1, ARR, 1000);
+        // CCR1=64 gives 1µs pulses, scale as required.
+        write_reg!(tim1, self.tim1, CCR1, 3*64);
         // Enable timer.
         write_reg!(tim1, self.tim1, CR1, ARPE: 1, CEN: 1);
         // Generate update even to load preloaded registers.
         write_reg!(tim1, self.tim1, EGR, UG: 1);
+    }
+
+    /// Set pulse duration in 1/64th µs.
+    pub fn set_duration(&self, duration: u32) {
+        write_reg!(tim1, self.tim1, CCR1, duration);
     }
 
     pub fn cc1if_set(&self) -> bool {

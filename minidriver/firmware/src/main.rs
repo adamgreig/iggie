@@ -3,15 +3,13 @@
 
 extern crate panic_halt;
 use cortex_m_rt::entry;
-use rtt_target::{rprintln, rtt_init_print};
 
 pub mod hal;
 pub mod app;
 
 #[entry]
 fn main() -> ! {
-    rtt_init_print!();
-
+    let flash = stm32ral::flash::FLASH::take().unwrap();
     let rcc = hal::rcc::RCC::new(stm32ral::rcc::RCC::take().unwrap());
     let gpioa = hal::gpio::GPIO::new(stm32ral::gpio::GPIOA::take().unwrap());
     let gpiob = hal::gpio::GPIO::new(stm32ral::gpio::GPIOB::take().unwrap());
@@ -32,7 +30,7 @@ fn main() -> ! {
         psu_run: gpioa.pin(7),
     };
 
-    rcc.setup();
+    rcc.setup(&flash);
     pins.setup();
     tim1.setup();
 
@@ -52,12 +50,15 @@ fn main() -> ! {
     let mut fbuf: &[[u8; 4]; 4] = &f1;
 
     loop {
-        for row in 1..=4 {
+        for row in 1..=64 {
             pins.set_row(row);
-            for col in 0..=64 {
+            for col in 0..64 {
                 // Set up next pulse
                 pins.set_col(col);
-                if (10..=13).contains(&col) && fbuf[col as usize - 10][row as usize - 1] == 1 {
+                if (10..=13).contains(&col) &&
+                   ( 1..=4).contains(&row) &&
+                    fbuf[col as usize - 10][row as usize - 1] == 1
+                {
                     tim1.output_enable();
                 } else {
                     tim1.output_disable();
@@ -65,7 +66,7 @@ fn main() -> ! {
 
                 // Toggle LED slowly
                 ctr += 1;
-                if ctr == 20000 {
+                if ctr == 16000 {
                     ctr = 0;
                     pins.led.toggle();
                     if fbuf == &f1 {

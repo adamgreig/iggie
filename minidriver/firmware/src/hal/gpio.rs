@@ -336,13 +336,15 @@ impl<'a> Pins<'a> {
         self.en.set_otype_pushpull().set_ospeed_veryhigh().set_af(2).set_mode_alternate();
     }
 
-    pub fn set_col(&self, addr: u8) {
-        self.a0.set_bool((addr & 0b0001) != 0);
-        self.a1.set_bool((addr & 0b0010) != 0);
-        self.a2.set_bool((addr & 0b0100) != 0);
-        self.a3.set_bool((addr & 0b1000) != 0);
+    /// Set which column to address, 0-15.
+    pub fn set_col(&self, col: u8) {
+        self.a0.set_bool((col & 0b0001) != 0);
+        self.a1.set_bool((col & 0b0010) != 0);
+        self.a2.set_bool((col & 0b0100) != 0);
+        self.a3.set_bool((col & 0b1000) != 0);
     }
 
+    /// Set which row to address, 1-4.
     pub fn set_row(&self, row: u8) {
         self.gk1.set_bool(row == 1);
         self.gk2.set_bool(row == 2);
